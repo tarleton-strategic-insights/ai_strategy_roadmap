@@ -6,13 +6,17 @@ SI's working repository for Tarleton's AI initiative roadmap. Read `CLAUDE.md` f
 ```
 pip install pyyaml markdown        # system: wkhtmltopdf
 python build/validate.py           # integrity checks
-python build/generate.py           # rebuild docs/generated from data/
+python build/generate.py           # rebuild the grouped-use-cases doc
 ```
 
 ## Where things live
-- `data/` — structured source of truth (items, taxonomy, clusters). Edit here.
-- `docs/source/` — the four authored PAC documents (reference).
-- `docs/generated/` — build outputs. Do not hand-edit.
-- `decisions/OPEN_DECISIONS.md` — what still needs adjudication.
-- `roadmap/` — iterations, priority-vote results, milestones.
-- `hooks/` — parked ideas.
+- `pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/` —
+  structured source of truth (`items.yaml`, `taxonomy.yaml`, `clusters.yaml`) plus the
+  generated `PAC_AI_use_cases_grouped.md`/`.pdf`. Edit the yaml; the md/pdf are build
+  outputs — do not hand-edit.
+- `pac_retreat_sources/post_event_analysis/strategic_insights/cook/vision statements/` —
+  vision-statement transcriptions and synopsis.
+- `pac_retreat_sources/post_event_analysis/strategic_insights/hutyra/` — the authored PAC
+  documents (reference).
+- `roadmap/` — `OPEN_DECISIONS.md` (what needs adjudication), `ai_infrastructure.md`
+  (platform catalog + job roles), `post_retreat_discussion.md`.

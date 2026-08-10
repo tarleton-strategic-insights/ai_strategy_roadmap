@@ -15,30 +15,35 @@ move the roadmap forward iteration by iteration.
 
 ## Layout
 
-- `data/` — structured source of truth. Edit these, not the generated docs.
+- `pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/` —
+  structured source of truth. Edit these, not the generated docs.
   - `items.yaml` — every use-case idea as a record (provenance ID, source group, text,
     cluster, category, key personnel). IDs (A1–I4) trace to the original flip-chart photos.
   - `taxonomy.yaml` — the category scheme (use-cases / capabilities / framings), the
     three use-case types, their facet profiles, and key-personnel mapping.
   - `clusters.yaml` — de-duplication clusters (repeated ideas grouped across source groups).
-- `docs/source/` — authored documents (the four PAC docs; read-only reference).
-- `docs/generated/` — build outputs (markdown + PDF). Never hand-edit; regenerate.
-- `build/` — the generation pipeline (md -> styled HTML -> PDF).
-- `roadmap/` — roadmap iterations, priority-vote results, 90-day milestone sets.
-- `decisions/` — adjudicated decisions and the open-decision log (ADR-style).
-- `hooks/` — parked ideas to develop later, one file each.
+  - `PAC_AI_use_cases_grouped.md` / `.pdf` — build outputs. Never hand-edit; regenerate.
+- `pac_retreat_sources/post_event_analysis/strategic_insights/cook/vision statements/` —
+  vision-statement transcriptions (from retreat flip charts) and cross-statement synopsis.
+- `pac_retreat_sources/post_event_analysis/strategic_insights/hutyra/` — authored
+  documents (the four PAC docs; read-only reference).
+- `build/` — `validate.py` (integrity checks) and `generate.py` (the generation
+  pipeline: yaml -> md -> styled HTML -> PDF).
+- `roadmap/` — `ai_infrastructure.md` (platform catalog + job roles/org units),
+  `OPEN_DECISIONS.md` (adjudicated decisions and the open-decision log, ADR-style),
+  `post_retreat_discussion.md`.
 
 ## Core conventions
 
-1. **Data drives docs.** The categorization lives in `data/*.yaml`. Generated documents
-   are built from it. If a category changes, change the YAML and rebuild — never patch a
-   generated file by hand.
+1. **Data drives docs.** The categorization lives in the `use_cases/*.yaml` files under
+   `pac_retreat_sources/.../cook/use_cases/`. Generated documents are built from it. If a
+   category changes, change the YAML and rebuild — never patch a generated file by hand.
 2. **Provenance is sacred.** Every item keeps its A1–I4 ID linking it to a source photo
    group. Never renumber these; they are the audit trail. Display/ordinal numbering
    (use-case 1/2/3) is separate and *may* change.
 3. **Alignment with PAC docs is tracked, not assumed.** The executive PAC documents use a
    three-**bucket** framework. This repo's categories map to those buckets but are not
-   identical. `decisions/OPEN_DECISIONS.md` tracks every known divergence awaiting
+   identical. `roadmap/OPEN_DECISIONS.md` tracks every known divergence awaiting
    adjudication. Do not silently "fix" a divergence — surface it.
 4. **Nothing gets dropped.** Every source item lands in exactly one category. If an item
    fits nowhere, that is a signal to revisit the taxonomy, not to discard the item.
@@ -56,7 +61,7 @@ Items partition into three top-level kinds:
 - **Framings** — strategic lenses and models (Extend/Defend/Upend; the "AI Competitive
   Flywheel"); consume no resources.
 
-See `data/taxonomy.yaml` for the authoritative definition and `decisions/OPEN_DECISIONS.md`
+See `use_cases/taxonomy.yaml` for the authoritative definition and `roadmap/OPEN_DECISIONS.md`
 for unresolved framework questions (notably: use-case ordering vs. PAC bucket numbers,
 and two contested item placements).
 
@@ -77,7 +82,7 @@ AI-solution (1/2/3); PAC buckets order Workforce/Technical/Curriculum (1/2/3). S
 ## Build
 
 ```
-python build/generate.py            # regenerate all docs/generated from data/
+python build/generate.py            # regenerate PAC_AI_use_cases_grouped.md/.pdf from use_cases/*.yaml
 ```
 
 Requires `markdown` (pip) and `wkhtmltopdf` (system). See `build/generate.py` header.

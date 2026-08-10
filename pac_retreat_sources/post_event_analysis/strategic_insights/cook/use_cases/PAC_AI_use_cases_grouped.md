@@ -141,11 +141,11 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 
 ## Part 3 — Categorization
 
-Generated from data/. Every item lands in exactly one category (items with `spans` are cross-listed).
+Generated from the use_cases yaml. Every item lands in exactly one category (items with `spans` are cross-listed).
 
 ### Use-cases
 
-#### 1. Ai solution delivery
+#### 1. AI solution delivery
 - Key personnel — AI engineers
 - Structure: wide & shallow — how to prioritize and manage many simultaneous requests
 - Content: wide & deep — how to turn real-world problems into AI-solvable tasks

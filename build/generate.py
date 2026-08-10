@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 """
-Regenerate docs/generated/ from data/*.yaml.
+Regenerate PAC_AI_use_cases_grouped.md/.pdf from the *.yaml data files.
 
 Deps: pip install pyyaml markdown  ;  system: wkhtmltopdf
 Usage: python build/generate.py [--no-pdf]
 
-Produces:
-  docs/generated/PAC_AI_use_cases_grouped.md
-  docs/generated/PAC_AI_use_cases_grouped.pdf   (unless --no-pdf)
+Produces (in DATA, alongside the source yaml):
+  PAC_AI_use_cases_grouped.md
+  PAC_AI_use_cases_grouped.pdf   (unless --no-pdf)
 """
 import sys, subprocess, datetime
 from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
-OUT = ROOT / "docs" / "generated"
+DATA = ROOT / "pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases"
+OUT = DATA
 TITLE = "PAC AI Use Case Brainstorm 2026-07-27"
 SUBTITLE = ("Source: 9 flip-chart photos from a Gartner-facilitated workshop "
             "(breakout group notes), sent by Drew Doolin, 2026-07-30.")
@@ -60,7 +60,7 @@ def emit_part2(items, clusters):
 def emit_part3(items, tax, clusters):
     by_id = {it["id"]: it for it in items}
     out = ["## Part 3 — Categorization\n",
-           "Generated from data/. Every item lands in exactly one category "
+           "Generated from the use_cases yaml. Every item lands in exactly one category "
            "(items with `spans` are cross-listed).\n"]
     types = tax["kinds"]["use_cases"]["types"]
     ordered = sorted(types.items(), key=lambda kv: kv[1]["ordinal"])
@@ -70,7 +70,7 @@ def emit_part3(items, tax, clusters):
 
     out.append("### Use-cases\n")
     for tname, t in ordered:
-        pretty = tname.replace("_", " ").capitalize()
+        pretty = tname.replace("_", " ").capitalize().replace("Ai ", "AI ")
         out.append(f"#### {t['ordinal']}. {pretty}")
         out.append(f"- Key personnel — {t['key_personnel']}")
         for facet in ("structure", "content", "technical"):

@@ -2,7 +2,7 @@
 
 Unresolved framework and placement questions. Each carries a recommendation and stays
 open until Scott adjudicates. When resolved, move to a dated ADR entry at the bottom and
-update the relevant `data/*.yaml`.
+update the relevant `use_cases/*.yaml`.
 
 ## Framework-level
 

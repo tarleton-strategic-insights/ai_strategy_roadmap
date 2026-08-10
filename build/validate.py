@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Integrity checks on data/. Run before committing or building.
+Integrity checks on the use-case data. Run before committing or building.
 Usage: python build/validate.py   (exit 0 = clean, 1 = problems)
 """
 import sys, re
@@ -8,7 +8,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = ROOT / "pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases"
 VALID_CATS = {"workforce_development", "curriculum_integration", "ai_solution_delivery",
               "capabilities_foundation", "framings"}
 ID_RE = re.compile(r"^[A-I]\d+$")
