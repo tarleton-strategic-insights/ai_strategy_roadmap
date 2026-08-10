@@ -145,39 +145,7 @@ Generated from data/. Every item lands in exactly one category (items with `span
 
 ### Use-cases
 
-#### 1. Workforce development
-- Key personnel — organizers
-- ***Structure***: wide & deep — how to provide and incentivize upskilling; university-wide, spans staff AND faculty (and possibly alumni, community partners)
-- Content: wide & shallow — what AI skills are valuable to most people
-- Technical: wide & shallow — what AI skills are accessible to most people
-
-Items:
-- A4: Training & literacy
-- A5: Human capital investment (AI engineering) — 'we need NERDS' (AI expertise)
-- A6: Microcredentialing  *(spans)*
-- B5: Centralized AI support
-- D2: Employee productivity / redundancy
-- D3: Communication tool
-- D4: Capacity-building / redundancy
-- F3: Augment opportunity for learning by individuals/groups — 'teach me ___'
-- G8: Faculty development and buy-in — inform/shape
-- G9: Faculty development and buy-in — implementation
-
-#### 2. Curriculum integration
-- Key personnel — subject-matter experts
-- Structure: wide & shallow — stand-alone AI courses vs. embed in all courses vs. capstones; Academic Affairs-wide decision
-- ***Content***: narrow & deep — how to embed AI into major XYZ; department-specific, deep subject-matter expertise
-- Technical: narrow & variable — what AI techniques are relevant to major XYZ; may or may not need advanced AI expertise
-
-Items:
-- A6: Microcredentialing  *(spans)*
-- A7: Embed AI into the curriculum
-- B4: AI-career-ready students -> AI core?
-- B6: AI across all curriculum
-- G6: University-wide competencies
-- G7: Discipline-specific competencies
-
-#### 3. Ai solution delivery
+#### 1. Ai solution delivery
 - Key personnel — AI engineers
 - Structure: wide & shallow — how to prioritize and manage many simultaneous requests
 - Content: wide & deep — how to turn real-world problems into AI-solvable tasks
@@ -202,6 +170,38 @@ Items:
 - H3: Hiring/onboarding & benefits — goal: retention, transition, advanced degree
 - H4: Degree development repository — proforma-identified faculty, hiring process
 - H5: Research expenditures — tracking, opportunities, analytics missed opportunities, collaborators/faculty database
+
+#### 2. Curriculum integration
+- Key personnel — subject-matter experts
+- Structure: wide & shallow — stand-alone AI courses vs. embed in all courses vs. capstones; Academic Affairs-wide decision
+- ***Content***: narrow & deep — how to embed AI into major XYZ; department-specific, deep subject-matter expertise
+- Technical: narrow & variable — what AI techniques are relevant to major XYZ; may or may not need advanced AI expertise
+
+Items:
+- A6: Microcredentialing  *(spans)*
+- A7: Embed AI into the curriculum
+- B4: AI-career-ready students -> AI core?
+- B6: AI across all curriculum
+- G6: University-wide competencies
+- G7: Discipline-specific competencies
+
+#### 3. Workforce development
+- Key personnel — organizers
+- ***Structure***: wide & deep — how to provide and incentivize upskilling; university-wide, spans staff AND faculty (and possibly alumni, community partners)
+- Content: wide & shallow — what AI skills are valuable to most people
+- Technical: wide & shallow — what AI skills are accessible to most people
+
+Items:
+- A4: Training & literacy
+- A5: Human capital investment (AI engineering) — 'we need NERDS' (AI expertise)
+- A6: Microcredentialing  *(spans)*
+- B5: Centralized AI support
+- D2: Employee productivity / redundancy
+- D3: Communication tool
+- D4: Capacity-building / redundancy
+- F3: Augment opportunity for learning by individuals/groups — 'teach me ___'
+- G8: Faculty development and buy-in — inform/shape
+- G9: Faculty development and buy-in — implementation
 
 ### Capabilities / Foundation
 - B7: Ethics & governance

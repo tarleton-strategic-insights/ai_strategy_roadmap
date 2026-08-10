@@ -8,26 +8,8 @@ kinds:
       The facet profile (structure / content / technical) marks WHY that personnel type
       is load-bearing — it is an emphasis, not a full rating on every dimension.
     types:
-      workforce_development:
-        ordinal: 1
-        pac_bucket: 1
-        key_personnel: organizers
-        load_bearing_facet: structure
-        facets:
-          structure: "wide & deep — how to provide and incentivize upskilling; university-wide, spans staff AND faculty (and possibly alumni, community partners)"
-          content: "wide & shallow — what AI skills are valuable to most people"
-          technical: "wide & shallow — what AI skills are accessible to most people"
-      curriculum_integration:
-        ordinal: 2   # NOTE: conflicts with PAC bucket 3; see OPEN_DECISIONS
-        pac_bucket: 3
-        key_personnel: subject-matter experts
-        load_bearing_facet: content
-        facets:
-          structure: "wide & shallow — stand-alone AI courses vs. embed in all courses vs. capstones; Academic Affairs-wide decision"
-          content: "narrow & deep — how to embed AI into major XYZ; department-specific, deep subject-matter expertise"
-          technical: "narrow & variable — what AI techniques are relevant to major XYZ; may or may not need advanced AI expertise"
       ai_solution_delivery:
-        ordinal: 3   # NOTE: conflicts with PAC bucket 2; see OPEN_DECISIONS
+        ordinal: 1   # NOTE: conflicts with PAC bucket 2; see ADR-1 in OPEN_DECISIONS
         pac_bucket: 2
         key_personnel: AI engineers
         load_bearing_facet: technical
@@ -35,6 +17,24 @@ kinds:
           structure: "wide & shallow — how to prioritize and manage many simultaneous requests"
           content: "wide & deep — how to turn real-world problems into AI-solvable tasks"
           technical: "narrow & deep — how to create/manage technically complex AI tools"
+      curriculum_integration:
+        ordinal: 2   # NOTE: conflicts with PAC bucket 3; see ADR-1 in OPEN_DECISIONS
+        pac_bucket: 3
+        key_personnel: subject-matter experts
+        load_bearing_facet: content
+        facets:
+          structure: "wide & shallow — stand-alone AI courses vs. embed in all courses vs. capstones; Academic Affairs-wide decision"
+          content: "narrow & deep — how to embed AI into major XYZ; department-specific, deep subject-matter expertise"
+          technical: "narrow & variable — what AI techniques are relevant to major XYZ; may or may not need advanced AI expertise"
+      workforce_development:
+        ordinal: 3
+        pac_bucket: 1
+        key_personnel: organizers
+        load_bearing_facet: structure
+        facets:
+          structure: "wide & deep — how to provide and incentivize upskilling; university-wide, spans staff AND faculty (and possibly alumni, community partners)"
+          content: "wide & shallow — what AI skills are valuable to most people"
+          technical: "wide & shallow — what AI skills are accessible to most people"
 
   capabilities_foundation:
     description: >

@@ -112,7 +112,10 @@ def to_pdf(md_path, pdf_path):
     html = f"<!DOCTYPE html><html><head><meta charset='utf-8'><style>{css}</style></head><body>{body}</body></html>"
     tmp = OUT / "_render.html"
     tmp.write_text(html)
-    subprocess.run(["wkhtmltopdf", "--enable-local-file-access", "--encoding", "utf-8",
+    import os
+    local_bin = ROOT / ".venv/tools/extracted/usr/local/bin/wkhtmltopdf"
+    wkhtmltopdf = os.environ.get("WKHTMLTOPDF") or (str(local_bin) if local_bin.exists() else "wkhtmltopdf")
+    subprocess.run([wkhtmltopdf, "--enable-local-file-access", "--encoding", "utf-8",
                     str(tmp), str(pdf_path)], check=True,
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     tmp.unlink()
