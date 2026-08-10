@@ -1,0 +1,48 @@
+# Categorization framework. Authoritative definition of categories.
+# Items in items.yaml reference these by `category` and (for use-cases) sit under a type.
+
+kinds:
+  use_cases:
+    description: >
+      Resourceable work, split by the scarce key personnel each type depends on most.
+      The facet profile (structure / content / technical) marks WHY that personnel type
+      is load-bearing — it is an emphasis, not a full rating on every dimension.
+    types:
+      workforce_development:
+        ordinal: 1
+        pac_bucket: 1
+        key_personnel: organizers
+        load_bearing_facet: structure
+        facets:
+          structure: "wide & deep — how to provide and incentivize upskilling; university-wide, spans staff AND faculty (and possibly alumni, community partners)"
+          content: "wide & shallow — what AI skills are valuable to most people"
+          technical: "wide & shallow — what AI skills are accessible to most people"
+      curriculum_integration:
+        ordinal: 2   # NOTE: conflicts with PAC bucket 3; see OPEN_DECISIONS
+        pac_bucket: 3
+        key_personnel: subject-matter experts
+        load_bearing_facet: content
+        facets:
+          structure: "wide & shallow — stand-alone AI courses vs. embed in all courses vs. capstones; Academic Affairs-wide decision"
+          content: "narrow & deep — how to embed AI into major XYZ; department-specific, deep subject-matter expertise"
+          technical: "narrow & variable — what AI techniques are relevant to major XYZ; may or may not need advanced AI expertise"
+      ai_solution_delivery:
+        ordinal: 3   # NOTE: conflicts with PAC bucket 2; see OPEN_DECISIONS
+        pac_bucket: 2
+        key_personnel: AI engineers
+        load_bearing_facet: technical
+        facets:
+          structure: "wide & shallow — how to prioritize and manage many simultaneous requests"
+          content: "wide & deep — how to turn real-world problems into AI-solvable tasks"
+          technical: "narrow & deep — how to create/manage technically complex AI tools"
+
+  capabilities_foundation:
+    description: >
+      Cross-cutting preconditions that underpin all use-cases. Not sorted by personnel.
+      Maps to the PAC docs' "Cross-Cutting Foundations" (rides along, not a fourth bucket).
+
+  framings:
+    description: >
+      Strategic lenses and models. They organize thinking about the portfolio but consume
+      no resources, so they carry no personnel or facet profile. Not represented in the
+      PAC executive documents.

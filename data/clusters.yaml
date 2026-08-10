@@ -1,0 +1,26 @@
+# De-duplication clusters: repeated ideas grouped across source photo groups.
+# Each cluster lists the item IDs that express the same underlying idea.
+# Items not in any cluster are singletons (see items.yaml `cluster: null`).
+
+clusters:
+  C1_curriculum_embed:
+    label: "AI embedded in curriculum"
+    items: [A7, B6, G6, G7]        # I1 is a flywheel spoke -> framings
+  C2_governance_ethics:
+    label: "AI governance / ethics"
+    items: [B7, G1, G2, G3, G4]    # I2 is a flywheel spoke -> framings
+  C3_student_success:
+    label: "Student success / retention"
+    items: [D1, H2]
+  C4_research_grants:
+    label: "Research / grant support"
+    items: [E2, E3, H5]
+  C5_enrollment_scheduling:
+    label: "Enrollment / scheduling predictions"
+    items: [E1, H1]
+  C6_security:
+    label: "Security"
+    items: [F1]                    # I3 is a flywheel spoke -> framings
+  C7_ai_literacy_training:
+    label: "AI literacy / training for people"
+    items: [A4, A5, G8, G9]
