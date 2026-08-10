@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Regenerate PAC_AI_use_cases_grouped.md/.pdf from the *.yaml data files.
+Regenerate use_cases_analysis.md/.pdf from the *.yaml data files.
 
 Deps: pip install pyyaml markdown  ;  system: wkhtmltopdf
 Usage: python build/generate.py [--no-pdf]
 
 Produces (in DATA, alongside the source yaml):
-  PAC_AI_use_cases_grouped.md
-  PAC_AI_use_cases_grouped.pdf   (unless --no-pdf)
+  use_cases_analysis.md
+  use_cases_analysis.pdf   (unless --no-pdf)
 """
 import sys, subprocess, datetime
 from pathlib import Path
@@ -42,7 +42,7 @@ def emit_part1(items):
     return "\n".join(out)
 
 def emit_part2(items, clusters):
-    out = ["## Part 2 — Grouped by Duplication (nothing removed)\n"]
+    out = ["## Part 2 — Clustered by Duplication (nothing removed)\n"]
     by_id = {it["id"]: it for it in items}
     for cid, c in clusters.items():
         out.append(f"### {c['label']}")
@@ -50,7 +50,7 @@ def emit_part2(items, clusters):
             out.append(f"- {iid}: {by_id[iid]['text']}")
         out.append("")
     clustered = {iid for c in clusters.values() for iid in c["items"]}
-    out.append("### Ungrouped (no duplication cluster)")
+    out.append("### Unclustered (no duplication cluster)")
     for it in items:
         if it["id"] not in clustered:
             out.append(f"- {it['id']}: {it['text']}")
@@ -124,11 +124,11 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     items, tax, clusters = load()
     md = build_md(items, tax, clusters)
-    md_path = OUT / "PAC_AI_use_cases_grouped.md"
+    md_path = OUT / "use_cases_analysis.md"
     md_path.write_text(md)
     print(f"wrote {md_path.relative_to(ROOT)}  ({len(items)} items)")
     if "--no-pdf" not in sys.argv:
-        pdf_path = OUT / "PAC_AI_use_cases_grouped.pdf"
+        pdf_path = OUT / "use_cases_analysis.pdf"
         to_pdf(md_path, pdf_path)
         print(f"wrote {pdf_path.relative_to(ROOT)}")
 

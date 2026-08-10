@@ -22,7 +22,7 @@ move the roadmap forward iteration by iteration.
   - `taxonomy.yaml` — the category scheme (use-cases / capabilities / framings), the
     three use-case types, their facet profiles, and key-personnel mapping.
   - `clusters.yaml` — de-duplication clusters (repeated ideas grouped across source groups).
-  - `PAC_AI_use_cases_grouped.md` / `.pdf` — build outputs. Never hand-edit; regenerate.
+  - `use_cases_analysis.md` / `.pdf` — build outputs. Never hand-edit; regenerate.
 - `pac_retreat_sources/post_event_analysis/strategic_insights/cook/vision statements/` —
   vision-statement transcriptions (from retreat flip charts) and cross-statement synopsis.
 - `pac_retreat_sources/post_event_analysis/strategic_insights/hutyra/` — authored
@@ -82,7 +82,7 @@ AI-solution (1/2/3); PAC buckets order Workforce/Technical/Curriculum (1/2/3). S
 ## Build
 
 ```
-python build/generate.py            # regenerate PAC_AI_use_cases_grouped.md/.pdf from use_cases/*.yaml
+python build/generate.py            # regenerate use_cases_analysis.md/.pdf from use_cases/*.yaml
 ```
 
 Requires `markdown` (pip) and `wkhtmltopdf` (system). See `build/generate.py` header.

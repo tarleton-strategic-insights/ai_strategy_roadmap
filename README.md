@@ -12,7 +12,7 @@ python build/generate.py           # rebuild the grouped-use-cases doc
 ## Where things live
 - `pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/` —
   structured source of truth (`items.yaml`, `taxonomy.yaml`, `clusters.yaml`) plus the
-  generated `PAC_AI_use_cases_grouped.md`/`.pdf`. Edit the yaml; the md/pdf are build
+  generated `use_cases_analysis.md`/`.pdf`. Edit the yaml; the md/pdf are build
   outputs — do not hand-edit.
 - `pac_retreat_sources/post_event_analysis/strategic_insights/cook/vision statements/` —
   vision-statement transcriptions and synopsis.

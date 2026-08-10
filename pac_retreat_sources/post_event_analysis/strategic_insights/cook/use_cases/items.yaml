@@ -13,7 +13,7 @@ items:
   - id: A1
     group: A
     text: "Employ AI for graduation (Extend)"
-    cluster: null
+    cluster: C3_student_success
     category: framings
   - id: A2
     group: A
@@ -23,7 +23,7 @@ items:
   - id: A3
     group: A
     text: "Teaching to Learning (Upend)"
-    cluster: null
+    cluster: C1_curriculum_embed
     category: framings
   - id: A4
     group: A
@@ -67,7 +67,7 @@ items:
   - id: B4
     group: B
     text: "AI-career-ready students -> AI core?"
-    cluster: null
+    cluster: C1_curriculum_embed
     category: curriculum_integration
     note: "Weakest single placement; phrased as an outcome, could read as a framing."
   - id: B5
@@ -91,7 +91,7 @@ items:
   - id: C1
     group: C
     text: "Degree completion optimization"
-    cluster: null
+    cluster: C3_student_success
     category: ai_solution_delivery
   - id: C2
     group: C
@@ -169,7 +169,7 @@ items:
   - id: F3
     group: F
     text: "Augment opportunity for learning by individuals/groups — 'teach me ___'"
-    cluster: null
+    cluster: C1_curriculum_embed
     category: workforce_development
     note: "(OPEN) PAC places this Bucket 2 (a tool to build). Candidate to move to ai_solution_delivery."
 
@@ -248,27 +248,53 @@ items:
     category: ai_solution_delivery
 
   # ---- Group I — 'AI Competitive Flywheel' diagram ----
+  # Originally 4 items, each pairing two concepts as "X <-> Y". Split into 8
+  # single-concept items (2026-08-10) to allow each half to cluster independently.
   - id: I1
     group: I
-    text: "Student success <-> AI literacy/curriculum"
-    cluster: null
+    text: "Student success"
+    cluster: C3_student_success
     category: framings
-    note: "Flywheel spoke. Echoes cluster C1 but held as a model, not a use-case."
+    note: "Flywheel spoke (split from former I1's left half)."
   - id: I2
     group: I
-    text: "Workforce readiness <-> Governance/data readiness"
-    cluster: null
+    text: "AI literacy/curriculum"
+    cluster: C1_curriculum_embed
     category: framings
-    note: "Flywheel spoke. Echoes cluster C2."
+    note: "Flywheel spoke (split from former I1's right half)."
   - id: I3
     group: I
-    text: "Responsible innovation <-> Secure platforms"
-    cluster: null
+    text: "Workforce readiness"
+    cluster: C7_ai_literacy_training
     category: framings
-    note: "Flywheel spoke. Echoes cluster C6."
+    note: "Flywheel spoke (split from former I2's left half)."
   - id: I4
     group: I
-    text: "Operational efficiency <-> Research capacity"
+    text: "Governance/data readiness"
+    cluster: C2_governance_ethics
+    category: framings
+    note: "Flywheel spoke (split from former I2's right half)."
+  - id: I5
+    group: I
+    text: "Responsible innovation"
+    cluster: C2_governance_ethics
+    category: framings
+    note: "Flywheel spoke (split from former I3's left half)."
+  - id: I6
+    group: I
+    text: "Secure platforms"
+    cluster: C6_security
+    category: framings
+    note: "Flywheel spoke (split from former I3's right half)."
+  - id: I7
+    group: I
+    text: "Operational efficiency"
     cluster: null
     category: framings
-    note: "Flywheel spoke."
+    note: "Flywheel spoke (split from former I4's left half). No matching duplication cluster."
+  - id: I8
+    group: I
+    text: "Research capacity"
+    cluster: C4_research_grants
+    category: framings
+    note: "Flywheel spoke (split from former I4's right half)."

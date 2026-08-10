@@ -65,20 +65,28 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 5. H5: Research expenditures — tracking, opportunities, analytics missed opportunities, collaborators/faculty database
 
 ### Group I
-1. I1: Student success <-> AI literacy/curriculum
-2. I2: Workforce readiness <-> Governance/data readiness
-3. I3: Responsible innovation <-> Secure platforms
-4. I4: Operational efficiency <-> Research capacity
+1. I1: Student success
+2. I2: AI literacy/curriculum
+3. I3: Workforce readiness
+4. I4: Governance/data readiness
+5. I5: Responsible innovation
+6. I6: Secure platforms
+7. I7: Operational efficiency
+8. I8: Research capacity
 
 ---
 
-## Part 2 — Grouped by Duplication (nothing removed)
+## Part 2 — Clustered by Duplication (nothing removed)
 
 ### AI embedded in curriculum
+- A3: Teaching to Learning (Upend)
 - A7: Embed AI into the curriculum
+- B4: AI-career-ready students -> AI core?
 - B6: AI across all curriculum
+- F3: Augment opportunity for learning by individuals/groups — 'teach me ___'
 - G6: University-wide competencies
 - G7: Discipline-specific competencies
+- I2: AI literacy/curriculum
 
 ### AI governance / ethics
 - B7: Ethics & governance
@@ -86,15 +94,21 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 - G2: Governance documents
 - G3: Strategic plan — accelerate initiatives?
 - G4: Ethical & acceptable use — in common language
+- I4: Governance/data readiness
+- I5: Responsible innovation
 
 ### Student success / retention
+- A1: Employ AI for graduation (Extend)
+- C1: Degree completion optimization
 - D1: Instructional coach / retention / student success — detect student inactivity, disengagement; generate reports/flags for faculty
 - H2: Coordination across all departments — enrollment mgmt/data input, student success, advising, AI student/faculty/staff navigation
+- I1: Student success
 
 ### Research / grant support
 - E2: Research + grant-writing agents
 - E3: Bureaucracy of grant administration / compliance
 - H5: Research expenditures — tracking, opportunities, analytics missed opportunities, collaborators/faculty database
+- I8: Research capacity
 
 ### Enrollment / scheduling predictions
 - E1: Predictions + planning for new student enrollments — course sections, faculty/hiring staff
@@ -102,24 +116,22 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 
 ### Security
 - F1: Gap analysis — potential weaknesses/security issues
+- I6: Secure platforms
 
 ### AI literacy / training for people
 - A4: Training & literacy
 - A5: Human capital investment (AI engineering) — 'we need NERDS' (AI expertise)
 - G8: Faculty development and buy-in — inform/shape
 - G9: Faculty development and buy-in — implementation
+- I3: Workforce readiness
 
-### Ungrouped (no duplication cluster)
-- A1: Employ AI for graduation (Extend)
+### Unclustered (no duplication cluster)
 - A2: Efficiency — Administrative (Defend)
-- A3: Teaching to Learning (Upend)
 - A6: Microcredentialing
 - B1: Identify fundraising & promotion opportunities
 - B2: Integrate AI to assist in recruiting
 - B3: Improve productivity & enhance decision support — financial aid packaging?
-- B4: AI-career-ready students -> AI core?
 - B5: Centralized AI support
-- C1: Degree completion optimization
 - C2: Optimize day-to-day business activities
 - C3: AI online test proctor
 - D2: Employee productivity / redundancy
@@ -128,14 +140,10 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 - D5: Visa process — employees/students
 - E4: Cross-divisional collaborations — finding synergies, helping identify collaborators
 - F2: Alumni — connecting & predicting; building sense of belonging with students
-- F3: Augment opportunity for learning by individuals/groups — 'teach me ___'
 - G5: External advisory board(s)
 - H3: Hiring/onboarding & benefits — goal: retention, transition, advanced degree
 - H4: Degree development repository — proforma-identified faculty, hiring process
-- I1: Student success <-> AI literacy/curriculum
-- I2: Workforce readiness <-> Governance/data readiness
-- I3: Responsible innovation <-> Secure platforms
-- I4: Operational efficiency <-> Research capacity
+- I7: Operational efficiency
 
 ---
 
@@ -216,8 +224,12 @@ Items:
 - A1: Employ AI for graduation (Extend)
 - A2: Efficiency — Administrative (Defend)
 - A3: Teaching to Learning (Upend)
-- I1: Student success <-> AI literacy/curriculum
-- I2: Workforce readiness <-> Governance/data readiness
-- I3: Responsible innovation <-> Secure platforms
-- I4: Operational efficiency <-> Research capacity
+- I1: Student success
+- I2: AI literacy/curriculum
+- I3: Workforce readiness
+- I4: Governance/data readiness
+- I5: Responsible innovation
+- I6: Secure platforms
+- I7: Operational efficiency
+- I8: Research capacity
 
