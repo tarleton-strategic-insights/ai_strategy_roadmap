@@ -32,14 +32,15 @@ move the roadmap forward iteration by iteration.
     categorizes at this level, not the raw-item level.
 - `pac_retreat_sources/post_event_analysis/strategic_insights/hutyra/` — authored
   documents (the four PAC docs; read-only reference).
-- `build/` — `validate.py` (integrity checks) and `generate.py` (the generation
-  pipeline: yaml -> md -> styled HTML -> PDF). Also renders a plain PDF for every other
-  `.md` file in `roadmap/`.
+- `build/` — `validate.py` (integrity checks) and `generate.py` (yaml -> md, always;
+  optionally md -> styled HTML -> PDF for every `.md` in `roadmap/` with `--pdf`).
+  PDFs are gitignored — this repo is pushed to GitHub, which renders markdown natively,
+  so committed PDFs would just be stale duplicates.
 - `roadmap/` — `ai_strategy_develop.md` (platform catalog + job roles/org units),
   `open_decisions.md` (what needs adjudication), `resolved_decisions.md` (adjudicated
   decisions, ADR-style), `post_retreat_discussion.md`, `vision_statements_analysis.md`
-  (vision-statement transcriptions + synopsis), and `use_cases_analysis.md` / `.pdf`
-  (build outputs from the `use_cases/*.yaml` above — never hand-edit; regenerate).
+  (vision-statement transcriptions + synopsis), and `use_cases_analysis.md` (build
+  output from the `use_cases/*.yaml` above — never hand-edit; regenerate).
 
 ## Core conventions
 
@@ -102,11 +103,11 @@ unrelated to PAC alignment. See `roadmap/resolved_decisions.md` for the full his
 ## Build
 
 ```
-python build/generate.py            # regenerate roadmap/use_cases_analysis.md/.pdf from use_cases/*.yaml,
-                                     # then a plain PDF for every other roadmap/*.md
+python build/generate.py            # regenerate roadmap/use_cases_analysis.md from use_cases/*.yaml
+python build/generate.py --pdf      # also render PDFs (gitignored; GitHub renders md natively)
 ```
 
-Requires `markdown` (pip) and `wkhtmltopdf` (system). See `build/generate.py` header.
+`--pdf` requires `markdown` (pip) and `wkhtmltopdf` (system). See `build/generate.py` header.
 
 ## Current status
 

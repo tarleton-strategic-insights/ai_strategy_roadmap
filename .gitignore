@@ -1,4 +1,5 @@
 __pycache__/
 *.pyc
-docs/generated/_render.html
+roadmap/_render.html
+roadmap/*.pdf
 .venv/

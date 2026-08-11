@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """
-Regenerate use_cases_analysis.md/.pdf from raw_items.yaml, categories.yaml, unique_items.yaml,
-then render a plain-styled PDF for every other .md file in roadmap/.
+Regenerate use_cases_analysis.md from raw_items.yaml, categories.yaml, unique_items.yaml.
 
-Deps: pip install pyyaml markdown  ;  system: wkhtmltopdf
-Usage: python build/generate.py [--no-pdf]
+PDFs are off by default — this repo is pushed to GitHub, which renders markdown
+natively, so committed PDFs would just be stale duplicates. Pass --pdf to also render
+use_cases_analysis.pdf (styled) and a plain-styled PDF for every other .md in roadmap/,
+e.g. for sharing outside GitHub.
+
+Deps: pip install pyyaml markdown  ;  system: wkhtmltopdf (only needed with --pdf)
+Usage: python build/generate.py [--pdf]
 
 Produces:
   roadmap/use_cases_analysis.md
-  roadmap/use_cases_analysis.pdf        (unless --no-pdf; styled)
-  roadmap/<other .md>.pdf               (unless --no-pdf; plain default styling)
+  roadmap/use_cases_analysis.pdf        (only with --pdf; styled)
+  roadmap/<other .md>.pdf               (only with --pdf; plain default styling)
 """
 import sys, subprocess, datetime
 from pathlib import Path
@@ -132,7 +136,7 @@ def main():
     md_path = OUT / "use_cases_analysis.md"
     md_path.write_text(md)
     print(f"wrote {md_path.relative_to(ROOT)}  ({len(items)} items)")
-    if "--no-pdf" not in sys.argv:
+    if "--pdf" in sys.argv:
         pdf_path = OUT / "use_cases_analysis.pdf"
         to_pdf(md_path, pdf_path)
         print(f"wrote {pdf_path.relative_to(ROOT)}")
