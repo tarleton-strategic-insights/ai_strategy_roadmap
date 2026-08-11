@@ -2,299 +2,196 @@
 # id:        provenance ID (source group letter + item number). NEVER renumber.
 # group:     source photo group (A-I). Groups are arbitrary (photo/email batching).
 # text:      the idea as captured on the flip chart.
-# cluster:   de-dup cluster from clusters.yaml, or null if singleton.
-# category:  one of: workforce_development | curriculum_integration |
-#            ai_solution_delivery | capabilities_foundation | framings
-# spans:     optional list of additional categories the item also belongs to.
 # note:      optional; open placement questions flagged with (OPEN).
+#
+# Category membership lives in categories.yaml; deduplication (which raw items
+# collapse into one idea) lives in unique_items.yaml. This file does not carry
+# category or dedup fields, so there is nothing here to fall out of sync.
 
 items:
   # ---- Group A ----
   - id: A1
     group: A
     text: "Employ AI for graduation (Extend)"
-    cluster: C3_student_success
-    category: framings
   - id: A2
     group: A
     text: "Efficiency — Administrative (Defend)"
-    cluster: null
-    category: framings
   - id: A3
     group: A
     text: "Teaching to Learning (Upend)"
-    cluster: C1_curriculum_embed
-    category: framings
   - id: A4
     group: A
     text: "Training & literacy"
-    cluster: C7_ai_literacy_training
-    category: workforce_development
   - id: A5
     group: A
     text: "Human capital investment (AI engineering) — 'we need NERDS' (AI expertise)"
-    cluster: C7_ai_literacy_training
-    category: workforce_development
   - id: A6
     group: A
     text: "Microcredentialing"
-    cluster: null
-    category: workforce_development
-    spans: [curriculum_integration]
     note: "Presidential (Hurley) sponsorship. PAC docs place it Bucket 1+3."
   - id: A7
     group: A
     text: "Embed AI into the curriculum"
-    cluster: C1_curriculum_embed
-    category: curriculum_integration
 
   # ---- Group B ----
   - id: B1
     group: B
     text: "Identify fundraising & promotion opportunities"
-    cluster: null
-    category: ai_solution_delivery
   - id: B2
     group: B
     text: "Integrate AI to assist in recruiting"
-    cluster: null
-    category: ai_solution_delivery
   - id: B3
     group: B
     text: "Improve productivity & enhance decision support — financial aid packaging?"
-    cluster: null
-    category: ai_solution_delivery
   - id: B4
     group: B
     text: "AI-career-ready students -> AI core?"
-    cluster: C1_curriculum_embed
-    category: curriculum_integration
     note: "Weakest single placement; phrased as an outcome, could read as a framing."
   - id: B5
     group: B
     text: "Centralized AI support"
-    cluster: null
-    category: workforce_development
     note: "Tension: PAC end-state is EMBEDDED unit experts, not a central help desk."
   - id: B6
     group: B
     text: "AI across all curriculum"
-    cluster: C1_curriculum_embed
-    category: curriculum_integration
   - id: B7
     group: B
     text: "Ethics & governance"
-    cluster: C2_governance_ethics
-    category: capabilities_foundation
 
   # ---- Group C ----
   - id: C1
     group: C
     text: "Degree completion optimization"
-    cluster: C3_student_success
-    category: ai_solution_delivery
   - id: C2
     group: C
     text: "Optimize day-to-day business activities"
-    cluster: null
-    category: ai_solution_delivery
   - id: C3
     group: C
     text: "AI online test proctor"
-    cluster: null
-    category: ai_solution_delivery
 
   # ---- Group D ----
   - id: D1
     group: D
     text: "Instructional coach / retention / student success — detect student inactivity, disengagement; generate reports/flags for faculty"
-    cluster: C3_student_success
-    category: ai_solution_delivery
   - id: D2
     group: D
     text: "Employee productivity / redundancy"
-    cluster: null
-    category: workforce_development
   - id: D3
     group: D
     text: "Communication tool"
-    cluster: null
-    category: workforce_development
     note: "PAC docs split comms: change-mgmt comms (B1) vs comms tooling (B2)."
   - id: D4
     group: D
     text: "Capacity-building / redundancy"
-    cluster: null
-    category: workforce_development
   - id: D5
     group: D
     text: "Visa process — employees/students"
-    cluster: null
-    category: ai_solution_delivery
 
   # ---- Group E ----
   - id: E1
     group: E
     text: "Predictions + planning for new student enrollments — course sections, faculty/hiring staff"
-    cluster: C5_enrollment_scheduling
-    category: ai_solution_delivery
   - id: E2
     group: E
     text: "Research + grant-writing agents"
-    cluster: C4_research_grants
-    category: ai_solution_delivery
   - id: E3
     group: E
     text: "Bureaucracy of grant administration / compliance"
-    cluster: C4_research_grants
-    category: ai_solution_delivery
   - id: E4
     group: E
     text: "Cross-divisional collaborations — finding synergies, helping identify collaborators"
-    cluster: null
-    category: ai_solution_delivery
 
   # ---- Group F ----
   - id: F1
     group: F
     text: "Gap analysis — potential weaknesses/security issues"
-    cluster: C6_security
-    category: capabilities_foundation
     note: "(OPEN) PAC Appendix A places this Bucket 2; PAC prose places it Foundation. We chose Foundation."
   - id: F2
     group: F
     text: "Alumni — connecting & predicting; building sense of belonging with students"
-    cluster: null
-    category: ai_solution_delivery
   - id: F3
     group: F
     text: "Augment opportunity for learning by individuals/groups — 'teach me ___'"
-    cluster: C1_curriculum_embed
-    category: workforce_development
     note: "(OPEN) PAC places this Bucket 2 (a tool to build). Candidate to move to ai_solution_delivery."
 
   # ---- Group G ----
   - id: G1
     group: G
     text: "Foundation"
-    cluster: C2_governance_ethics
-    category: capabilities_foundation
   - id: G2
     group: G
     text: "Governance documents"
-    cluster: C2_governance_ethics
-    category: capabilities_foundation
   - id: G3
     group: G
     text: "Strategic plan — accelerate initiatives?"
-    cluster: C2_governance_ethics
-    category: capabilities_foundation
   - id: G4
     group: G
     text: "Ethical & acceptable use — in common language"
-    cluster: C2_governance_ethics
-    category: capabilities_foundation
   - id: G5
     group: G
     text: "External advisory board(s)"
-    cluster: null
-    category: capabilities_foundation
   - id: G6
     group: G
     text: "University-wide competencies"
-    cluster: C1_curriculum_embed
-    category: curriculum_integration
   - id: G7
     group: G
     text: "Discipline-specific competencies"
-    cluster: C1_curriculum_embed
-    category: curriculum_integration
   - id: G8
     group: G
     text: "Faculty development and buy-in — inform/shape"
-    cluster: C7_ai_literacy_training
-    category: workforce_development
   - id: G9
     group: G
     text: "Faculty development and buy-in — implementation"
-    cluster: C7_ai_literacy_training
-    category: workforce_development
 
   # ---- Group H ----
   - id: H1
     group: H
     text: "Scheduling rooms — recoding rooms for use, clean data input before scheduling (currently doesn't predict), watch clicks on registration"
-    cluster: C5_enrollment_scheduling
-    category: ai_solution_delivery
   - id: H2
     group: H
     text: "Coordination across all departments — enrollment mgmt/data input, student success, advising, AI student/faculty/staff navigation"
-    cluster: C3_student_success
-    category: ai_solution_delivery
   - id: H3
     group: H
     text: "Hiring/onboarding & benefits — goal: retention, transition, advanced degree"
-    cluster: null
-    category: ai_solution_delivery
   - id: H4
     group: H
     text: "Degree development repository — proforma-identified faculty, hiring process"
-    cluster: null
-    category: ai_solution_delivery
   - id: H5
     group: H
     text: "Research expenditures — tracking, opportunities, analytics missed opportunities, collaborators/faculty database"
-    cluster: C4_research_grants
-    category: ai_solution_delivery
 
   # ---- Group I — 'AI Competitive Flywheel' diagram ----
   # Originally 4 items, each pairing two concepts as "X <-> Y". Split into 8
-  # single-concept items (2026-08-10) to allow each half to cluster independently.
+  # single-concept items (2026-08-10) to allow each half to be deduplicated independently.
   - id: I1
     group: I
     text: "Student success"
-    cluster: C3_student_success
-    category: framings
     note: "Flywheel spoke (split from former I1's left half)."
   - id: I2
     group: I
     text: "AI literacy/curriculum"
-    cluster: C1_curriculum_embed
-    category: framings
     note: "Flywheel spoke (split from former I1's right half)."
   - id: I3
     group: I
     text: "Workforce readiness"
-    cluster: C7_ai_literacy_training
-    category: framings
     note: "Flywheel spoke (split from former I2's left half)."
   - id: I4
     group: I
     text: "Governance/data readiness"
-    cluster: C2_governance_ethics
-    category: framings
     note: "Flywheel spoke (split from former I2's right half)."
   - id: I5
     group: I
     text: "Responsible innovation"
-    cluster: C2_governance_ethics
-    category: framings
     note: "Flywheel spoke (split from former I3's left half)."
   - id: I6
     group: I
     text: "Secure platforms"
-    cluster: C6_security
-    category: framings
     note: "Flywheel spoke (split from former I3's right half)."
   - id: I7
     group: I
     text: "Operational efficiency"
-    cluster: null
-    category: framings
-    note: "Flywheel spoke (split from former I4's left half). No matching duplication cluster."
+    note: "Flywheel spoke (split from former I4's left half)."
   - id: I8
     group: I
     text: "Research capacity"
-    cluster: C4_research_grants
-    category: framings
     note: "Flywheel spoke (split from former I4's right half)."

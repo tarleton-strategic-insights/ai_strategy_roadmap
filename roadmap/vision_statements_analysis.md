@@ -3,7 +3,7 @@
 Transcribed verbatim from flip-chart photos taken at the PAC retreat, 2026-07-28.
 Source: `pac_retreat_sources/event_artifacts/images/vision_statements/` (5 photos,
 7 distinct statements). Not yet adjudicated into a single official vision — see
-`roadmap/OPEN_DECISIONS.md` if/when this becomes an open decision item.
+`roadmap/open_decisions.md` if/when this becomes an open decision item.
 
 ---
 
@@ -139,4 +139,4 @@ security).**
 
 This synthesis is a starting point for discussion, not a resolved decision — a formal
 choice among (or synthesis of) these statements should go through the same adjudication
-path as other framework-level items in `roadmap/OPEN_DECISIONS.md`.
+path as other framework-level items in `roadmap/open_decisions.md`.

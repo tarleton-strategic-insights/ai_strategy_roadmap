@@ -76,32 +76,31 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 
 ---
 
-## Part 2 — Clustered by Duplication (nothing removed)
+## Part 2 — Deduplicated (nothing removed; every item lands in exactly one entry below)
 
-### AI embedded in curriculum
+### Curriculum Integration
 - A3: Teaching to Learning (Upend)
 - A7: Embed AI into the curriculum
 - B4: AI-career-ready students -> AI core?
 - B6: AI across all curriculum
 - F3: Augment opportunity for learning by individuals/groups — 'teach me ___'
-- G6: University-wide competencies
-- G7: Discipline-specific competencies
-- I2: AI literacy/curriculum
+- G8: Faculty development and buy-in — inform/shape
+- G9: Faculty development and buy-in — implementation
 
-### AI governance / ethics
+### Governance / security / ethics
 - B7: Ethics & governance
 - G1: Foundation
 - G2: Governance documents
-- G3: Strategic plan — accelerate initiatives?
 - G4: Ethical & acceptable use — in common language
 - I4: Governance/data readiness
 - I5: Responsible innovation
+- F1: Gap analysis — potential weaknesses/security issues
+- I6: Secure platforms
 
 ### Student success / retention
 - A1: Employ AI for graduation (Extend)
 - C1: Degree completion optimization
 - D1: Instructional coach / retention / student success — detect student inactivity, disengagement; generate reports/flags for faculty
-- H2: Coordination across all departments — enrollment mgmt/data input, student success, advising, AI student/faculty/staff navigation
 - I1: Student success
 
 ### Research / grant support
@@ -110,126 +109,117 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 - H5: Research expenditures — tracking, opportunities, analytics missed opportunities, collaborators/faculty database
 - I8: Research capacity
 
-### Enrollment / scheduling predictions
-- E1: Predictions + planning for new student enrollments — course sections, faculty/hiring staff
-- H1: Scheduling rooms — recoding rooms for use, clean data input before scheduling (currently doesn't predict), watch clicks on registration
+### Interdepartmental coordination
+- D3: Communication tool
+- E4: Cross-divisional collaborations — finding synergies, helping identify collaborators
+- H2: Coordination across all departments — enrollment mgmt/data input, student success, advising, AI student/faculty/staff navigation
 
-### Security
-- F1: Gap analysis — potential weaknesses/security issues
-- I6: Secure platforms
+### Operational efficiency
+- A2: Efficiency — Administrative (Defend)
+- C2: Optimize day-to-day business activities
+- D2: Employee productivity / redundancy
+- D4: Capacity-building / redundancy
+- G3: Strategic plan — accelerate initiatives?
+- I7: Operational efficiency
 
-### AI literacy / training for people
+### Literacy & training
 - A4: Training & literacy
-- A5: Human capital investment (AI engineering) — 'we need NERDS' (AI expertise)
-- G8: Faculty development and buy-in — inform/shape
-- G9: Faculty development and buy-in — implementation
+- G6: University-wide competencies
+- G7: Discipline-specific competencies
+- I2: AI literacy/curriculum
 - I3: Workforce readiness
 
-### Unclustered (no duplication cluster)
-- A2: Efficiency — Administrative (Defend)
-- A6: Microcredentialing
-- B1: Identify fundraising & promotion opportunities
-- B2: Integrate AI to assist in recruiting
-- B3: Improve productivity & enhance decision support — financial aid packaging?
+### Technical expertise
+- A5: Human capital investment (AI engineering) — 'we need NERDS' (AI expertise)
 - B5: Centralized AI support
-- C2: Optimize day-to-day business activities
+
+### Microcredentialing
+- A6: Microcredentialing
+
+### Identify fundraising & promotion opportunities
+- B1: Identify fundraising & promotion opportunities
+
+### Integrate AI to assist in recruiting
+- B2: Integrate AI to assist in recruiting
+
+### Improve productivity & enhance decision support — financial aid packaging?
+- B3: Improve productivity & enhance decision support — financial aid packaging?
+
+### AI online test proctor
 - C3: AI online test proctor
-- D2: Employee productivity / redundancy
-- D3: Communication tool
-- D4: Capacity-building / redundancy
+
+### Visa process — employees/students
 - D5: Visa process — employees/students
-- E4: Cross-divisional collaborations — finding synergies, helping identify collaborators
+
+### Predictions + planning for new student enrollments — course sections, faculty/hiring staff
+- E1: Predictions + planning for new student enrollments — course sections, faculty/hiring staff
+
+### Alumni — connecting & predicting; building sense of belonging with students
 - F2: Alumni — connecting & predicting; building sense of belonging with students
+
+### External advisory board(s)
 - G5: External advisory board(s)
+
+### Scheduling rooms — recoding rooms for use, clean data input before scheduling (currently doesn't predict), watch clicks on registration
+- H1: Scheduling rooms — recoding rooms for use, clean data input before scheduling (currently doesn't predict), watch clicks on registration
+
+### Hiring/onboarding & benefits — goal: retention, transition, advanced degree
 - H3: Hiring/onboarding & benefits — goal: retention, transition, advanced degree
+
+### Degree development repository — proforma-identified faculty, hiring process
 - H4: Degree development repository — proforma-identified faculty, hiring process
-- I7: Operational efficiency
 
 ---
 
 ## Part 3 — Categorization
 
-Generated from the use_cases yaml. Every item lands in exactly one category (items with `spans` are cross-listed).
+Generated from the use_cases yaml. Membership is defined in categories.yaml at the deduplicated (unique_items) level — every unique_items entry belongs to exactly one category.
 
 ### Use-cases
 
-#### 1. AI solution delivery
-- Key personnel — AI engineers
-- Structure: wide & shallow — how to prioritize and manage many simultaneous requests
-- Content: wide & deep — how to turn real-world problems into AI-solvable tasks
-- ***Technical***: narrow & deep — how to create/manage technically complex AI tools
-
-Items:
-- B1: Identify fundraising & promotion opportunities
-- B2: Integrate AI to assist in recruiting
-- B3: Improve productivity & enhance decision support — financial aid packaging?
-- C1: Degree completion optimization
-- C2: Optimize day-to-day business activities
-- C3: AI online test proctor
-- D1: Instructional coach / retention / student success — detect student inactivity, disengagement; generate reports/flags for faculty
-- D5: Visa process — employees/students
-- E1: Predictions + planning for new student enrollments — course sections, faculty/hiring staff
-- E2: Research + grant-writing agents
-- E3: Bureaucracy of grant administration / compliance
-- E4: Cross-divisional collaborations — finding synergies, helping identify collaborators
-- F2: Alumni — connecting & predicting; building sense of belonging with students
-- H1: Scheduling rooms — recoding rooms for use, clean data input before scheduling (currently doesn't predict), watch clicks on registration
-- H2: Coordination across all departments — enrollment mgmt/data input, student success, advising, AI student/faculty/staff navigation
-- H3: Hiring/onboarding & benefits — goal: retention, transition, advanced degree
-- H4: Degree development repository — proforma-identified faculty, hiring process
-- H5: Research expenditures — tracking, opportunities, analytics missed opportunities, collaborators/faculty database
-
-#### 2. Curriculum integration
+#### 1. Curriculum integration
 - Key personnel — subject-matter experts
 - Structure: wide & shallow — stand-alone AI courses vs. embed in all courses vs. capstones; Academic Affairs-wide decision
 - ***Content***: narrow & deep — how to embed AI into major XYZ; department-specific, deep subject-matter expertise
 - Technical: narrow & variable — what AI techniques are relevant to major XYZ; may or may not need advanced AI expertise
 
 Items:
-- A6: Microcredentialing  *(spans)*
-- A7: Embed AI into the curriculum
-- B4: AI-career-ready students -> AI core?
-- B6: AI across all curriculum
-- G6: University-wide competencies
-- G7: Discipline-specific competencies
+- Curriculum Integration (7 raw items)
+- Microcredentialing (1 raw item)
 
-#### 3. Workforce development
+#### 2. Workforce development
 - Key personnel — organizers
 - ***Structure***: wide & deep — how to provide and incentivize upskilling; university-wide, spans staff AND faculty (and possibly alumni, community partners)
 - Content: wide & shallow — what AI skills are valuable to most people
 - Technical: wide & shallow — what AI skills are accessible to most people
 
 Items:
-- A4: Training & literacy
-- A5: Human capital investment (AI engineering) — 'we need NERDS' (AI expertise)
-- A6: Microcredentialing  *(spans)*
-- B5: Centralized AI support
-- D2: Employee productivity / redundancy
-- D3: Communication tool
-- D4: Capacity-building / redundancy
-- F3: Augment opportunity for learning by individuals/groups — 'teach me ___'
-- G8: Faculty development and buy-in — inform/shape
-- G9: Faculty development and buy-in — implementation
+- Operational efficiency (6 raw items)
+- Literacy & training (5 raw items)
+
+#### 3. AI solution delivery
+- Key personnel — AI engineers
+- Structure: wide & shallow — how to prioritize and manage many simultaneous requests
+- Content: wide & deep — how to turn real-world problems into AI-solvable tasks
+- ***Technical***: narrow & deep — how to create/manage technically complex AI tools
+
+Items:
+- Student success / retention (4 raw items)
+- Research / grant support (4 raw items)
+- Interdepartmental coordination (3 raw items)
+- Technical expertise (2 raw items)
+- Identify fundraising & promotion opportunities (1 raw item)
+- Integrate AI to assist in recruiting (1 raw item)
+- Improve productivity & enhance decision support — financial aid packaging? (1 raw item)
+- AI online test proctor (1 raw item)
+- Visa process — employees/students (1 raw item)
+- Predictions + planning for new student enrollments — course sections, faculty/hiring staff (1 raw item)
+- Alumni — connecting & predicting; building sense of belonging with students (1 raw item)
+- Scheduling rooms — recoding rooms for use, clean data input before scheduling (currently doesn't predict), watch clicks on registration (1 raw item)
+- Hiring/onboarding & benefits — goal: retention, transition, advanced degree (1 raw item)
+- Degree development repository — proforma-identified faculty, hiring process (1 raw item)
 
 ### Capabilities / Foundation
-- B7: Ethics & governance
-- F1: Gap analysis — potential weaknesses/security issues
-- G1: Foundation
-- G2: Governance documents
-- G3: Strategic plan — accelerate initiatives?
-- G4: Ethical & acceptable use — in common language
-- G5: External advisory board(s)
-
-### Framings
-- A1: Employ AI for graduation (Extend)
-- A2: Efficiency — Administrative (Defend)
-- A3: Teaching to Learning (Upend)
-- I1: Student success
-- I2: AI literacy/curriculum
-- I3: Workforce readiness
-- I4: Governance/data readiness
-- I5: Responsible innovation
-- I6: Secure platforms
-- I7: Operational efficiency
-- I8: Research capacity
+- Governance / security / ethics (8 raw items)
+- External advisory board(s) (1 raw item)
 

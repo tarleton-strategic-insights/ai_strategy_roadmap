@@ -1,0 +1,67 @@
+# Deduplicated ideas: every raw item (raw_items.yaml) appears in exactly one
+# entry here. Multi-item entries are duplicates of the same underlying idea;
+# single-item entries are singletons (label = the item text verbatim).
+# Keys are arbitrary sequential slugs (X1, X2, ...) - stable, uninformative by
+# design, so relabeling never requires a rename.
+
+unique_items:
+  X1:
+    label: "Curriculum Integration"
+    items: [A3, A7, B4, B6, F3, G8, G9]
+  X2:
+    label: "Governance / security / ethics"
+    items: [B7, G1, G2, G4, I4, I5, F1, I6]
+  X3:
+    label: "Student success / retention"
+    items: [A1, C1, D1, I1]
+  X4:
+    label: "Research / grant support"
+    items: [E2, E3, H5, I8]
+  X5:
+    label: "Interdepartmental coordination"
+    items: [D3, E4, H2]
+  X6:
+    label: "Operational efficiency"
+    items: [A2, C2, D2, D4, G3, I7]
+  X7:
+    label: "Literacy & training"
+    items: [A4, G6, G7, I2, I3]
+  X8:
+    label: "Technical expertise"
+    items: [A5, B5]
+  X9:
+    label: "Microcredentialing"
+    items: [A6]
+  X10:
+    label: "Identify fundraising & promotion opportunities"
+    items: [B1]
+  X11:
+    label: "Integrate AI to assist in recruiting"
+    items: [B2]
+  X12:
+    label: "Improve productivity & enhance decision support — financial aid packaging?"
+    items: [B3]
+  X13:
+    label: "AI online test proctor"
+    items: [C3]
+  X14:
+    label: "Visa process — employees/students"
+    items: [D5]
+  X15:
+    label: "Predictions + planning for new student enrollments — course sections, faculty/hiring staff"
+    items: [E1]
+  X16:
+    label: "Alumni — connecting & predicting; building sense of belonging with students"
+    items: [F2]
+  X17:
+    label: "External advisory board(s)"
+    items: [G5]
+  X18:
+    label: "Scheduling rooms — recoding rooms for use, clean data input before scheduling (currently doesn't predict), watch clicks on registration"
+    items: [H1]
+  X19:
+    label: "Hiring/onboarding & benefits — goal: retention, transition, advanced degree"
+    items: [H3]
+  X20:
+    label: "Degree development repository — proforma-identified faculty, hiring process"
+    items: [H4]

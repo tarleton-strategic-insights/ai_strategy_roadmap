@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-Regenerate use_cases_analysis.md/.pdf from the *.yaml data files.
+Regenerate use_cases_analysis.md/.pdf from raw_items.yaml, categories.yaml, unique_items.yaml,
+then render a plain-styled PDF for every other .md file in roadmap/.
 
 Deps: pip install pyyaml markdown  ;  system: wkhtmltopdf
 Usage: python build/generate.py [--no-pdf]
 
-Produces (in DATA, alongside the source yaml):
-  use_cases_analysis.md
-  use_cases_analysis.pdf   (unless --no-pdf)
+Produces:
+  roadmap/use_cases_analysis.md
+  roadmap/use_cases_analysis.pdf        (unless --no-pdf; styled)
+  roadmap/<other .md>.pdf               (unless --no-pdf; plain default styling)
 """
 import sys, subprocess, datetime
 from pathlib import Path
@@ -15,16 +17,16 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases"
-OUT = DATA
+OUT = ROOT / "roadmap"
 TITLE = "PAC AI Use Case Brainstorm 2026-07-27"
 SUBTITLE = ("Source: 9 flip-chart photos from a Gartner-facilitated workshop "
             "(breakout group notes), sent by Drew Doolin, 2026-07-30.")
 
 def load():
-    items = yaml.safe_load((DATA / "items.yaml").read_text())["items"]
-    tax = yaml.safe_load((DATA / "taxonomy.yaml").read_text())
-    clusters = yaml.safe_load((DATA / "clusters.yaml").read_text())["clusters"]
-    return items, tax, clusters
+    items = yaml.safe_load((DATA / "raw_items.yaml").read_text())["items"]
+    cats = yaml.safe_load((DATA / "categories.yaml").read_text())
+    uniques = yaml.safe_load((DATA / "unique_items.yaml").read_text())["unique_items"]
+    return items, cats, uniques
 
 def by_group(items):
     groups = {}
@@ -41,32 +43,30 @@ def emit_part1(items):
         out.append("")
     return "\n".join(out)
 
-def emit_part2(items, clusters):
-    out = ["## Part 2 — Clustered by Duplication (nothing removed)\n"]
+def emit_part2(items, uniques):
+    out = ["## Part 2 — Deduplicated (nothing removed; every item lands in exactly "
+           "one entry below)\n"]
     by_id = {it["id"]: it for it in items}
-    for cid, c in clusters.items():
-        out.append(f"### {c['label']}")
-        for iid in c["items"]:
+    for uid, u in uniques.items():
+        out.append(f"### {u['label']}")
+        for iid in u["items"]:
             out.append(f"- {iid}: {by_id[iid]['text']}")
         out.append("")
-    clustered = {iid for c in clusters.values() for iid in c["items"]}
-    out.append("### Unclustered (no duplication cluster)")
-    for it in items:
-        if it["id"] not in clustered:
-            out.append(f"- {it['id']}: {it['text']}")
-    out.append("")
     return "\n".join(out)
 
-def emit_part3(items, tax, clusters):
-    by_id = {it["id"]: it for it in items}
+def emit_part3(items, cats, uniques):
     out = ["## Part 3 — Categorization\n",
-           "Generated from the use_cases yaml. Every item lands in exactly one category "
-           "(items with `spans` are cross-listed).\n"]
-    types = tax["kinds"]["use_cases"]["types"]
+           "Generated from the use_cases yaml. Membership is defined in categories.yaml "
+           "at the deduplicated (unique_items) level — every unique_items entry belongs "
+           "to exactly one category.\n"]
+    types = cats["kinds"]["use_cases"]["types"]
     ordered = sorted(types.items(), key=lambda kv: kv[1]["ordinal"])
 
-    def items_in(cat):
-        return [it for it in items if it["category"] == cat or cat in it.get("spans", [])]
+    def emit_uniques_in(cat_def):
+        for uid in cat_def["items"]:
+            u = uniques[uid]
+            n = len(u["items"])
+            out.append(f"- {u['label']} ({n} raw item{'s' if n != 1 else ''})")
 
     out.append("### Use-cases\n")
     for tname, t in ordered:
@@ -77,37 +77,42 @@ def emit_part3(items, tax, clusters):
             label = f"***{facet.capitalize()}***" if facet == t["load_bearing_facet"] else facet.capitalize()
             out.append(f"- {label}: {t['facets'][facet]}")
         out.append("\nItems:")
-        for it in items_in(tname):
-            tag = "  *(spans)*" if it.get("spans") else ""
-            out.append(f"- {it['id']}: {it['text']}{tag}")
+        emit_uniques_in(t)
         out.append("")
 
-    for cat, header in (("capabilities_foundation", "Capabilities / Foundation"),
-                        ("framings", "Framings")):
-        out.append(f"### {header}")
-        for it in items_in(cat):
-            out.append(f"- {it['id']}: {it['text']}")
-        out.append("")
+    out.append("### Capabilities / Foundation")
+    emit_uniques_in(cats["kinds"]["capabilities_foundation"])
+    out.append("")
     return "\n".join(out)
 
-def build_md(items, tax, clusters):
+def build_md(items, cats, uniques):
     parts = [f"# {TITLE}", SUBTITLE, "", "---", "",
              emit_part1(items), "---", "",
-             emit_part2(items, clusters), "---", "",
-             emit_part3(items, tax, clusters)]
+             emit_part2(items, uniques), "---", "",
+             emit_part3(items, cats, uniques)]
     return "\n".join(parts) + "\n"
 
-def to_pdf(md_path, pdf_path):
+STYLED_CSS = """
+@page { size: letter; margin: 0.9in 0.85in; }
+body { font-family: 'DejaVu Sans', sans-serif; font-size: 10.5pt; line-height: 1.45; }
+h1 { font-size: 20pt; border-bottom: 2px solid #333; padding-bottom: 4px; }
+h2 { font-size: 15pt; border-bottom: 1px solid #bbb; padding-bottom: 3px; margin-top: 20px; }
+h3 { font-size: 12.5pt; margin-top: 16px; }
+h4 { font-size: 11pt; margin-top: 12px; }
+li { margin-bottom: 2px; } strong, em { color: #000; }
+"""
+
+# Plain default styling (browser-default-ish) for markdown files that aren't
+# generated docs — logs, tables, notes. No custom fonts/spacing/rules.
+PLAIN_CSS = """
+@page { size: letter; margin: 1in; }
+body { font-family: sans-serif; font-size: 12pt; }
+table { border-collapse: collapse; }
+td, th { border: 1px solid #ccc; padding: 4px 8px; }
+"""
+
+def to_pdf(md_path, pdf_path, css=STYLED_CSS):
     import markdown
-    css = """
-    @page { size: letter; margin: 0.9in 0.85in; }
-    body { font-family: 'DejaVu Sans', sans-serif; font-size: 10.5pt; line-height: 1.45; }
-    h1 { font-size: 20pt; border-bottom: 2px solid #333; padding-bottom: 4px; }
-    h2 { font-size: 15pt; border-bottom: 1px solid #bbb; padding-bottom: 3px; margin-top: 20px; }
-    h3 { font-size: 12.5pt; margin-top: 16px; }
-    h4 { font-size: 11pt; margin-top: 12px; }
-    li { margin-bottom: 2px; } strong, em { color: #000; }
-    """
     body = markdown.markdown(md_path.read_text(), extensions=["extra", "sane_lists"])
     html = f"<!DOCTYPE html><html><head><meta charset='utf-8'><style>{css}</style></head><body>{body}</body></html>"
     tmp = OUT / "_render.html"
@@ -122,8 +127,8 @@ def to_pdf(md_path, pdf_path):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    items, tax, clusters = load()
-    md = build_md(items, tax, clusters)
+    items, cats, uniques = load()
+    md = build_md(items, cats, uniques)
     md_path = OUT / "use_cases_analysis.md"
     md_path.write_text(md)
     print(f"wrote {md_path.relative_to(ROOT)}  ({len(items)} items)")
@@ -131,6 +136,13 @@ def main():
         pdf_path = OUT / "use_cases_analysis.pdf"
         to_pdf(md_path, pdf_path)
         print(f"wrote {pdf_path.relative_to(ROOT)}")
+
+        for other_md in sorted(OUT.glob("*.md")):
+            if other_md.name == "use_cases_analysis.md":
+                continue
+            other_pdf = other_md.with_suffix(".pdf")
+            to_pdf(other_md, other_pdf, css=PLAIN_CSS)
+            print(f"wrote {other_pdf.relative_to(ROOT)}")
 
 if __name__ == "__main__":
     main()

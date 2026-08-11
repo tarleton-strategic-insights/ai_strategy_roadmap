@@ -17,21 +17,29 @@ move the roadmap forward iteration by iteration.
 
 - `pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/` —
   structured source of truth. Edit these, not the generated docs.
-  - `items.yaml` — every use-case idea as a record (provenance ID, source group, text,
-    cluster, category, key personnel). IDs (A1–I4) trace to the original flip-chart photos.
-  - `taxonomy.yaml` — the category scheme (use-cases / capabilities / framings), the
-    three use-case types, their facet profiles, and key-personnel mapping.
-  - `clusters.yaml` — de-duplication clusters (repeated ideas grouped across source groups).
-  - `use_cases_analysis.md` / `.pdf` — build outputs. Never hand-edit; regenerate.
-- `pac_retreat_sources/post_event_analysis/strategic_insights/cook/vision statements/` —
-  vision-statement transcriptions (from retreat flip charts) and cross-statement synopsis.
+  - `raw_items.yaml` — every use-case idea as a record (provenance ID, source group,
+    text). IDs (A1–I4) trace to the original flip-chart photos. Carries no category or
+    dedup field — those live solely in categories.yaml/unique_items.yaml, so there is
+    nothing here that can fall out of sync with them.
+  - `categories.yaml` — sole authoritative category scheme AND membership (use-cases /
+    capabilities), the three use-case types, their facet profiles, key-personnel
+    mapping, and each category's `items:` list of unique_items IDs (not raw item IDs).
+    Every unique_items entry belongs to exactly one category — no spanning.
+  - `unique_items.yaml` — sole authoritative deduplication: every raw item appears in
+    exactly one entry's `items:` list (multi-item entries are duplicates of the same
+    idea; single-item entries are singletons, `label:` = the item's own text). Keys are
+    arbitrary sequential slugs (X1, X2, ...), decoupled from content. categories.yaml
+    categorizes at this level, not the raw-item level.
 - `pac_retreat_sources/post_event_analysis/strategic_insights/hutyra/` — authored
   documents (the four PAC docs; read-only reference).
 - `build/` — `validate.py` (integrity checks) and `generate.py` (the generation
-  pipeline: yaml -> md -> styled HTML -> PDF).
-- `roadmap/` — `ai_infrastructure.md` (platform catalog + job roles/org units),
-  `OPEN_DECISIONS.md` (adjudicated decisions and the open-decision log, ADR-style),
-  `post_retreat_discussion.md`.
+  pipeline: yaml -> md -> styled HTML -> PDF). Also renders a plain PDF for every other
+  `.md` file in `roadmap/`.
+- `roadmap/` — `ai_strategy_develop.md` (platform catalog + job roles/org units),
+  `open_decisions.md` (what needs adjudication), `resolved_decisions.md` (adjudicated
+  decisions, ADR-style), `post_retreat_discussion.md`, `vision_statements_analysis.md`
+  (vision-statement transcriptions + synopsis), and `use_cases_analysis.md` / `.pdf`
+  (build outputs from the `use_cases/*.yaml` above — never hand-edit; regenerate).
 
 ## Core conventions
 
@@ -43,53 +51,66 @@ move the roadmap forward iteration by iteration.
    (use-case 1/2/3) is separate and *may* change.
 3. **Alignment with PAC docs is tracked, not assumed.** The executive PAC documents use a
    three-**bucket** framework. This repo's categories map to those buckets but are not
-   identical. `roadmap/OPEN_DECISIONS.md` tracks every known divergence awaiting
+   identical. `roadmap/open_decisions.md` tracks every known divergence awaiting
    adjudication. Do not silently "fix" a divergence — surface it.
 4. **Nothing gets dropped.** Every source item lands in exactly one category. If an item
    fits nowhere, that is a signal to revisit the taxonomy, not to discard the item.
 
 ## The categorization framework (current state)
 
-Items partition into three top-level kinds:
+Categorization applies at the **unique_items** (deduplicated) level, not the raw-item
+level — every unique_items entry belongs to exactly one category. Where an entry's
+member raw items previously disagreed (e.g. a duplicate group mixing a curriculum item
+with a workforce item), a single category was chosen by explicit adjudication rather
+than split across categories.
+
+Unique items partition into two top-level kinds:
 
 - **Use-cases** — resourceable work, split by the scarce *key personnel* each depends on:
-  1. Workforce development — organizers (wide & deep coordination on structure)
-  2. Curriculum integration — subject-matter experts (narrow & deep on content)
+  1. Curriculum integration — subject-matter experts (narrow & deep on content)
+  2. Workforce development — organizers (wide & deep coordination on structure)
   3. AI solution delivery — AI engineers (narrow & deep on technical)
 - **Capabilities / Foundation** — cross-cutting preconditions (governance, security,
   advisory board); not sorted by personnel.
-- **Framings** — strategic lenses and models (Extend/Defend/Upend; the "AI Competitive
-  Flywheel"); consume no resources.
 
-See `use_cases/taxonomy.yaml` for the authoritative definition and `roadmap/OPEN_DECISIONS.md`
-for unresolved framework questions (notably: use-case ordering vs. PAC bucket numbers,
-and two contested item placements).
+(A former third top-level kind, **Framings** — strategic lenses/models that consumed no
+resources — was removed 2026-08-11: once categorization moved to the unique_items level,
+every framings-flavored raw item turned out to be the minority member of a duplicate
+group whose majority belonged elsewhere, leaving the category permanently empty.)
+
+See `use_cases/categories.yaml` for the authoritative definition and `roadmap/open_decisions.md`
+for unresolved framework questions (notably a lingering ordering divergence vs. PAC bucket
+numbers, and two contested item placements).
 
 ## Relationship to the PAC three-bucket framework
 
 | This repo (use-case) | PAC document (bucket) | Owner |
 |---|---|---|
+| Curriculum integration | Bucket 3: Curriculum Integration | Academic Affairs (TBD); SI advises |
 | Workforce development | Bucket 1: Workforce Upskilling | Org lead (TBD); SI advises |
 | AI solution delivery | Bucket 2: High-Technical Projects | **SI owns** |
-| Curriculum integration | Bucket 3: Curriculum Integration | Academic Affairs (TBD); SI advises |
 | Capabilities / Foundation | Cross-Cutting Foundations | rides along all buckets |
-| Framings | (not represented in PAC docs) | — |
 
-**Known ordering conflict:** this repo currently orders use-cases Workforce/Curriculum/
-AI-solution (1/2/3); PAC buckets order Workforce/Technical/Curriculum (1/2/3). Slots 2 and
-3 are transposed. Unresolved — see OPEN_DECISIONS.
+**Ordering vs. PAC buckets:** this repo currently orders use-cases Curriculum/Workforce/
+AI-solution (1/2/3); PAC buckets order Workforce/AI-solution/Curriculum (1/2/3) — every
+slot differs. This is adjudicated, not an oversight (OD-1, resolved): the repo
+deliberately keeps its own internal ordering rather than matching PAC's, and that
+internal ordering has itself been revised twice (ADR-1, then ADR-9 in
+`roadmap/resolved_decisions.md`) for internal-readability and ownership-signaling reasons
+unrelated to PAC alignment. See `roadmap/resolved_decisions.md` for the full history.
 
 ## Build
 
 ```
-python build/generate.py            # regenerate use_cases_analysis.md/.pdf from use_cases/*.yaml
+python build/generate.py            # regenerate roadmap/use_cases_analysis.md/.pdf from use_cases/*.yaml,
+                                     # then a plain PDF for every other roadmap/*.md
 ```
 
 Requires `markdown` (pip) and `wkhtmltopdf` (system). See `build/generate.py` header.
 
 ## Current status
 
-- Categorization: complete draft; 6 alignment/adjudication items open.
+- Categorization: complete draft; 6 alignment/adjudication items open (see `roadmap/open_decisions.md`).
 - Priority vote: not yet held (immediate next step per PAC exec brief).
 - Owners for Buckets 1 & 3: unnamed.
 - MLOps/DevOps hire (the last-mile gap): recommended, not yet approved.
