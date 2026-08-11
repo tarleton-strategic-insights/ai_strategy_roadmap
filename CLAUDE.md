@@ -112,5 +112,6 @@ Requires `markdown` (pip) and `wkhtmltopdf` (system). See `build/generate.py` he
 
 - Categorization: complete draft; 6 alignment/adjudication items open (see `roadmap/open_decisions.md`).
 - Priority vote: not yet held (immediate next step per PAC exec brief).
-- Owners for Buckets 1 & 3: unnamed.
+- Owners: Curriculum Integration — Denise Martinez. AI Solution Delivery — Scott Cook.
+  Workforce Development still unnamed — see OD-8 in `roadmap/open_decisions.md`.
 - MLOps/DevOps hire (the last-mile gap): recommended, not yet approved.
