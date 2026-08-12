@@ -8,16 +8,16 @@ files) plus vision_synthesis.yaml.
 PDFs are off by default — this repo is pushed to GitHub, which renders markdown
 natively, so committed PDFs would just be stale duplicates. Pass --pdf to also render
 use_cases_analysis.pdf (styled) and a plain-styled PDF for every other .md in
-pac_retreat/, e.g. for sharing outside GitHub.
+pac_retreat/ and roadmap/, e.g. for sharing outside GitHub.
 
 Deps: pip install pyyaml markdown  ;  system: wkhtmltopdf (only needed with --pdf)
 Usage: python build/generate.py [--pdf]
 
 Produces:
-  pac_retreat/use_cases_analysis.md
-  pac_retreat/pac_report.md
-  pac_retreat/use_cases_analysis.pdf    (only with --pdf; styled)
-  pac_retreat/<other .md>.pdf           (only with --pdf; plain default styling)
+  pac_retreat/analysis/use_cases_analysis.md
+  pac_report.md                              (repo top level)
+  pac_retreat/analysis/use_cases_analysis.pdf (only with --pdf; styled)
+  <other .md>.pdf                            (only with --pdf; plain default styling)
 """
 import sys, subprocess, datetime
 from pathlib import Path
@@ -26,14 +26,15 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 COOK = ROOT / "pac_retreat/analysis/strategic_insights/cook"
 DATA = COOK / "use_cases"
-OUT = ROOT / "pac_retreat"
+ANALYSIS = ROOT / "pac_retreat/analysis"
+OUT = ROOT
 ROADMAP = ROOT / "roadmap"
 TITLE = "PAC AI Use Case Brainstorm 2026-07-27"
 SUBTITLE = ("Source: `pac_retreat/sources/event_artifacts/images/use_cases/` "
             "(9 flip-chart photos from a Gartner-facilitated workshop, breakout "
             "group notes, sent by Drew Doolin, 2026-07-30). "
             "Categorization framework adjudicated — see ADR-8 and ADR-9 in "
-            "[resolved_decisions.md](../roadmap/decisions/resolved_decisions.md).")
+            "[resolved_decisions.md](../../roadmap/decisions/resolved_decisions.md).")
 
 def load():
     items = yaml.safe_load((DATA / "raw_items.yaml").read_text())["items"]
@@ -51,7 +52,7 @@ def by_group(items):
 def emit_part1(items):
     out = ["## Part 1 — Direct Extraction (enumerated)\n",
            "Defined in "
-           "[raw_items.yaml](analysis/strategic_insights/cook/use_cases/raw_items.yaml).\n"]
+           "[raw_items.yaml](strategic_insights/cook/use_cases/raw_items.yaml).\n"]
     for g, its in sorted(by_group(items).items()):
         out.append(f"### Group {g}")
         for i, it in enumerate(its, 1):
@@ -63,7 +64,7 @@ def emit_part2(items, uniques):
     out = ["## Part 2 — Deduplicated (nothing removed; every item lands in exactly "
            "one entry below)\n",
            "Defined in "
-           "[unique_items.yaml](analysis/strategic_insights/cook/use_cases/unique_items.yaml).\n"]
+           "[unique_items.yaml](strategic_insights/cook/use_cases/unique_items.yaml).\n"]
     by_id = {it["id"]: it for it in items}
     for uid, u in uniques.items():
         out.append(f"### {u['label']}")
@@ -138,9 +139,9 @@ def emit_part3(items, personnel, outcomes, uniques):
            "that each reveal "
            "important patterns: by outcome and by personnel.\n",
            "Defined in "
-           "[outcomes.yaml](analysis/strategic_insights/cook/use_cases/outcomes.yaml) "
+           "[outcomes.yaml](strategic_insights/cook/use_cases/outcomes.yaml) "
            "and "
-           "[personnel.yaml](analysis/strategic_insights/cook/use_cases/personnel.yaml) "
+           "[personnel.yaml](strategic_insights/cook/use_cases/personnel.yaml) "
            "using deduplicated (unique) items.\n",
            emit_part3a_outcomes(uniques, outcomes),
            "",
@@ -169,7 +170,7 @@ def emit_report_vision():
     return (f"## Vision Statement\n\n> {synthesis}\n\n"
             f"This synthesis of the {VISION_STATEMENT_COUNT} original vision statements "
             "was created by a human+AI team. See "
-            "[vision_statements_analysis.md](vision_statements_analysis.md) for details.\n")
+            "[vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md) for details.\n")
 
 def emit_report_use_cases(items, personnel, outcomes, uniques):
     out = ["## Use Cases\n",
@@ -178,7 +179,7 @@ def emit_report_use_cases(items, personnel, outcomes, uniques):
            "reveal important patterns: by outcome and by personnel.\n",
            f"This synthesis of the {len(items)} suggested use cases was created by a "
            "human+AI team. See "
-           "[use_cases_analysis.md](use_cases_analysis.md) for details.\n",
+           "[use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md) for details.\n",
            emit_part3a_outcomes(uniques, outcomes),
            "",
            emit_part3b_personnel(personnel, uniques)]
@@ -224,10 +225,10 @@ def to_pdf(md_path, pdf_path, css=STYLED_CSS):
     tmp.unlink()
 
 def main():
-    OUT.mkdir(parents=True, exist_ok=True)
+    ANALYSIS.mkdir(parents=True, exist_ok=True)
     items, personnel, outcomes, uniques = load()
     md = build_md(items, personnel, outcomes, uniques)
-    md_path = OUT / "use_cases_analysis.md"
+    md_path = ANALYSIS / "use_cases_analysis.md"
     md_path.write_text(md)
     print(f"wrote {md_path.relative_to(ROOT)}  ({len(items)} items)")
 
@@ -237,11 +238,13 @@ def main():
     print(f"wrote {report_path.relative_to(ROOT)}")
 
     if "--pdf" in sys.argv:
-        pdf_path = OUT / "use_cases_analysis.pdf"
+        pdf_path = md_path.with_suffix(".pdf")
         to_pdf(md_path, pdf_path)
         print(f"wrote {pdf_path.relative_to(ROOT)}")
 
-        other_mds = [p for p in sorted(OUT.glob("*.md")) if p.name != "use_cases_analysis.md"]
+        other_mds = [report_path]
+        other_mds += sorted(p for p in (ROOT / "pac_retreat").rglob("*.md")
+                             if p.name != "use_cases_analysis.md")
         other_mds += sorted(ROADMAP.rglob("*.md"))
         for other_md in other_mds:
             other_pdf = other_md.with_suffix(".pdf")

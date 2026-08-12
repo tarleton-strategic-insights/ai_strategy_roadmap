@@ -15,47 +15,60 @@ move the roadmap forward iteration by iteration.
 
 ## Layout
 
+- `docs/` — `README.md` (quick start, this layout section) and `CLAUDE.md` (this
+  file). Moved out of the repo top level so a visitor landing on the GitHub repo page
+  isn't confused by internal working docs; the top-level `README.md` is a short stub
+  pointing here.
+- `pac_report.md` (repo top level) — build output: Introduction + Vision Statement +
+  Use Cases (the latter re-deriving the outcome/personnel breakdown from
+  `use_cases/*.yaml`). Never hand-edit; regenerate. Lives at top level (not under
+  `pac_retreat/`) because it's the primary PAC-facing deliverable.
+- `followup_message.md` (repo top level) — PAC-facing follow-up survey draft.
 - `pac_retreat/sources/` — raw retreat materials (flip-chart photos, slides, pre-event
   case-study research). Read-only reference; never edited.
-- `pac_retreat/analysis/strategic_insights/cook/use_cases/` — structured source of
-  truth. Edit these, not the generated docs.
-  - `raw_items.yaml` — every use-case idea as a record (provenance ID, source group,
-    text). IDs (A1–I4) trace to the original flip-chart photos. Carries no personnel,
-    outcome, or dedup field — those live solely in personnel.yaml/outcomes.yaml/
-    unique_items.yaml, so there is nothing here that can fall out of sync with them.
-  - `unique_items.yaml` — sole authoritative deduplication: every raw item appears in
-    exactly one entry's `items:` list (multi-item entries are duplicates of the same
-    idea; single-item entries are singletons, `label:` = the item's own text). Keys are
-    arbitrary sequential slugs (X1, X2, ...), decoupled from content. Both
-    personnel.yaml and outcomes.yaml categorize at this level, not the raw-item level.
-  - `personnel.yaml` — sole authoritative **personnel** scheme AND membership
-    (use-cases / capabilities): the three use-case types, and for each, a Leaders/Doers
-    role breakdown (title, one-line description(s), an `ai_expertise` rating) plus its
-    `items:` list of unique_items IDs (not raw item IDs). Every unique_items entry
-    belongs to exactly one personnel category — no spanning. Answers "what roles/skills
-    does this work need?" — drives hiring/promoting/organizing decisions.
-  - `outcomes.yaml` — sole authoritative **outcome** scheme AND membership: which
-    strategic objective each unique_items entry serves. Independent axis from
-    personnel — the two don't have to agree and aren't derived from each other. Every
-    unique_items entry belongs to exactly one outcome. Set mirrors `roadmap/survey.md`'s
-    three PAC-facing priorities plus a Foundations catch-all.
-- `pac_retreat/analysis/strategic_insights/cook/vision_synthesis.yaml` — sole
-  authoritative source for the official vision statement (adjudicated 2026-08-12,
-  ADR-11) quoted in `pac_retreat/pac_report.md`'s Vision Statement section and (by
-  hand) in `pac_retreat/vision_statements_analysis.md`'s "Synthesized Vision
-  Statement" section.
-- `pac_retreat/analysis/strategic_insights/hutyra/` — authored documents (the four PAC
-  docs; read-only reference).
-- `pac_retreat/` (top level) — build outputs: `pac_report.md` (Introduction + Vision
-  Statement + Use Cases, the latter re-deriving the outcome/personnel breakdown from
-  `use_cases/*.yaml`), `use_cases_analysis.md`, `vision_statements_analysis.md`
-  (vision-statement transcriptions + synopsis, hand-maintained except the synthesis
-  quote). Never hand-edit `pac_report.md` or `use_cases_analysis.md`; regenerate.
+- `pac_retreat/analysis/` — structured source of truth and its generated/hand-authored
+  analysis docs.
+  - `use_cases_analysis.md` — build output (Parts 1–3 of use-case extraction,
+    dedup, and categorization). Never hand-edit; regenerate.
+  - `vision_statements_analysis.md` — vision-statement transcriptions + synopsis,
+    hand-maintained except the Synthesized Vision Statement quote.
+  - `strategic_insights/cook/use_cases/` — structured source of truth. Edit these,
+    not the generated docs.
+    - `raw_items.yaml` — every use-case idea as a record (provenance ID, source
+      group, text). IDs (A1–I4) trace to the original flip-chart photos. Carries no
+      personnel, outcome, or dedup field — those live solely in
+      personnel.yaml/outcomes.yaml/unique_items.yaml, so there is nothing here that
+      can fall out of sync with them.
+    - `unique_items.yaml` — sole authoritative deduplication: every raw item appears
+      in exactly one entry's `items:` list (multi-item entries are duplicates of the
+      same idea; single-item entries are singletons, `label:` = the item's own
+      text). Keys are arbitrary sequential slugs (X1, X2, ...), decoupled from
+      content. Both personnel.yaml and outcomes.yaml categorize at this level, not
+      the raw-item level.
+    - `personnel.yaml` — sole authoritative **personnel** scheme AND membership
+      (use-cases / capabilities): the three use-case types, and for each, a
+      Leaders/Doers role breakdown (title, one-line description(s), an
+      `ai_expertise` rating) plus its `items:` list of unique_items IDs (not raw
+      item IDs). Every unique_items entry belongs to exactly one personnel category
+      — no spanning. Answers "what roles/skills does this work need?" — drives
+      hiring/promoting/organizing decisions.
+    - `outcomes.yaml` — sole authoritative **outcome** scheme AND membership: which
+      strategic objective each unique_items entry serves. Independent axis from
+      personnel — the two don't have to agree and aren't derived from each other.
+      Every unique_items entry belongs to exactly one outcome. Set mirrors
+      `followup_message.md`'s three PAC-facing priorities plus a Foundations
+      catch-all.
+  - `strategic_insights/cook/vision_synthesis.yaml` — sole authoritative source for
+    the official vision statement (adjudicated 2026-08-12, ADR-11) quoted in
+    `pac_report.md`'s Vision Statement section and (by hand) in
+    `vision_statements_analysis.md`'s "Synthesized Vision Statement" section.
+  - `strategic_insights/hutyra/` — authored documents (the four PAC docs; read-only
+    reference).
 - `build/` — `validate.py` (integrity checks) and `generate.py` (yaml -> md, always;
   optionally md -> styled HTML -> PDF for every `.md` in `pac_retreat/` and `roadmap/`
   with `--pdf`). PDFs are gitignored — this repo is pushed to GitHub, which renders
   markdown natively, so committed PDFs would just be stale duplicates.
-- `roadmap/` — hand-authored roadmap docs: `survey.md` at top level;
+- `roadmap/` — hand-authored roadmap docs:
   `decisions/open_decisions.md` (what needs adjudication) and
   `decisions/resolved_decisions.md` (adjudicated decisions, ADR-style);
   `resources/infrastructure.md` (AI platform catalog),
@@ -89,7 +102,7 @@ to agree with each other and neither is derived from the other:
 - **Personnel** (`personnel.yaml`) — what roles/skills the work needs (a Leaders/Doers
   breakdown per category). Drives hiring/promoting/organizing decisions.
 - **Outcome** (`outcomes.yaml`) — which strategic objective the work serves. Mirrors the
-  PAC-facing priorities in `roadmap/survey.md`.
+  PAC-facing priorities in `followup_message.md`.
 
 Both axes apply at the **unique_items** (deduplicated) level, not the raw-item level —
 every unique_items entry belongs to exactly one group on each axis. Where an entry's
@@ -129,7 +142,7 @@ ordering divergence vs. PAC bucket numbers, and two contested item placements).
 
 ### Outcome
 
-Four groups (added 2026-08-12), three mirroring `roadmap/survey.md`'s PAC-facing
+Four groups (added 2026-08-12), three mirroring `followup_message.md`'s PAC-facing
 priorities plus a catch-all for entries none of the three cover:
 
 1. Accelerate Student Retention and Success
@@ -159,7 +172,7 @@ unrelated to PAC alignment. See `roadmap/decisions/resolved_decisions.md` for th
 ## Build
 
 ```
-python build/generate.py            # regenerate pac_retreat/use_cases_analysis.md and pac_report.md from use_cases/*.yaml
+python build/generate.py            # regenerate pac_retreat/analysis/use_cases_analysis.md and pac_report.md (top level) from use_cases/*.yaml
 python build/generate.py --pdf      # also render PDFs (gitignored; GitHub renders md natively)
 ```
 

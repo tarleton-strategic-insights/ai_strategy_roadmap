@@ -6,7 +6,7 @@
 # Membership is defined at the unique_items (unique_items.yaml) level, not the raw-item
 # level: every unique_items entry (X1, X2, ...) belongs to exactly one outcome.
 #
-# Set mirrors the three PAC-facing priorities in roadmap/survey.md, plus a catch-all for
+# Set mirrors the three PAC-facing priorities in followup_message.md, plus a catch-all for
 # entries that don't serve any of those three directly (e.g. governance, research
 # capacity) — added 2026-08-12 so every unique_items entry still lands somewhere.
 

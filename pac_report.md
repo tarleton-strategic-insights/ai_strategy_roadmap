@@ -8,7 +8,7 @@ This report synthesizes the outcomes of Tarleton State's PAC AI strategy retreat
 
 > Tarleton State University will responsibly use AI to improve student success, workforce readiness, and institutional operations, while protecting the integrity, privacy, and trust of our students, faculty, staff, and community.
 
-This synthesis of the 7 original vision statements was created by a human+AI team. See [vision_statements_analysis.md](vision_statements_analysis.md) for details.
+This synthesis of the 7 original vision statements was created by a human+AI team. See [vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md) for details.
 
 ---
 
@@ -16,7 +16,7 @@ This synthesis of the 7 original vision statements was created by a human+AI tea
 
 We analyze all use cases suggested during the PAC retreat by combining duplicate items then categorizing them in two distinct ways that each reveal important patterns: by outcome and by personnel.
 
-This synthesis of the 51 suggested use cases was created by a human+AI team. See [use_cases_analysis.md](use_cases_analysis.md) for details.
+This synthesis of the 51 suggested use cases was created by a human+AI team. See [use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md) for details.
 
 ### By Outcomes
 

@@ -3,66 +3,66 @@ We’d like to thank you for the time and energy you brought to PAC’s AI strat
 
 Three clear priorities emerged from our time together:
 
-    Accelerate Student Retention and Success Through AI
-    Integrate AI Across the Curriculum and Create AI Certificates
-    Enhance Service and Operations Through AI
+- Accelerate Student Retention and Success Through AI
+- Integrate AI Across the Curriculum and Create AI Certificates
+- Enhance Service and Operations Through AI
 
 The foundational enablers of these three priorities will be to:
 
-    Equip our faculty and staff to use AI effectively and responsibly, 
-    Resource AI initiatives/projects adequately
-    Provide guidance and guardrails to keep our data and systems safe
+- Equip our faculty and staff to use AI effectively and responsibly, 
+- Resource AI initiatives/projects adequately
+- Provide guidance and guardrails to keep our data and systems safe
 
 The next step will be for you to complete a brief ranking survey to help us prioritize steps to move from strategy to action for the coming year. 
 
 We’re excited for the journey ahead! Thank you again for your contributions.
 
 # Survey
-1. Where does Tarleton fall on the AI ambition spectrum
+- Where does Tarleton fall on the AI ambition spectrum
 [insert image for Kristen Richardsen slide 3 here]
 
 Rank these AI-focused initiatives from highest to lowest priority
-1. Accelerate Student Retention and Success
-    Tutoring and academic support
-    Advising and degree planning
-    Early-alert for at-risk students
-    Personalized student communications
-    Career readiness and job placement
-    Student services and problem resolution
+- Accelerate Student Retention and Success
+    - Tutoring and academic support
+    - Advising and degree planning
+    - Early-alert for at-risk students
+    - Personalized student communications
+    - Career readiness and job placement
+    - Student services and problem resolution
 Other ideas: (Open response)
 
-1. Integrate AI Competencies Across the Curriculum and Create AI Certificates
-    Identify core AI competencies for every Tarleton graduate
-    Integrate AI into existing academic programs
-    Create new AI projects, internships, and experiential learning opportunities
-    Launch AI certificates/microcredentials for students and working professionals
-    Develop industry partnerships to align AI skills with workforce needs   
+- Integrate AI Competencies Across the Curriculum and Create AI Certificates
+    - Identify core AI competencies for every Tarleton graduate
+    - Integrate AI into existing academic programs
+    - Create new AI projects, internships, and experiential - learning opportunities
+    - Launch AI certificates/microcredentials for students and working professionals
+    - Develop industry partnerships to align AI skills with workforce needs   
 Other ideas: (Open response)
 [combined 2 similar items]
 
-1. Enhance Service and Operations
-    Streamline business processes and automate routine tasks
-    Improve service speed and quality
-    Increase employee productivity through AI-enabled tools
-    Enhance access to institutional knowledge and data-informed decision support
+- Enhance Service and Operations
+    - Streamline business processes and automate routine tasks
+    - Improve service speed and quality
+    - Increase employee productivity through AI-enabled tools
+    - Enhance access to institutional knowledge and data-informed decision support
 Other ideas: (Open response)
 
-1. Rank these training formats from most to least effective for your team
-- 5 min videos on a specific topic (on-demand)
-- In-person workshops
-- Coursera-style learning paths (on-demand)
-- Presentations embedded in team meeting
-- etc
+- Rank these training formats from most to least effective for your team
+    - 5 min videos on a specific topic (on-demand)
+    - In-person workshops
+    - Coursera-style learning paths (on-demand)
+    - Presentations embedded in team meeting
+    - etc
 
-1. Suppose we offer advanced training to equip a member of your team as your AI champion to faciliate your team's AI journey and develop tailored AI solutions.
-- Would you support this with funding and dedicated time & effort?
-- Do you have someone who would want this role?
+- Suppose we offer advanced training to equip a member of your team as your AI champion to faciliate your team's AI journey and develop tailored AI solutions.
+    - Would you support this with funding and dedicated time & effort?
+    - Do you have someone who would want this role?
 
-1. As we plan to integrate AI into our curriculum
-- What suggestions do you have
-- What challenges do you foresee
+- As we plan to integrate AI into our curriculum
+    - What suggestions do you have
+    - What challenges do you foresee
 
-1. As we plan to equip our faculty and staff to use AI effectively and responsibly
-- What suggestions do you have
-- What challenges do you foresee
+- As we plan to equip our faculty and staff to use AI effectively and responsibly
+    - What suggestions do you have
+    - What challenges do you foresee
 

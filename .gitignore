@@ -1,5 +1,5 @@
 __pycache__/
 *.pyc
-roadmap/_render.html
-roadmap/*.pdf
+/_render.html
+*.pdf
 .venv/

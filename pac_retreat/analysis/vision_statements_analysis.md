@@ -3,7 +3,7 @@
 Transcribed verbatim from flip-chart photos taken at the PAC retreat, 2026-07-28.
 Source: `pac_retreat/sources/event_artifacts/images/vision_statements/` (5 photos,
 7 distinct statements). Adjudicated into a single official vision (the Synthesized
-Vision Statement below) — see ADR-11 in `../roadmap/decisions/resolved_decisions.md`.
+Vision Statement below) — see ADR-11 in `../../roadmap/decisions/resolved_decisions.md`.
 
 ---
 
