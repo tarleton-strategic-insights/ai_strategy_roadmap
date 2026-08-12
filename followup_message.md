@@ -15,6 +15,8 @@ The foundational enablers of these three priorities will be to:
 
 The next step will be for you to complete a brief ranking survey to help us prioritize steps to move from strategy to action for the coming year. 
 
+All PAC members received access to M365 CoPilot Pro for one month for the July 27 retreat which will expire on 8/31. If you would like to continue your license at $18 per month, please contact ITS through Laura Isbell and provide an account number.
+
 We’re excited for the journey ahead! Thank you again for your contributions.
 
 # Survey
