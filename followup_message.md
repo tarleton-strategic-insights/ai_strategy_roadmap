@@ -21,38 +21,38 @@ We’re excited for the journey ahead! Thank you again for your contributions.
 - Where does Tarleton fall on the AI ambition spectrum
 [insert image for Kristen Richardsen slide 3 here]
 
-Rank these AI-focused initiatives from highest to lowest priority
-- Accelerate Student Retention and Success
-    - Tutoring and academic support
-    - Advising and degree planning
-    - Early-alert for at-risk students
-    - Personalized student communications
-    - Career readiness and job placement
-    - Student services and problem resolution
-Other ideas: (Open response)
+- Rank these AI-focused initiatives from highest to lowest priority
+    - Accelerate Student Retention and Success
+        - Tutoring and academic support
+        - Advising and degree planning
+        - Early-alert for at-risk students
+        - Personalized student communications
+        - Career readiness and job placement
+        - Student services and problem resolution
+    Other ideas: (Open response)
 
-- Integrate AI Competencies Across the Curriculum and Create AI Certificates
-    - Identify core AI competencies for every Tarleton graduate
-    - Integrate AI into existing academic programs
-    - Create new AI projects, internships, and experiential - learning opportunities
-    - Launch AI certificates/microcredentials for students and working professionals
-    - Develop industry partnerships to align AI skills with workforce needs   
-Other ideas: (Open response)
-[combined 2 similar items]
+    - Integrate AI Competencies Across the Curriculum and Create AI Certificates
+        - Identify core AI competencies for every Tarleton graduate
+        - Integrate AI into existing academic programs
+        - Create new AI projects, internships, and experiential - learning opportunities
+        - Launch AI certificates/microcredentials for students and working professionals
+        - Develop industry partnerships to align AI skills with workforce needs   
+    Other ideas: (Open response)
+    [combined 2 similar items]
 
-- Enhance Service and Operations
-    - Streamline business processes and automate routine tasks
-    - Improve service speed and quality
-    - Increase employee productivity through AI-enabled tools
-    - Enhance access to institutional knowledge and data-informed decision support
-Other ideas: (Open response)
+    - Enhance Service and Operations
+        - Streamline business processes and automate routine tasks
+        - Improve service speed and quality
+        - Increase employee productivity through AI-enabled tools
+        - Enhance access to institutional knowledge and data-informed decision support
+    Other ideas: (Open response)
 
 - Rank these training formats from most to least effective for your team
     - 5 min videos on a specific topic (on-demand)
     - In-person workshops
     - Coursera-style learning paths (on-demand)
-    - Presentations embedded in team meeting
-    - etc
+    - embedded in your team meetings
+    - [Add more later]
 
 - Suppose we offer advanced training to equip a member of your team as your AI champion to faciliate your team's AI journey and develop tailored AI solutions.
     - Would you support this with funding and dedicated time & effort?
