@@ -19,7 +19,8 @@ We’re excited for the journey ahead! Thank you again for your contributions.
 
 # Survey
 - Where should Tarleton be on the AI ambition spectrum
-[insert image from Kristen Richardson slide 3 here]
+
+![AI ambition spectrum: Not AI-enabled, AI-assisted, AI-augmented, AI-integrated, AI-centric, AI-native](pac_retreat/sources/event_artifacts/images/ai_ambition_spectrum.png)
 
 - Rank these AI-focused initiatives from highest to lowest priority
     - Accelerate Student Retention and Success
@@ -52,7 +53,7 @@ We’re excited for the journey ahead! Thank you again for your contributions.
     - In-person workshops
     - Coursera-style learning paths (on-demand)
     - embedded in your team meetings
-    - [Add more later]
+    - [please suggest additional options]
 
 - Suppose we offer advanced training to equip a member of your team as your AI champion to faciliate your team's AI journey and develop tailored AI solutions.
     - Would you support this with funding and dedicated time & effort?
