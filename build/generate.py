@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Regenerate use_cases_analysis.md from raw_items.yaml, categories.yaml, unique_items.yaml.
+Regenerate use_cases_analysis.md from raw_items.yaml, unique_items.yaml, personnel.yaml,
+and outcomes.yaml.
 
 PDFs are off by default — this repo is pushed to GitHub, which renders markdown
 natively, so committed PDFs would just be stale duplicates. Pass --pdf to also render
@@ -28,9 +29,10 @@ SUBTITLE = ("Source: 9 flip-chart photos from a Gartner-facilitated workshop "
 
 def load():
     items = yaml.safe_load((DATA / "raw_items.yaml").read_text())["items"]
-    cats = yaml.safe_load((DATA / "categories.yaml").read_text())
+    personnel = yaml.safe_load((DATA / "personnel.yaml").read_text())
+    outcomes = yaml.safe_load((DATA / "outcomes.yaml").read_text())["outcomes"]
     uniques = yaml.safe_load((DATA / "unique_items.yaml").read_text())["unique_items"]
-    return items, cats, uniques
+    return items, personnel, outcomes, uniques
 
 def by_group(items):
     groups = {}
@@ -58,42 +60,78 @@ def emit_part2(items, uniques):
         out.append("")
     return "\n".join(out)
 
-def emit_part3(items, cats, uniques):
-    out = ["## Part 3 — Categorization\n",
-           "Generated from the use_cases yaml. Membership is defined in categories.yaml "
-           "at the deduplicated (unique_items) level — every unique_items entry belongs "
-           "to exactly one category.\n"]
-    types = cats["kinds"]["use_cases"]["types"]
-    ordered = sorted(types.items(), key=lambda kv: kv[1]["ordinal"])
+def emit_uniques_list(items_list, uniques):
+    out = []
+    for uid in items_list:
+        u = uniques[uid]
+        n = len(u["items"])
+        out.append(f"- {u['label']} ({n} raw item{'s' if n != 1 else ''})")
+    return out
 
-    def emit_uniques_in(cat_def):
-        for uid in cat_def["items"]:
-            u = uniques[uid]
-            n = len(u["items"])
-            out.append(f"- {u['label']} ({n} raw item{'s' if n != 1 else ''})")
-
-    out.append("### Use-cases\n")
-    for tname, t in ordered:
-        pretty = tname.replace("_", " ").capitalize().replace("Ai ", "AI ")
-        out.append(f"#### {t['ordinal']}. {pretty}")
-        out.append(f"- Key personnel — {t['key_personnel']}")
-        for facet in ("structure", "content", "technical"):
-            label = f"***{facet.capitalize()}***" if facet == t["load_bearing_facet"] else facet.capitalize()
-            out.append(f"- {label}: {t['facets'][facet]}")
-        out.append("\nItems:")
-        emit_uniques_in(t)
+def emit_part3a_outcomes(uniques, outcomes):
+    out = ["### Part 3A: Outcomes\n",
+           "Categorize items based on the outcome it serves - highlights *WHY* we do "
+           "it and connects to the broader Tarleton strategic plan.\n",
+           "Defined in outcomes.yaml using deduplicated (unique) items.\n"]
+    for oname, odef in outcomes.items():
+        out.append(f"#### {odef['label']}\n")
+        out.extend(emit_uniques_list(odef["items"], uniques))
         out.append("")
-
-    out.append("### Capabilities / Foundation")
-    emit_uniques_in(cats["kinds"]["capabilities_foundation"])
-    out.append("")
     return "\n".join(out)
 
-def build_md(items, cats, uniques):
+def emit_roles(role_list):
+    out = []
+    for role in role_list:
+        out.append(f"    - {role['title']}")
+        for desc in role.get("descriptions", []):
+            out.append(f"        - {desc}")
+        if "ai_expertise" in role:
+            out.append(f"        - AI expertise: {role['ai_expertise']}")
+    return out
+
+def emit_personnel_category(label, cat_def, uniques):
+    out = [f"#### {label}", ""]
+    out.append("- Leaders")
+    out.extend(emit_roles(cat_def["leaders"]))
+    out.append("- Doers")
+    out.extend(emit_roles(cat_def["doers"]))
+    out.append("- Items")
+    for uid in cat_def["items"]:
+        u = uniques[uid]
+        n = len(u["items"])
+        out.append(f"    - {u['label']} ({n} raw item{'s' if n != 1 else ''})")
+    return out
+
+def emit_part3b_personnel(personnel, uniques):
+    out = ["### Part 3B — Personnel\n",
+           "Categorize items based on the personnel it requires - highlights *HOW* we "
+           "do it and informs resource allocation and planning decisions.\n",
+           "Defined in personnel.yaml using deduplicated (unique) items.\n"]
+    types = personnel["kinds"]["use_cases"]["types"]
+    ordered = sorted(types.items(), key=lambda kv: kv[1]["ordinal"])
+
+    for tname, t in ordered:
+        out.extend(emit_personnel_category(t["label"], t, uniques))
+        out.append("")
+
+    foundation = personnel["kinds"]["capabilities_foundation"]
+    out.extend(emit_personnel_category(foundation["label"], foundation, uniques))
+    return "\n".join(out)
+
+def emit_part3(items, personnel, outcomes, uniques):
+    out = ["## Part 3 - Categorize\n"
+           "We now categorize unique items in two distinct ways that each reveal "
+           "important patterns: by outcome and by personnel.\n",
+           emit_part3a_outcomes(uniques, outcomes),
+           "",
+           emit_part3b_personnel(personnel, uniques)]
+    return "\n".join(out)
+
+def build_md(items, personnel, outcomes, uniques):
     parts = [f"# {TITLE}", SUBTITLE, "", "---", "",
              emit_part1(items), "---", "",
              emit_part2(items, uniques), "---", "",
-             emit_part3(items, cats, uniques)]
+             emit_part3(items, personnel, outcomes, uniques)]
     return "\n".join(parts) + "\n"
 
 STYLED_CSS = """
@@ -131,8 +169,8 @@ def to_pdf(md_path, pdf_path, css=STYLED_CSS):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    items, cats, uniques = load()
-    md = build_md(items, cats, uniques)
+    items, personnel, outcomes, uniques = load()
+    md = build_md(items, personnel, outcomes, uniques)
     md_path = OUT / "use_cases_analysis.md"
     md_path.write_text(md)
     print(f"wrote {md_path.relative_to(ROOT)}  ({len(items)} items)")

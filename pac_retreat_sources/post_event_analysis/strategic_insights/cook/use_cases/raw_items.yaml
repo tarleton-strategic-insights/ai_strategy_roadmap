@@ -4,9 +4,10 @@
 # text:      the idea as captured on the flip chart.
 # note:      optional; open placement questions flagged with (OPEN).
 #
-# Category membership lives in categories.yaml; deduplication (which raw items
-# collapse into one idea) lives in unique_items.yaml. This file does not carry
-# category or dedup fields, so there is nothing here to fall out of sync.
+# Personnel membership lives in personnel.yaml, outcome membership lives in
+# outcomes.yaml, and deduplication (which raw items collapse into one idea) lives in
+# unique_items.yaml. This file does not carry any of those fields, so there is nothing
+# here to fall out of sync.
 
 items:
   # ---- Group A ----

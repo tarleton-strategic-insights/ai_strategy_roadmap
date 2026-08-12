@@ -13,8 +13,8 @@ python build/generate.py --pdf     # also render PDFs (not committed; repo is pu
 
 ## Where things live
 - `pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/` —
-  structured source of truth (`raw_items.yaml`, `categories.yaml`, `unique_items.yaml`).
-  Edit these; the generated doc lives in `roadmap/`, not here.
+  structured source of truth (`raw_items.yaml`, `unique_items.yaml`, `personnel.yaml`,
+  `outcomes.yaml`). Edit these; the generated doc lives in `roadmap/`, not here.
 - `pac_retreat_sources/post_event_analysis/strategic_insights/hutyra/` — the authored PAC
   documents (reference).
 - `roadmap/` — `open_decisions.md` (what needs adjudication), `resolved_decisions.md`
