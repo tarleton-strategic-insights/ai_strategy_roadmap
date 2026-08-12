@@ -1,9 +1,11 @@
 # PAC AI Use Case Brainstorm 2026-07-27
-Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group notes), sent by Drew Doolin, 2026-07-30.
+Source: `pac_retreat_sources/event_artifacts/images/use_cases/` (9 flip-chart photos from a Gartner-facilitated workshop, breakout group notes, sent by Drew Doolin, 2026-07-30). Categorization framework adjudicated — see ADR-8 and ADR-9 in [resolved_decisions.md](resolved_decisions.md).
 
 ---
 
 ## Part 1 — Direct Extraction (enumerated)
+
+Defined in [raw_items.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/raw_items.yaml).
 
 ### Group A
 1. A1: Employ AI for graduation (Extend)
@@ -77,6 +79,8 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 ---
 
 ## Part 2 — Deduplicated (nothing removed; every item lands in exactly one entry below)
+
+Defined in [unique_items.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/unique_items.yaml).
 
 ### Curriculum Integration
 - A3: Teaching to Learning (Upend)
@@ -172,13 +176,13 @@ Source: 9 flip-chart photos from a Gartner-facilitated workshop (breakout group 
 ---
 
 ## Part 3 - Categorize
-We now categorize unique items in two distinct ways that each reveal important patterns: by outcome and by personnel.
+We now categorize unique use cases from PAC retreat in two distinct ways that each reveal important patterns: by outcome and by personnel.
 
-### Part 3A: Outcomes
+Defined in [outcomes.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/outcomes.yaml) and [personnel.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/personnel.yaml) using deduplicated (unique) items.
+
+### By Outcomes
 
 Categorize items based on the outcome it serves - highlights *WHY* we do it and connects to the broader Tarleton strategic plan.
-
-Defined in outcomes.yaml using deduplicated (unique) items.
 
 #### Integrate AI Across the Curriculum and Create AI Certificates
 
@@ -213,14 +217,15 @@ Defined in outcomes.yaml using deduplicated (unique) items.
 - External advisory board(s) (1 raw item)
 
 
-### Part 3B — Personnel
+### By Personnel
 
 Categorize items based on the personnel it requires - highlights *HOW* we do it and informs resource allocation and planning decisions.
 
-Defined in personnel.yaml using deduplicated (unique) items.
-
 #### Integrate AI Across the Curriculum and Create AI Certificates
 
+- Champions
+    - Barry Lambert
+    - Denise Martinez
 - Leaders
     - Provost, deans, department heads
         - Establish academic structure and process (ex: stand-alone AI courses vs. embed AI in all courses vs. embed into capstones)
@@ -235,6 +240,8 @@ Defined in personnel.yaml using deduplicated (unique) items.
 
 #### Train & Empower Workforce
 
+- Champions
+    - TBD
 - Leaders
     - Coordinator
         - Organize & support training for all staff AND faculty (and possibly alumni, community partners, etc)
@@ -249,8 +256,11 @@ Defined in personnel.yaml using deduplicated (unique) items.
 
 #### Solutions Delivery
 
+- Champions
+    - Scott Cook
+    - Zach Gorman
 - Leaders
-    - Chief AI Officer
+    - Chief engineer
         - Develop, architect, and guide multiple complex AI projects
         - Evaluate & manage 3rd-party AI products
         - AI expertise: high

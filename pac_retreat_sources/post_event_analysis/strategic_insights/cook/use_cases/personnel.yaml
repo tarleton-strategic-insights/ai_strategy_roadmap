@@ -15,6 +15,8 @@
 # concrete roles within each category than to describe by abstract characteristics.
 # Each role has a title, a list of one-line descriptions, and an ai_expertise rating
 # (low / medium / high / varies by field, etc — free text).
+# `champions` (added 2026-08-12): optional list of named people driving that category
+# forward. Not every category has champions named yet ("TBD" is a valid placeholder).
 
 kinds:
   use_cases:
@@ -25,6 +27,7 @@ kinds:
         ordinal: 1   # NOTE: conflicts with PAC bucket 3; see ADR-9 in roadmap/resolved_decisions.md
         pac_bucket: 3
         label: "Integrate AI Across the Curriculum and Create AI Certificates"
+        champions: ["Barry Lambert", "Denise Martinez"]
         leaders:
           - title: "Provost, deans, department heads"
             descriptions:
@@ -40,6 +43,7 @@ kinds:
         ordinal: 2   # NOTE: conflicts with PAC bucket 1; see ADR-9 in roadmap/resolved_decisions.md
         pac_bucket: 1
         label: "Train & Empower Workforce"
+        champions: ["TBD"]
         leaders:
           - title: "Coordinator"
             descriptions:
@@ -55,8 +59,9 @@ kinds:
         ordinal: 3   # NOTE: conflicts with PAC bucket 2; see ADR-9 in roadmap/resolved_decisions.md
         pac_bucket: 2
         label: "Solutions Delivery"
+        champions: ["Scott Cook", "Zach Gorman"]
         leaders:
-          - title: "Chief AI Officer"
+          - title: "Chief engineer"
             descriptions:
               - "Develop, architect, and guide multiple complex AI projects"
               - "Evaluate & manage 3rd-party AI products"

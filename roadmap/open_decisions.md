@@ -57,8 +57,9 @@ items first/most heavily, vs. an even-handed vote across all three use-case cate
 **Status: OPEN.**
 
 ### OD-14 — AI Solution Delivery: reporting structure vs. logical/matrixed unit
-Many of the job roles in `roadmap/ai_strategy_develop.md`'s AI Solution Delivery section
-are probably not full-time jobs and could be filled by existing staff (Scott has
+Many of the roles in `use_cases/personnel.yaml`'s "Solutions Delivery" category (Chief
+AI Officer, Project manager, Engineer, Operations, Product support) are probably not
+full-time jobs and could be filled by existing staff (Scott has
 candidate names in mind) — but a role can't simply be stacked on top of someone's
 current job; some of their existing duties would need to be realigned to someone else.
 This raises a structural question, related to but more concrete than ADR-10 (in

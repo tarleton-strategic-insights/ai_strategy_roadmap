@@ -37,17 +37,27 @@ move the roadmap forward iteration by iteration.
     personnel — the two don't have to agree and aren't derived from each other. Every
     unique_items entry belongs to exactly one outcome. Set mirrors `roadmap/survey.md`'s
     three PAC-facing priorities plus a Foundations catch-all.
+  - `vision_synthesis.yaml` — sole authoritative source for the official vision
+    statement (adjudicated 2026-08-12, ADR-11) quoted in `roadmap/pac_report.md`'s
+    Vision Statement section and (by hand) in `roadmap/vision_statements_analysis.md`'s
+    "Synthesized Vision Statement" section.
 - `pac_retreat_sources/post_event_analysis/strategic_insights/hutyra/` — authored
   documents (the four PAC docs; read-only reference).
 - `build/` — `validate.py` (integrity checks) and `generate.py` (yaml -> md, always;
   optionally md -> styled HTML -> PDF for every `.md` in `roadmap/` with `--pdf`).
   PDFs are gitignored — this repo is pushed to GitHub, which renders markdown natively,
   so committed PDFs would just be stale duplicates.
-- `roadmap/` — `ai_strategy_develop.md` (platform catalog + job roles/org units),
-  `open_decisions.md` (what needs adjudication), `resolved_decisions.md` (adjudicated
-  decisions, ADR-style), `post_retreat_discussion.md`, `vision_statements_analysis.md`
-  (vision-statement transcriptions + synopsis), and `use_cases_analysis.md` (build
-  output from the `use_cases/*.yaml` above — never hand-edit; regenerate).
+- `roadmap/` — `pac_report.md` (build output: Introduction + Vision Statement +
+  Use Cases, the latter re-deriving the outcome/personnel breakdown from
+  `use_cases/*.yaml` — never hand-edit; regenerate), `infrastructure.md` (AI platform
+  catalog), `support_organizations.md`
+  (support roles/org units), `open_decisions.md` (what needs adjudication),
+  `resolved_decisions.md` (adjudicated decisions, ADR-style), `post_retreat_discussion.md`,
+  `vision_statements_analysis.md` (vision-statement transcriptions + synopsis),
+  `survey.md`, and `use_cases_analysis.md` (build output from the `use_cases/*.yaml`
+  above — never hand-edit; regenerate). Job roles (Curriculum Integration Lead,
+  Workforce Development Lead, AI Solution Delivery Lead, etc.) are no longer tracked
+  separately here — see `use_cases/personnel.yaml` for current role definitions.
 
 ## Core conventions
 
@@ -87,13 +97,15 @@ explicit adjudication rather than split across categories; same rule applies to 
 Unique items partition into two top-level kinds:
 
 - **Use-cases** — resourceable work, split by the scarce *key personnel* each depends on.
-  Each has a Leaders/Doers role breakdown (title, description(s), `ai_expertise` rating):
+  Each has an optional named Champions list plus a Leaders/Doers role breakdown (title,
+  description(s), `ai_expertise` rating):
   1. Curriculum integration — "Integrate AI Across the Curriculum and Create AI
-     Certificates." Leaders: Provost/deans/department heads. Doers: Instructors.
-  2. Workforce development — "Train & Empower Workforce." Leaders: Coordinator.
-     Doers: Trainers.
-  3. AI solution delivery — "Solutions Delivery." Leaders: Chief AI Officer, Project
-     manager. Doers: Engineer, Operations, Product support.
+     Certificates." Champions: Barry Lambert, Denise Martinez. Leaders: Provost/deans/
+     department heads. Doers: Instructors.
+  2. Workforce development — "Train & Empower Workforce." Champions: TBD.
+     Leaders: Coordinator. Doers: Trainers.
+  3. AI solution delivery — "Solutions Delivery." Champions: Scott Cook, Zach Gorman.
+     Leaders: Chief engineer, Project manager. Doers: Engineer, Operations, Product support.
 - **Capabilities / Foundation** ("Foundations") — cross-cutting preconditions
   (governance, security, advisory board); not sorted by personnel. Leaders/Doers: TBD.
 
@@ -142,16 +154,8 @@ unrelated to PAC alignment. See `roadmap/resolved_decisions.md` for the full his
 ## Build
 
 ```
-python build/generate.py            # regenerate roadmap/use_cases_analysis.md from use_cases/*.yaml
+python build/generate.py            # regenerate roadmap/use_cases_analysis.md and pac_report.md from use_cases/*.yaml
 python build/generate.py --pdf      # also render PDFs (gitignored; GitHub renders md natively)
 ```
 
 `--pdf` requires `markdown` (pip) and `wkhtmltopdf` (system). See `build/generate.py` header.
-
-## Current status
-
-- Categorization: complete draft; 6 alignment/adjudication items open (see `roadmap/open_decisions.md`).
-- Priority vote: not yet held (immediate next step per PAC exec brief).
-- Owners: Curriculum Integration — Denise Martinez. AI Solution Delivery — Scott Cook.
-  Workforce Development still unnamed — see OD-8 in `roadmap/open_decisions.md`.
-- MLOps/DevOps hire (the last-mile gap): recommended, not yet approved.

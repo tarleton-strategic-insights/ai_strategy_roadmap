@@ -102,5 +102,19 @@ technically complex work, and an embedded-partner tier fills the middle ground �
 distributing skilled capacity into functional areas without losing central
 coordination entirely.
 **Open question surfaced:** How the AI partner tier would actually be staffed/trained,
-and how it interacts with the job roles in `roadmap/ai_strategy_develop.md`'s AI
-Solution Delivery section — see OD-11 and OD-14 in `open_decisions.md`.
+and how it interacts with the roles in `use_cases/personnel.yaml`'s "Solutions
+Delivery" category — see OD-11 and OD-14 in `open_decisions.md`.
+
+### ADR-11 — Official vision statement (2026-08-12)
+**Decision:** Adopt the Working synthesis as Tarleton State's single official AI
+vision statement: "Tarleton State University will responsibly use AI to improve
+student success, workforce readiness, and institutional operations, while protecting
+the integrity, privacy, and trust of our students, faculty, staff, and community."
+**Rationale:** Synthesizes the 7 candidate statements transcribed from the retreat
+flip charts (see `roadmap/vision_statements_analysis.md`) into one adjudicated
+statement, closing out the "not yet adjudicated" status that section carried since
+the retreat. Sole source of truth for the wording is
+`pac_retreat_sources/.../cook/vision_synthesis.yaml`; `pac_report.md`'s Vision
+Statement section is generated from it directly, and
+`vision_statements_analysis.md`'s "Synthesized Vision Statement" section is kept in
+sync by hand.

@@ -2,16 +2,16 @@
 
 Transcribed verbatim from flip-chart photos taken at the PAC retreat, 2026-07-28.
 Source: `pac_retreat_sources/event_artifacts/images/vision_statements/` (5 photos,
-7 distinct statements). Not yet adjudicated into a single official vision — see
-`roadmap/open_decisions.md` if/when this becomes an open decision item.
+7 distinct statements). Adjudicated into a single official vision (the Working
+synthesis below) — see ADR-11 in `roadmap/resolved_decisions.md`.
 
 ---
 
 ### VS-1
 
 > Tarleton State will thoughtfully integrate AI across learning, work, and
-> institutional operations to improve student success and create lasting value
-> for all stakeholders.
+institutional operations to improve student success and create lasting value
+for all stakeholders.
 
 Source: `IMG_20260728_093023.jpg`
 
@@ -20,8 +20,8 @@ Source: `IMG_20260728_093023.jpg`
 ### VS-2
 
 > Tarleton State University will leverage AI to accelerate degree completion,
-> streamline university operations, and ensure academic integrity through
-> innovation that prepares students for life-long learning in an AI world.
+streamline university operations, and ensure academic integrity through
+innovation that prepares students for life-long learning in an AI world.
 
 Source: `IMG_20260728_093023 (1).jpg`
 
@@ -30,10 +30,10 @@ Source: `IMG_20260728_093023 (1).jpg`
 ### VS-3
 
 > Tarleton State University will harness A.I. to enhance student success,
-> accelerate innovation and empower our stakeholders to thrive in a rapidly
-> evolving world. Through responsible and ethical use, we will amplify human
-> potential, transform lives and inspire future generations to lead, innovate
-> and create lasting value for society.
+accelerate innovation and empower our stakeholders to thrive in a rapidly
+evolving world. Through responsible and ethical use, we will amplify human
+potential, transform lives and inspire future generations to lead, innovate
+and create lasting value for society.
 
 Source: `IMG_20260728_093023 (2).jpg` (left poster)
 
@@ -42,9 +42,9 @@ Source: `IMG_20260728_093023 (2).jpg` (left poster)
 ### VS-4
 
 > "Tarleton State will use AI Technology to transform learning, research,
-> institutional effectiveness, and operational efficiency while preparing every
-> student for an AI-enabled future and maintaining the highest standards of
-> integrity, privacy, and trust."
+institutional effectiveness, and operational efficiency while preparing every
+student for an AI-enabled future and maintaining the highest standards of
+integrity, privacy, and trust."
 
 Source: `IMG_20260728_093023 (2).jpg` (right poster)
 
@@ -53,9 +53,9 @@ Source: `IMG_20260728_093023 (2).jpg` (right poster)
 ### VS-5
 
 > We will use AI to improve student success, workforce readiness, academic
-> excellence, research innovation, operational effectiveness, and community
-> impact while protecting academic integrity, privacy, security, access, and
-> human judgement.
+excellence, research innovation, operational effectiveness, and community
+impact while protecting academic integrity, privacy, security, access, and
+human judgement.
 
 Source: `IMG_20260728_093023 (3).jpg` (left poster)
 
@@ -64,8 +64,8 @@ Source: `IMG_20260728_093023 (3).jpg` (left poster)
 ### VS-6
 
 > "Tarleton State University will responsibly use AI to prepare every learner
-> and colleague for an AI-enabled future while strengthening student success,
-> trusted data use, institutional effectiveness, and workforce impact."
+and colleague for an AI-enabled future while strengthening student success,
+trusted data use, institutional effectiveness, and workforce impact."
 
 Source: `IMG_20260728_093023 (3).jpg` (right poster, titled "Vision Statement").
 Original had "with" struck through and replaced with "and colleague".
@@ -75,8 +75,8 @@ Original had "with" struck through and replaced with "and colleague".
 ### VS-7
 
 > Tarleton State University will harness responsible, human-centered AI to
-> advance research excellence, improve student success, strengthened workforce
-> readiness, and create transformational impact for Texas and beyond!
+advance research excellence, improve student success, strengthened workforce
+readiness, and create transformational impact for Texas and beyond!
 
 Source: `IMG_20260728_093023 (4).jpg` (top poster)
 
@@ -99,11 +99,6 @@ Source: `IMG_20260728_093023 (4).jpg` (bottom poster)
 ---
 
 ## Synopsis across all 7 statements
-
-Despite different wording, the seven statements converge on a shared shape: **Tarleton
-State will use AI, responsibly, to improve outcomes across learning/academics, workforce
-readiness, and institutional operations — while protecting trust (integrity, privacy,
-security).**
 
 **Themes present across most statements:**
 
@@ -131,12 +126,6 @@ security).**
 - **Level of specificity.** VS-5 is the most exhaustive single-sentence list (six outcome
   areas + five protected values); VS-1 is the most compact.
 
-**Working synthesis (not adjudicated):**
+## Synthesized Vision Statement
 
-> Tarleton State University will responsibly use AI to improve student success, workforce
-> readiness, and institutional operations, while protecting the integrity, privacy, and
-> trust of our students, faculty, staff, and community.
-
-This synthesis is a starting point for discussion, not a resolved decision — a formal
-choice among (or synthesis of) these statements should go through the same adjudication
-path as other framework-level items in `roadmap/open_decisions.md`.
+> Tarleton State University will responsibly use AI to improve student success, workforce readiness, and institutional operations, while protecting the integrity, privacy, and trust of our students, faculty, staff, and community.
