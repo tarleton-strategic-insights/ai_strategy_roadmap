@@ -55,10 +55,12 @@ move the roadmap forward iteration by iteration.
   optionally md -> styled HTML -> PDF for every `.md` in `pac_retreat/` and `roadmap/`
   with `--pdf`). PDFs are gitignored — this repo is pushed to GitHub, which renders
   markdown natively, so committed PDFs would just be stale duplicates.
-- `roadmap/` — hand-authored roadmap docs: `infrastructure.md` (AI platform catalog),
-  `support_organizations.md` (support roles/org units), `open_decisions.md` (what
-  needs adjudication), `resolved_decisions.md` (adjudicated decisions, ADR-style),
-  `post_retreat_discussion.md`, `survey.md`. Job roles (Curriculum Integration Lead,
+- `roadmap/` — hand-authored roadmap docs: `survey.md` at top level;
+  `decisions/open_decisions.md` (what needs adjudication) and
+  `decisions/resolved_decisions.md` (adjudicated decisions, ADR-style);
+  `resources/infrastructure.md` (AI platform catalog),
+  `resources/support_organizations.md` (support roles/org units), and
+  `resources/post_retreat_discussion.md`. Job roles (Curriculum Integration Lead,
   Workforce Development Lead, AI Solution Delivery Lead, etc.) are no longer tracked
   separately here — see `use_cases/personnel.yaml` for current role definitions.
 
@@ -73,7 +75,7 @@ move the roadmap forward iteration by iteration.
    (use-case 1/2/3) is separate and *may* change.
 3. **Alignment with PAC docs is tracked, not assumed.** The executive PAC documents use a
    three-**bucket** framework. This repo's personnel categories map to those buckets but
-   are not identical. `roadmap/open_decisions.md` tracks every known divergence awaiting
+   are not identical. `roadmap/decisions/open_decisions.md` tracks every known divergence awaiting
    adjudication. Do not silently "fix" a divergence — surface it.
 4. **Nothing gets dropped.** Every unique_items entry lands in exactly one personnel
    category AND exactly one outcome. If an item fits nowhere on either axis, that is a
@@ -122,7 +124,7 @@ every framings-flavored raw item turned out to be the minority member of a dupli
 group whose majority belonged elsewhere, leaving the category permanently empty.)
 
 See `use_cases/personnel.yaml` for the authoritative definition and
-`roadmap/open_decisions.md` for unresolved framework questions (notably a lingering
+`roadmap/decisions/open_decisions.md` for unresolved framework questions (notably a lingering
 ordering divergence vs. PAC bucket numbers, and two contested item placements).
 
 ### Outcome
@@ -151,8 +153,8 @@ AI-solution (1/2/3); PAC buckets order Workforce/AI-solution/Curriculum (1/2/3) 
 slot differs. This is adjudicated, not an oversight (OD-1, resolved): the repo
 deliberately keeps its own internal ordering rather than matching PAC's, and that
 internal ordering has itself been revised twice (ADR-1, then ADR-9 in
-`roadmap/resolved_decisions.md`) for internal-readability and ownership-signaling reasons
-unrelated to PAC alignment. See `roadmap/resolved_decisions.md` for the full history.
+`roadmap/decisions/resolved_decisions.md`) for internal-readability and ownership-signaling reasons
+unrelated to PAC alignment. See `roadmap/decisions/resolved_decisions.md` for the full history.
 
 ## Build
 

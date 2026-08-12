@@ -24,7 +24,8 @@ python build/generate.py --pdf     # also render PDFs (not committed; repo is pu
 - `pac_retreat/` (top level) — `pac_report.md` / `use_cases_analysis.md` (build
   output — do not hand-edit) and `vision_statements_analysis.md`
   (vision-statement transcriptions + synopsis).
-- `roadmap/` — `open_decisions.md` (what needs adjudication), `resolved_decisions.md`
-  (adjudicated decisions, ADR-style), `infrastructure.md` (AI platform catalog),
-  `support_organizations.md` (support roles/org units), `post_retreat_discussion.md`,
-  `survey.md`. PDFs are gitignored, generated on demand only.
+- `roadmap/` — `survey.md` at top level; `decisions/open_decisions.md` (what needs
+  adjudication) and `decisions/resolved_decisions.md` (adjudicated decisions,
+  ADR-style); `resources/infrastructure.md` (AI platform catalog),
+  `resources/support_organizations.md` (support roles/org units), and
+  `resources/post_retreat_discussion.md`. PDFs are gitignored, generated on demand only.

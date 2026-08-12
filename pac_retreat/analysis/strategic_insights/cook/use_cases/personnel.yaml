@@ -24,7 +24,7 @@ kinds:
       Resourceable work, split by the scarce key personnel each type depends on most.
     types:
       curriculum_integration:
-        ordinal: 1   # NOTE: conflicts with PAC bucket 3; see ADR-9 in roadmap/resolved_decisions.md
+        ordinal: 1   # NOTE: conflicts with PAC bucket 3; see ADR-9 in roadmap/decisions/resolved_decisions.md
         pac_bucket: 3
         label: "Integrate AI Across the Curriculum and Create AI Certificates"
         champions: ["Barry Lambert", "Denise Martinez"]
@@ -40,7 +40,7 @@ kinds:
             ai_expertise: "varies by field"
         items: [X1, X9]
       workforce_development:
-        ordinal: 2   # NOTE: conflicts with PAC bucket 1; see ADR-9 in roadmap/resolved_decisions.md
+        ordinal: 2   # NOTE: conflicts with PAC bucket 1; see ADR-9 in roadmap/decisions/resolved_decisions.md
         pac_bucket: 1
         label: "Train & Empower Workforce"
         champions: ["TBD"]
@@ -56,7 +56,7 @@ kinds:
             ai_expertise: "medium"
         items: [X7, X6]
       ai_solution_delivery:
-        ordinal: 3   # NOTE: conflicts with PAC bucket 2; see ADR-9 in roadmap/resolved_decisions.md
+        ordinal: 3   # NOTE: conflicts with PAC bucket 2; see ADR-9 in roadmap/decisions/resolved_decisions.md
         pac_bucket: 2
         label: "Solutions Delivery"
         champions: ["Scott Cook", "Zach Gorman"]

@@ -33,7 +33,7 @@ SUBTITLE = ("Source: `pac_retreat/sources/event_artifacts/images/use_cases/` "
             "(9 flip-chart photos from a Gartner-facilitated workshop, breakout "
             "group notes, sent by Drew Doolin, 2026-07-30). "
             "Categorization framework adjudicated — see ADR-8 and ADR-9 in "
-            "[resolved_decisions.md](../roadmap/resolved_decisions.md).")
+            "[resolved_decisions.md](../roadmap/decisions/resolved_decisions.md).")
 
 def load():
     items = yaml.safe_load((DATA / "raw_items.yaml").read_text())["items"]
@@ -156,22 +156,22 @@ def build_md(items, personnel, outcomes, uniques):
 
 VISION_STATEMENT_COUNT = 7  # distinct statements documented in vision_statements_analysis.md
 
-def emit_roadmap_intro():
+def emit_report_intro():
     return ("## Introduction\n\n"
-            "This roadmap synthesizes the outcomes of Tarleton State's PAC AI strategy "
+            "This report synthesizes the outcomes of Tarleton State's PAC AI strategy "
             "retreat (2026-07-27) into a single reference: our working vision for AI "
             "at the university, and the concrete use cases surfaced at the retreat, "
             "organized by the strategic outcome each serves and the personnel needed "
             "to deliver it.\n")
 
-def emit_roadmap_vision():
+def emit_report_vision():
     synthesis = yaml.safe_load((COOK / "vision_synthesis.yaml").read_text())["working_synthesis"]
     return (f"## Vision Statement\n\n> {synthesis}\n\n"
             f"This synthesis of the {VISION_STATEMENT_COUNT} original vision statements "
             "was created by a human+AI team. See "
             "[vision_statements_analysis.md](vision_statements_analysis.md) for details.\n")
 
-def emit_roadmap_use_cases(items, personnel, outcomes, uniques):
+def emit_report_use_cases(items, personnel, outcomes, uniques):
     out = ["## Use Cases\n",
            "We analyze all use cases suggested during the PAC retreat by combining "
            "duplicate items then categorizing them in two distinct ways that each "
@@ -184,10 +184,10 @@ def emit_roadmap_use_cases(items, personnel, outcomes, uniques):
            emit_part3b_personnel(personnel, uniques)]
     return "\n".join(out)
 
-def build_roadmap_md(items, personnel, outcomes, uniques):
-    parts = [emit_roadmap_intro(), "---", "",
-             emit_roadmap_vision(), "---", "",
-             emit_roadmap_use_cases(items, personnel, outcomes, uniques)]
+def build_report_md(items, personnel, outcomes, uniques):
+    parts = [emit_report_intro(), "---", "",
+             emit_report_vision(), "---", "",
+             emit_report_use_cases(items, personnel, outcomes, uniques)]
     return "\n".join(parts) + "\n"
 
 STYLED_CSS = """
@@ -231,10 +231,10 @@ def main():
     md_path.write_text(md)
     print(f"wrote {md_path.relative_to(ROOT)}  ({len(items)} items)")
 
-    roadmap_md = build_roadmap_md(items, personnel, outcomes, uniques)
-    roadmap_path = OUT / "pac_report.md"
-    roadmap_path.write_text(roadmap_md)
-    print(f"wrote {roadmap_path.relative_to(ROOT)}")
+    report_md = build_report_md(items, personnel, outcomes, uniques)
+    report_path = OUT / "pac_report.md"
+    report_path.write_text(report_md)
+    print(f"wrote {report_path.relative_to(ROOT)}")
 
     if "--pdf" in sys.argv:
         pdf_path = OUT / "use_cases_analysis.pdf"
@@ -242,7 +242,7 @@ def main():
         print(f"wrote {pdf_path.relative_to(ROOT)}")
 
         other_mds = [p for p in sorted(OUT.glob("*.md")) if p.name != "use_cases_analysis.md"]
-        other_mds += sorted(ROADMAP.glob("*.md"))
+        other_mds += sorted(ROADMAP.rglob("*.md"))
         for other_md in other_mds:
             other_pdf = other_md.with_suffix(".pdf")
             to_pdf(other_md, other_pdf, css=PLAIN_CSS)

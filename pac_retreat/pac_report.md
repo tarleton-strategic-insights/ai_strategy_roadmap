@@ -1,6 +1,6 @@
 ## Introduction
 
-This roadmap synthesizes the outcomes of Tarleton State's PAC AI strategy retreat (2026-07-27) into a single reference: our working vision for AI at the university, and the concrete use cases surfaced at the retreat, organized by the strategic outcome each serves and the personnel needed to deliver it.
+This report synthesizes the outcomes of Tarleton State's PAC AI strategy retreat (2026-07-27) into a single reference: our working vision for AI at the university, and the concrete use cases surfaced at the retreat, organized by the strategic outcome each serves and the personnel needed to deliver it.
 
 ---
 

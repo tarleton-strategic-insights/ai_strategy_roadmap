@@ -47,8 +47,8 @@ fundamentally built on AI). Where does Tarleton currently sit on this spectrum?
 **Status: OPEN.**
 
 ### OD-13 — PAC should prioritize AI solution delivery items
-Proposal: when PAC holds the not-yet-held priority vote (see `CLAUDE.md` "Current
-status" and `roadmap/post_retreat_discussion.md`'s milestone table), it should
+Proposal: when PAC holds the not-yet-held priority vote (see
+`roadmap/resources/post_retreat_discussion.md`'s milestone table), it should
 specifically prioritize items within the AI solution delivery use-case category —
 i.e. weight/sequence the vote toward that backlog rather than treating all three
 use-case categories as equally urgent.

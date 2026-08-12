@@ -1,5 +1,5 @@
 # PAC AI Use Case Brainstorm 2026-07-27
-Source: `pac_retreat/sources/event_artifacts/images/use_cases/` (9 flip-chart photos from a Gartner-facilitated workshop, breakout group notes, sent by Drew Doolin, 2026-07-30). Categorization framework adjudicated — see ADR-8 and ADR-9 in [resolved_decisions.md](../roadmap/resolved_decisions.md).
+Source: `pac_retreat/sources/event_artifacts/images/use_cases/` (9 flip-chart photos from a Gartner-facilitated workshop, breakout group notes, sent by Drew Doolin, 2026-07-30). Categorization framework adjudicated — see ADR-8 and ADR-9 in [resolved_decisions.md](../roadmap/decisions/resolved_decisions.md).
 
 ---
 
