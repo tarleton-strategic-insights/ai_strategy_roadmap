@@ -18,8 +18,8 @@ The next step will be for you to complete a brief ranking survey to help us prio
 We’re excited for the journey ahead! Thank you again for your contributions.
 
 # Survey
-- Where does Tarleton fall on the AI ambition spectrum
-[insert image for Kristen Richardsen slide 3 here]
+- Where should Tarleton be on the AI ambition spectrum
+[insert image from Kristen Richardson slide 3 here]
 
 - Rank these AI-focused initiatives from highest to lowest priority
     - Accelerate Student Retention and Success
