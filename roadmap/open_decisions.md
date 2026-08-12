@@ -37,7 +37,7 @@ organizational structure across all four categories.
 **Status: OPEN.**
 
 ### OD-12 — Tarleton's position on the AI maturity spectrum
-Slide 3 of `pac_retreat_sources/event_artifacts/slides/Richardson_AI_landscape.pdf`
+Slide 3 of `pac_retreat/sources/event_artifacts/slides/Richardson_AI_landscape.pdf`
 ("Organizations Are Picking Their Pace") lays out a six-stage AI maturity spectrum:
 **Not AI-enabled** (no AI use) → **AI-assisted** (basic AI support in isolated areas) →
 **AI-augmented** (AI enhances, but not central) → **AI-integrated** (AI integrated into

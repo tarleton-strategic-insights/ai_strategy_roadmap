@@ -7,32 +7,33 @@ files) plus vision_synthesis.yaml.
 
 PDFs are off by default — this repo is pushed to GitHub, which renders markdown
 natively, so committed PDFs would just be stale duplicates. Pass --pdf to also render
-use_cases_analysis.pdf (styled) and a plain-styled PDF for every other .md in roadmap/,
-e.g. for sharing outside GitHub.
+use_cases_analysis.pdf (styled) and a plain-styled PDF for every other .md in
+pac_retreat/, e.g. for sharing outside GitHub.
 
 Deps: pip install pyyaml markdown  ;  system: wkhtmltopdf (only needed with --pdf)
 Usage: python build/generate.py [--pdf]
 
 Produces:
-  roadmap/use_cases_analysis.md
-  roadmap/pac_report.md
-  roadmap/use_cases_analysis.pdf        (only with --pdf; styled)
-  roadmap/<other .md>.pdf               (only with --pdf; plain default styling)
+  pac_retreat/use_cases_analysis.md
+  pac_retreat/pac_report.md
+  pac_retreat/use_cases_analysis.pdf    (only with --pdf; styled)
+  pac_retreat/<other .md>.pdf           (only with --pdf; plain default styling)
 """
 import sys, subprocess, datetime
 from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-COOK = ROOT / "pac_retreat_sources/post_event_analysis/strategic_insights/cook"
+COOK = ROOT / "pac_retreat/analysis/strategic_insights/cook"
 DATA = COOK / "use_cases"
-OUT = ROOT / "roadmap"
+OUT = ROOT / "pac_retreat"
+ROADMAP = ROOT / "roadmap"
 TITLE = "PAC AI Use Case Brainstorm 2026-07-27"
-SUBTITLE = ("Source: `pac_retreat_sources/event_artifacts/images/use_cases/` "
+SUBTITLE = ("Source: `pac_retreat/sources/event_artifacts/images/use_cases/` "
             "(9 flip-chart photos from a Gartner-facilitated workshop, breakout "
             "group notes, sent by Drew Doolin, 2026-07-30). "
             "Categorization framework adjudicated — see ADR-8 and ADR-9 in "
-            "[resolved_decisions.md](resolved_decisions.md).")
+            "[resolved_decisions.md](../roadmap/resolved_decisions.md).")
 
 def load():
     items = yaml.safe_load((DATA / "raw_items.yaml").read_text())["items"]
@@ -50,7 +51,7 @@ def by_group(items):
 def emit_part1(items):
     out = ["## Part 1 — Direct Extraction (enumerated)\n",
            "Defined in "
-           "[raw_items.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/raw_items.yaml).\n"]
+           "[raw_items.yaml](analysis/strategic_insights/cook/use_cases/raw_items.yaml).\n"]
     for g, its in sorted(by_group(items).items()):
         out.append(f"### Group {g}")
         for i, it in enumerate(its, 1):
@@ -62,7 +63,7 @@ def emit_part2(items, uniques):
     out = ["## Part 2 — Deduplicated (nothing removed; every item lands in exactly "
            "one entry below)\n",
            "Defined in "
-           "[unique_items.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/unique_items.yaml).\n"]
+           "[unique_items.yaml](analysis/strategic_insights/cook/use_cases/unique_items.yaml).\n"]
     by_id = {it["id"]: it for it in items}
     for uid, u in uniques.items():
         out.append(f"### {u['label']}")
@@ -137,9 +138,9 @@ def emit_part3(items, personnel, outcomes, uniques):
            "that each reveal "
            "important patterns: by outcome and by personnel.\n",
            "Defined in "
-           "[outcomes.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/outcomes.yaml) "
+           "[outcomes.yaml](analysis/strategic_insights/cook/use_cases/outcomes.yaml) "
            "and "
-           "[personnel.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/personnel.yaml) "
+           "[personnel.yaml](analysis/strategic_insights/cook/use_cases/personnel.yaml) "
            "using deduplicated (unique) items.\n",
            emit_part3a_outcomes(uniques, outcomes),
            "",
@@ -240,9 +241,9 @@ def main():
         to_pdf(md_path, pdf_path)
         print(f"wrote {pdf_path.relative_to(ROOT)}")
 
-        for other_md in sorted(OUT.glob("*.md")):
-            if other_md.name == "use_cases_analysis.md":
-                continue
+        other_mds = [p for p in sorted(OUT.glob("*.md")) if p.name != "use_cases_analysis.md"]
+        other_mds += sorted(ROADMAP.glob("*.md"))
+        for other_md in other_mds:
             other_pdf = other_md.with_suffix(".pdf")
             to_pdf(other_md, other_pdf, css=PLAIN_CSS)
             print(f"wrote {other_pdf.relative_to(ROOT)}")

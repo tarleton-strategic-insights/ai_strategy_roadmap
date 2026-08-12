@@ -1,9 +1,9 @@
 # PAC Retreat — Vision Statement Candidates
 
 Transcribed verbatim from flip-chart photos taken at the PAC retreat, 2026-07-28.
-Source: `pac_retreat_sources/event_artifacts/images/vision_statements/` (5 photos,
-7 distinct statements). Adjudicated into a single official vision (the Working
-synthesis below) — see ADR-11 in `roadmap/resolved_decisions.md`.
+Source: `pac_retreat/sources/event_artifacts/images/vision_statements/` (5 photos,
+7 distinct statements). Adjudicated into a single official vision (the Synthesized
+Vision Statement below) — see ADR-11 in `../roadmap/resolved_decisions.md`.
 
 ---
 

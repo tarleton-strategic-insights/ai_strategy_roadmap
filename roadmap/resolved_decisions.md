@@ -111,10 +111,10 @@ vision statement: "Tarleton State University will responsibly use AI to improve
 student success, workforce readiness, and institutional operations, while protecting
 the integrity, privacy, and trust of our students, faculty, staff, and community."
 **Rationale:** Synthesizes the 7 candidate statements transcribed from the retreat
-flip charts (see `roadmap/vision_statements_analysis.md`) into one adjudicated
+flip charts (see `pac_retreat/vision_statements_analysis.md`) into one adjudicated
 statement, closing out the "not yet adjudicated" status that section carried since
 the retreat. Sole source of truth for the wording is
-`pac_retreat_sources/.../cook/vision_synthesis.yaml`; `pac_report.md`'s Vision
-Statement section is generated from it directly, and
+`pac_retreat/analysis/strategic_insights/cook/vision_synthesis.yaml`; `pac_report.md`'s
+Vision Statement section is generated from it directly, and
 `vision_statements_analysis.md`'s "Synthesized Vision Statement" section is kept in
 sync by hand.

@@ -1,11 +1,11 @@
 # PAC AI Use Case Brainstorm 2026-07-27
-Source: `pac_retreat_sources/event_artifacts/images/use_cases/` (9 flip-chart photos from a Gartner-facilitated workshop, breakout group notes, sent by Drew Doolin, 2026-07-30). Categorization framework adjudicated — see ADR-8 and ADR-9 in [resolved_decisions.md](resolved_decisions.md).
+Source: `pac_retreat/sources/event_artifacts/images/use_cases/` (9 flip-chart photos from a Gartner-facilitated workshop, breakout group notes, sent by Drew Doolin, 2026-07-30). Categorization framework adjudicated — see ADR-8 and ADR-9 in [resolved_decisions.md](../roadmap/resolved_decisions.md).
 
 ---
 
 ## Part 1 — Direct Extraction (enumerated)
 
-Defined in [raw_items.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/raw_items.yaml).
+Defined in [raw_items.yaml](analysis/strategic_insights/cook/use_cases/raw_items.yaml).
 
 ### Group A
 1. A1: Employ AI for graduation (Extend)
@@ -80,7 +80,7 @@ Defined in [raw_items.yaml](../pac_retreat_sources/post_event_analysis/strategic
 
 ## Part 2 — Deduplicated (nothing removed; every item lands in exactly one entry below)
 
-Defined in [unique_items.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/unique_items.yaml).
+Defined in [unique_items.yaml](analysis/strategic_insights/cook/use_cases/unique_items.yaml).
 
 ### Curriculum Integration
 - A3: Teaching to Learning (Upend)
@@ -178,7 +178,7 @@ Defined in [unique_items.yaml](../pac_retreat_sources/post_event_analysis/strate
 ## Part 3 - Categorize
 We now categorize unique use cases from PAC retreat in two distinct ways that each reveal important patterns: by outcome and by personnel.
 
-Defined in [outcomes.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/outcomes.yaml) and [personnel.yaml](../pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/personnel.yaml) using deduplicated (unique) items.
+Defined in [outcomes.yaml](analysis/strategic_insights/cook/use_cases/outcomes.yaml) and [personnel.yaml](analysis/strategic_insights/cook/use_cases/personnel.yaml) using deduplicated (unique) items.
 
 ### By Outcomes
 

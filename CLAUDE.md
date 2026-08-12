@@ -15,8 +15,10 @@ move the roadmap forward iteration by iteration.
 
 ## Layout
 
-- `pac_retreat_sources/post_event_analysis/strategic_insights/cook/use_cases/` —
-  structured source of truth. Edit these, not the generated docs.
+- `pac_retreat/sources/` — raw retreat materials (flip-chart photos, slides, pre-event
+  case-study research). Read-only reference; never edited.
+- `pac_retreat/analysis/strategic_insights/cook/use_cases/` — structured source of
+  truth. Edit these, not the generated docs.
   - `raw_items.yaml` — every use-case idea as a record (provenance ID, source group,
     text). IDs (A1–I4) trace to the original flip-chart photos. Carries no personnel,
     outcome, or dedup field — those live solely in personnel.yaml/outcomes.yaml/
@@ -37,33 +39,34 @@ move the roadmap forward iteration by iteration.
     personnel — the two don't have to agree and aren't derived from each other. Every
     unique_items entry belongs to exactly one outcome. Set mirrors `roadmap/survey.md`'s
     three PAC-facing priorities plus a Foundations catch-all.
-  - `vision_synthesis.yaml` — sole authoritative source for the official vision
-    statement (adjudicated 2026-08-12, ADR-11) quoted in `roadmap/pac_report.md`'s
-    Vision Statement section and (by hand) in `roadmap/vision_statements_analysis.md`'s
-    "Synthesized Vision Statement" section.
-- `pac_retreat_sources/post_event_analysis/strategic_insights/hutyra/` — authored
-  documents (the four PAC docs; read-only reference).
+- `pac_retreat/analysis/strategic_insights/cook/vision_synthesis.yaml` — sole
+  authoritative source for the official vision statement (adjudicated 2026-08-12,
+  ADR-11) quoted in `pac_retreat/pac_report.md`'s Vision Statement section and (by
+  hand) in `pac_retreat/vision_statements_analysis.md`'s "Synthesized Vision
+  Statement" section.
+- `pac_retreat/analysis/strategic_insights/hutyra/` — authored documents (the four PAC
+  docs; read-only reference).
+- `pac_retreat/` (top level) — build outputs: `pac_report.md` (Introduction + Vision
+  Statement + Use Cases, the latter re-deriving the outcome/personnel breakdown from
+  `use_cases/*.yaml`), `use_cases_analysis.md`, `vision_statements_analysis.md`
+  (vision-statement transcriptions + synopsis, hand-maintained except the synthesis
+  quote). Never hand-edit `pac_report.md` or `use_cases_analysis.md`; regenerate.
 - `build/` — `validate.py` (integrity checks) and `generate.py` (yaml -> md, always;
-  optionally md -> styled HTML -> PDF for every `.md` in `roadmap/` with `--pdf`).
-  PDFs are gitignored — this repo is pushed to GitHub, which renders markdown natively,
-  so committed PDFs would just be stale duplicates.
-- `roadmap/` — `pac_report.md` (build output: Introduction + Vision Statement +
-  Use Cases, the latter re-deriving the outcome/personnel breakdown from
-  `use_cases/*.yaml` — never hand-edit; regenerate), `infrastructure.md` (AI platform
-  catalog), `support_organizations.md`
-  (support roles/org units), `open_decisions.md` (what needs adjudication),
-  `resolved_decisions.md` (adjudicated decisions, ADR-style), `post_retreat_discussion.md`,
-  `vision_statements_analysis.md` (vision-statement transcriptions + synopsis),
-  `survey.md`, and `use_cases_analysis.md` (build output from the `use_cases/*.yaml`
-  above — never hand-edit; regenerate). Job roles (Curriculum Integration Lead,
+  optionally md -> styled HTML -> PDF for every `.md` in `pac_retreat/` and `roadmap/`
+  with `--pdf`). PDFs are gitignored — this repo is pushed to GitHub, which renders
+  markdown natively, so committed PDFs would just be stale duplicates.
+- `roadmap/` — hand-authored roadmap docs: `infrastructure.md` (AI platform catalog),
+  `support_organizations.md` (support roles/org units), `open_decisions.md` (what
+  needs adjudication), `resolved_decisions.md` (adjudicated decisions, ADR-style),
+  `post_retreat_discussion.md`, `survey.md`. Job roles (Curriculum Integration Lead,
   Workforce Development Lead, AI Solution Delivery Lead, etc.) are no longer tracked
   separately here — see `use_cases/personnel.yaml` for current role definitions.
 
 ## Core conventions
 
 1. **Data drives docs.** The categorization lives in the `use_cases/*.yaml` files under
-   `pac_retreat_sources/.../cook/use_cases/`. Generated documents are built from it. If a
-   personnel role or outcome changes, change the YAML and rebuild — never patch a
+   `pac_retreat/analysis/.../cook/use_cases/`. Generated documents are built from it.
+   If a personnel role or outcome changes, change the YAML and rebuild — never patch a
    generated file by hand.
 2. **Provenance is sacred.** Every item keeps its A1–I4 ID linking it to a source photo
    group. Never renumber these; they are the audit trail. Display/ordinal numbering
@@ -154,7 +157,7 @@ unrelated to PAC alignment. See `roadmap/resolved_decisions.md` for the full his
 ## Build
 
 ```
-python build/generate.py            # regenerate roadmap/use_cases_analysis.md and pac_report.md from use_cases/*.yaml
+python build/generate.py            # regenerate pac_retreat/use_cases_analysis.md and pac_report.md from use_cases/*.yaml
 python build/generate.py --pdf      # also render PDFs (gitignored; GitHub renders md natively)
 ```
 

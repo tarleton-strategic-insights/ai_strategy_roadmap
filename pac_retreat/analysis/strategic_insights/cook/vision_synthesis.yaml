@@ -1,7 +1,7 @@
 # Sole authoritative source for the official vision statement text (adjudicated
 # 2026-08-12, see ADR-11 in roadmap/resolved_decisions.md) — read by build/generate.py
-# to build roadmap/pac_report.md's Vision Statement section and (by hand) quoted in
-# roadmap/vision_statements_analysis.md's "Synthesized Vision Statement" section. If
+# to build pac_retreat/pac_report.md's Vision Statement section and (by hand) quoted in
+# pac_retreat/vision_statements_analysis.md's "Synthesized Vision Statement" section. If
 # you edit the wording, update it here first, then sync vision_statements_analysis.md
 # to match and regenerate pac_report.md.
 
