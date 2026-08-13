@@ -20,6 +20,8 @@ We’re excited for the journey ahead! Thank you again for your contributions.
 All PAC members received access to M365 CoPilot Pro for one month which will expire on 8/31. If you would like to continue your license at $18 per month, please contact ITS through [Laura Isbell](LISBELL@tarleton.edu) and provide an account number.
 [we can drop this if desired, but the information does need to go out to PAC so including it here at the end saves another email]
 
+Best, 
+~Credence 
 
 # Survey
 - Where should Tarleton be on the AI ambition spectrum
