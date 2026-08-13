@@ -13,11 +13,13 @@ The foundational enablers of these three priorities will be to:
 - Resource AI initiatives/projects adequately
 - Provide guidance and guardrails to keep our data and systems safe
 
-The next step will be for you to complete a brief ranking survey to help us prioritize steps to move from strategy to action for the coming year. 
+To help us prioritize steps to move from strategy to action in the coming year, would you please complete [THIS] survey by [DEADLINE].
+
+We’re excited for the journey ahead! Thank you again for your contributions.
 
 All PAC members received access to M365 CoPilot Pro for one month for the July 27 retreat which will expire on 8/31. If you would like to continue your license at $18 per month, please contact ITS through Laura Isbell and provide an account number.
 
-We’re excited for the journey ahead! Thank you again for your contributions.
+
 
 # Survey
 - Where should Tarleton be on the AI ambition spectrum
