@@ -2,27 +2,31 @@
 
 This report synthesizes the outcomes of Tarleton State's PAC AI strategy retreat (2026-07-27) into a single reference: our working vision for AI at the university, and the concrete use cases surfaced at the retreat, organized by the strategic outcome each serves and the personnel needed to deliver it.
 
+This report was created by a human+AI team.
+
 ---
 
 ## Vision Statement
 
 > Tarleton State University will responsibly use AI to improve student success, workforce readiness, and institutional operations, while protecting the integrity, privacy, and trust of our students, faculty, staff, and community.
 
-This synthesis of the 7 original vision statements was created by a human+AI team. See [vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md) for details.
+See [vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md) for details.
 
 ---
 
 ## Use Cases
 
-We analyze all use cases suggested during the PAC retreat by combining duplicate items then categorizing them in two distinct ways that each reveal important patterns: by outcome and by personnel.
+We analyze all use cases suggested during the PAC retreat by combining duplicate items then categorizing them in two distinct ways that reveal important patterns: by outcome and by resources.
 
-This synthesis of the 51 suggested use cases was created by a human+AI team. See [use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md) for details.
+Note - this section does NOT judge the value/priority of use cases NOR add missing items ... that will happen later. This section analyzes only suggestions made during the PAC retreat giving them all equal weight.
+
+See [use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md) for details.
 
 ### By Outcomes
 
 Categorize items based on the outcome it serves - highlights *WHY* we do it and connects to the broader Tarleton strategic plan.
 
-#### Integrate AI Across the Curriculum and Create AI Certificates
+#### Ensure AI Literacy for All Tarleton Graduates
 
 - Curriculum Integration (7 raw items)
 - Microcredentialing (1 raw item)
@@ -55,11 +59,15 @@ Categorize items based on the outcome it serves - highlights *WHY* we do it and 
 - External advisory board(s) (1 raw item)
 
 
-### By Personnel
+### By Resources
 
-Categorize items based on the personnel it requires - highlights *HOW* we do it and informs resource allocation and planning decisions.
+Categorize items based on the resources it requires - highlights *HOW* we do it and informs resource allocation and planning decisions.
 
-#### Integrate AI Across the Curriculum and Create AI Certificates
+This is work in-progress. It is incomplete and intended as a starting point for future planning conversations.
+
+Since technical AI expertise is a limited and expensive resource, we estimate the level necessary for each role.
+
+#### Ensure AI Literacy for All Tarleton Graduates
 
 - Champions
     - Barry Lambert
@@ -76,7 +84,7 @@ Categorize items based on the personnel it requires - highlights *HOW* we do it 
     - Curriculum Integration (7 raw items)
     - Microcredentialing (1 raw item)
 
-#### Train & Empower Workforce
+#### Equip our faculty and staff to use AI effectively and responsibly
 
 - Champions
     - TBD
@@ -86,13 +94,13 @@ Categorize items based on the personnel it requires - highlights *HOW* we do it 
         - AI expertise: low
 - Doers
     - Trainers
-        - Teach AI to many types of people
+        - Teach AI to a broad range of people
         - AI expertise: medium
 - Items
     - Literacy & training (5 raw items)
     - Operational efficiency (6 raw items)
 
-#### Solutions Delivery
+#### AI Solutions Delivery
 
 - Champions
     - Scott Cook
@@ -103,18 +111,18 @@ Categorize items based on the personnel it requires - highlights *HOW* we do it 
         - Evaluate & manage 3rd-party AI products
         - AI expertise: high
     - Project manager
-        - Prioritize, coordinate, and monitor all projects
+        - Intake, prioritize, coordinate, and monitor all projects
         - Client-facing point of contact
         - AI expertise: low
 - Doers
     - Engineer
-        - Execute complex AI project
+        - Execute complex AI projects
         - AI expertise: high
     - Operations
         - Deploy, monitor, and support completed projects
         - AI expertise: high
     - Product support
-        - Help users effectively leverage AI tools (ex: Copilot, AI Builder)
+        - Help users effectively leverage 3rd party AI tools (ex: Copilot, AI Builder)
         - AI expertise: medium
 - Items
     - Student success / retention (4 raw items)
@@ -132,7 +140,7 @@ Categorize items based on the personnel it requires - highlights *HOW* we do it 
     - Hiring/onboarding & benefits — goal: retention, transition, advanced degree (1 raw item)
     - Degree development repository — proforma-identified faculty, hiring process (1 raw item)
 
-#### Foundations
+#### Provide guidance and guardrails to keep our data and systems safe
 
 - Leaders
     - TBD

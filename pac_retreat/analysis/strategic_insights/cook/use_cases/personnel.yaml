@@ -26,7 +26,7 @@ kinds:
       curriculum_integration:
         ordinal: 1   # NOTE: conflicts with PAC bucket 3; see ADR-9 in roadmap/decisions/resolved_decisions.md
         pac_bucket: 3
-        label: "Integrate AI Across the Curriculum and Create AI Certificates"
+        label: "Ensure AI Literacy for All Tarleton Graduates"
         champions: ["Barry Lambert", "Denise Martinez"]
         leaders:
           - title: "Provost, deans, department heads"
@@ -42,7 +42,7 @@ kinds:
       workforce_development:
         ordinal: 2   # NOTE: conflicts with PAC bucket 1; see ADR-9 in roadmap/decisions/resolved_decisions.md
         pac_bucket: 1
-        label: "Train & Empower Workforce"
+        label: "Equip our faculty and staff to use AI effectively and responsibly"
         champions: ["TBD"]
         leaders:
           - title: "Coordinator"
@@ -52,13 +52,13 @@ kinds:
         doers:
           - title: "Trainers"
             descriptions:
-              - "Teach AI to many types of people"
+              - "Teach AI to a broad range of people"
             ai_expertise: "medium"
         items: [X7, X6]
       ai_solution_delivery:
         ordinal: 3   # NOTE: conflicts with PAC bucket 2; see ADR-9 in roadmap/decisions/resolved_decisions.md
         pac_bucket: 2
-        label: "Solutions Delivery"
+        label: "AI Solutions Delivery"
         champions: ["Scott Cook", "Zach Gorman"]
         leaders:
           - title: "Chief engineer"
@@ -68,13 +68,13 @@ kinds:
             ai_expertise: "high"
           - title: "Project manager"
             descriptions:
-              - "Prioritize, coordinate, and monitor all projects"
+              - "Intake, prioritize, coordinate, and monitor all projects"
               - "Client-facing point of contact"
             ai_expertise: "low"
         doers:
           - title: "Engineer"
             descriptions:
-              - "Execute complex AI project"
+              - "Execute complex AI projects"
             ai_expertise: "high"
           - title: "Operations"
             descriptions:
@@ -82,12 +82,12 @@ kinds:
             ai_expertise: "high"
           - title: "Product support"
             descriptions:
-              - "Help users effectively leverage AI tools (ex: Copilot, AI Builder)"
+              - "Help users effectively leverage 3rd party AI tools (ex: Copilot, AI Builder)"
             ai_expertise: "medium"
         items: [X3, X4, X5, X8, X10, X11, X12, X13, X14, X15, X16, X18, X19, X20]
 
   capabilities_foundation:
-    label: "Foundations"
+    label: "Provide guidance and guardrails to keep our data and systems safe"
     description: >
       Cross-cutting preconditions that underpin all use-cases. Not sorted by personnel.
       Maps to the PAC docs' "Cross-Cutting Foundations" (rides along, not a fourth bucket).

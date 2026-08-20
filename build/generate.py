@@ -119,9 +119,13 @@ def emit_personnel_category(label, cat_def, uniques):
     return out
 
 def emit_part3b_personnel(personnel, uniques):
-    out = ["### By Personnel\n",
-           "Categorize items based on the personnel it requires - highlights *HOW* we "
-           "do it and informs resource allocation and planning decisions.\n"]
+    out = ["### By Resources\n",
+           "Categorize items based on the resources it requires - highlights *HOW* we "
+           "do it and informs resource allocation and planning decisions.\n",
+           "This is work in-progress. It is incomplete and intended as a starting "
+           "point for future planning conversations.\n",
+           "Since technical AI expertise is a limited and expensive resource, we "
+           "estimate the level necessary for each role.\n"]
     types = personnel["kinds"]["use_cases"]["types"]
     ordered = sorted(types.items(), key=lambda kv: kv[1]["ordinal"])
 
@@ -136,8 +140,8 @@ def emit_part3b_personnel(personnel, uniques):
 def emit_part3(items, personnel, outcomes, uniques):
     out = ["## Part 3 - Categorize\n"
            "We now categorize unique use cases from PAC retreat in two distinct ways "
-           "that each reveal "
-           "important patterns: by outcome and by personnel.\n",
+           "that reveal "
+           "important patterns: by outcome and by resources.\n",
            "Defined in "
            "[outcomes.yaml](strategic_insights/cook/use_cases/outcomes.yaml) "
            "and "
@@ -163,22 +167,25 @@ def emit_report_intro():
             "retreat (2026-07-27) into a single reference: our working vision for AI "
             "at the university, and the concrete use cases surfaced at the retreat, "
             "organized by the strategic outcome each serves and the personnel needed "
-            "to deliver it.\n")
+            "to deliver it.\n\n"
+            "This report was created by a human+AI team.\n")
 
 def emit_report_vision():
     synthesis = yaml.safe_load((COOK / "vision_synthesis.yaml").read_text())["working_synthesis"]
     return (f"## Vision Statement\n\n> {synthesis}\n\n"
-            f"This synthesis of the {VISION_STATEMENT_COUNT} original vision statements "
-            "was created by a human+AI team. See "
+            "See "
             "[vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md) for details.\n")
 
 def emit_report_use_cases(items, personnel, outcomes, uniques):
     out = ["## Use Cases\n",
            "We analyze all use cases suggested during the PAC retreat by combining "
-           "duplicate items then categorizing them in two distinct ways that each "
-           "reveal important patterns: by outcome and by personnel.\n",
-           f"This synthesis of the {len(items)} suggested use cases was created by a "
-           "human+AI team. See "
+           "duplicate items then categorizing them in two distinct ways that "
+           "reveal important patterns: by outcome and by resources.\n",
+           "Note - this section does NOT judge the value/priority of use cases NOR "
+           "add missing items ... that will happen later. This section analyzes "
+           "only suggestions made during the PAC retreat giving them all equal "
+           "weight.\n",
+           "See "
            "[use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md) for details.\n",
            emit_part3a_outcomes(uniques, outcomes),
            "",

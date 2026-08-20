@@ -176,7 +176,7 @@ Defined in [unique_items.yaml](strategic_insights/cook/use_cases/unique_items.ya
 ---
 
 ## Part 3 - Categorize
-We now categorize unique use cases from PAC retreat in two distinct ways that each reveal important patterns: by outcome and by personnel.
+We now categorize unique use cases from PAC retreat in two distinct ways that reveal important patterns: by outcome and by resources.
 
 Defined in [outcomes.yaml](strategic_insights/cook/use_cases/outcomes.yaml) and [personnel.yaml](strategic_insights/cook/use_cases/personnel.yaml) using deduplicated (unique) items.
 
@@ -184,7 +184,7 @@ Defined in [outcomes.yaml](strategic_insights/cook/use_cases/outcomes.yaml) and 
 
 Categorize items based on the outcome it serves - highlights *WHY* we do it and connects to the broader Tarleton strategic plan.
 
-#### Integrate AI Across the Curriculum and Create AI Certificates
+#### Ensure AI Literacy for All Tarleton Graduates
 
 - Curriculum Integration (7 raw items)
 - Microcredentialing (1 raw item)
@@ -217,11 +217,15 @@ Categorize items based on the outcome it serves - highlights *WHY* we do it and 
 - External advisory board(s) (1 raw item)
 
 
-### By Personnel
+### By Resources
 
-Categorize items based on the personnel it requires - highlights *HOW* we do it and informs resource allocation and planning decisions.
+Categorize items based on the resources it requires - highlights *HOW* we do it and informs resource allocation and planning decisions.
 
-#### Integrate AI Across the Curriculum and Create AI Certificates
+This is work in-progress. It is incomplete and intended as a starting point for future planning conversations.
+
+Since technical AI expertise is a limited and expensive resource, we estimate the level necessary for each role.
+
+#### Ensure AI Literacy for All Tarleton Graduates
 
 - Champions
     - Barry Lambert
@@ -238,7 +242,7 @@ Categorize items based on the personnel it requires - highlights *HOW* we do it 
     - Curriculum Integration (7 raw items)
     - Microcredentialing (1 raw item)
 
-#### Train & Empower Workforce
+#### Equip our faculty and staff to use AI effectively and responsibly
 
 - Champions
     - TBD
@@ -248,13 +252,13 @@ Categorize items based on the personnel it requires - highlights *HOW* we do it 
         - AI expertise: low
 - Doers
     - Trainers
-        - Teach AI to many types of people
+        - Teach AI to a broad range of people
         - AI expertise: medium
 - Items
     - Literacy & training (5 raw items)
     - Operational efficiency (6 raw items)
 
-#### Solutions Delivery
+#### AI Solutions Delivery
 
 - Champions
     - Scott Cook
@@ -265,18 +269,18 @@ Categorize items based on the personnel it requires - highlights *HOW* we do it 
         - Evaluate & manage 3rd-party AI products
         - AI expertise: high
     - Project manager
-        - Prioritize, coordinate, and monitor all projects
+        - Intake, prioritize, coordinate, and monitor all projects
         - Client-facing point of contact
         - AI expertise: low
 - Doers
     - Engineer
-        - Execute complex AI project
+        - Execute complex AI projects
         - AI expertise: high
     - Operations
         - Deploy, monitor, and support completed projects
         - AI expertise: high
     - Product support
-        - Help users effectively leverage AI tools (ex: Copilot, AI Builder)
+        - Help users effectively leverage 3rd party AI tools (ex: Copilot, AI Builder)
         - AI expertise: medium
 - Items
     - Student success / retention (4 raw items)
@@ -294,7 +298,7 @@ Categorize items based on the personnel it requires - highlights *HOW* we do it 
     - Hiring/onboarding & benefits — goal: retention, transition, advanced degree (1 raw item)
     - Degree development repository — proforma-identified faculty, hiring process (1 raw item)
 
-#### Foundations
+#### Provide guidance and guardrails to keep our data and systems safe
 
 - Leaders
     - TBD
