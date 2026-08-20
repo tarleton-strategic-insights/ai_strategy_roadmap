@@ -3,16 +3,15 @@
 TODO: frame this doc as the sequel to [pac_report.md](pac_report.md) — moving from "what was
 surfaced at the retreat" to "how we act on it."
 
-This document builds upon [pac_report.md](pac_report.md) — moving from "what was surfaced in the retreat and followup survey" to "how we act on it."
+This draft Ai strategy \& roadmaps document builds upon [pac_report.md](pac_report.md) — moving from "what was surfaced in the retreat and followup survey" to "how we act on it."
 
-Key elements from [pac_report.md](pac_report.md):
-
-## Synthesized vision statement
+## Synthesized vision statement 
+from [pac_report.md](pac_report.md)
 
 > Tarleton State University will responsibly use AI to improve student success, workforce readiness, and institutional operations, while protecting the integrity, privacy, and trust of our students, faculty, staff, and community.
 
 ## Use Cases
-All 51 use cases suggested in the PAC retreat were analyzed to create 2 categorizations: by outcome and by resource. 
+In [pac_report.md](pac_report.md), all 51 use cases suggested in the PAC retreat were analyzed to create two types of categorization: by outcome and by resource. 
 
 ### By Outcome
 - Ensure AI Literacy for All Tarleton Graduates
@@ -25,7 +24,7 @@ All 51 use cases suggested in the PAC retreat were analyzed to create 2 categori
 - AI Solutions Delivery
 - Provide guidance and guardrails to keep our data and systems safe
 
-We now add details such as key roles and responsibilities. This is work in-progress. It is incomplete and intended as a starting point for future planning conversations.
+We now add details such as key roles and responsibilities. This is work in-progress. It is incomplete and intended as a starting point for future discussions.
 
 Since technical AI expertise is a limited and expensive resource, we estimate the level necessary for each role.
 
@@ -44,6 +43,8 @@ Since technical AI expertise is a limited and expensive resource, we estimate th
         - Design & implement most effective ways to integrate AI within their specific subject
         - AI expertise: varies by field
 
+This objective naturally lives within Academic Affairs which has already begun to plan and pursue it.
+
 #### Equip our faculty and staff to use AI effectively and responsibly
 
 - Workforce development
@@ -57,6 +58,17 @@ Since technical AI expertise is a limited and expensive resource, we estimate th
     - Trainers
         - Teach AI to a broad range of people
         - AI expertise: medium
+
+This is a big job that needs a leader with a clear vision and strong organizational skills to make it consistent and effective. Unlike the other pieces, this does not have an obvious home nor align naturally with existing jobs.
+
+It presents organizational challenges because it spans both faculty and staff. Here are a few examples (over-simplified for brevity)
+- Uses: faculty need AI for teaching/learning and research; staff need AI for business functions
+- Trainers: CEE trains faculty; HR trains staff
+- Incentives: faculty are incentivized by tenure/promotion; staff are incentivized by performance evaluations
+
+This incomplete list already highlights the 1st big issue - workforce development does not fit naturally into our organizational structure.
+
+Thus, figuring out where this fits must be one of our top priorities.
 
 #### AI Solutions Delivery
 
@@ -84,6 +96,7 @@ Since technical AI expertise is a limited and expensive resource, we estimate th
         - Help users effectively leverage 3rd party AI tools (ex: Copilot, AI Builder)
         - AI expertise: medium
 
+There are already several pockets of such activity to build upon.
 
 #### Provide guidance and guardrails to keep our data and systems safe
 
@@ -93,19 +106,22 @@ Since technical AI expertise is a limited and expensive resource, we estimate th
 - Doers
     - TBD
 
+AI Council has provided some degree of oversight, but it does not have a clear mandate or sufficient resourcing to do it properly. We could choose to beef-up and refocus AI Council for this job or find/create another group.
+
 ## Strategic Priorities
 
 TODO: the prioritized (not just enumerated) set of outcomes/use-cases — which come first and why.
 
----
+
+
 
 ## Organizational Structure
 
-While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, the other resource categories span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. 
+While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, the other resource categories span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. As discussed above, "Workforce development" does not have a natural home and therefore might only span multiple divisions.
 
 Furthermore, many of the listed roles are not full time jobs. It is likely that they will be incorporated into existing positions across different departments/divisions.
 
-These raise questions about coordination and oversight that commonly occur with cross-functional teams. These questions can be effectively answered and potential problem avoided through careful upfront discussion and planning.
+These raise questions about coordination, oversight, and evaluation that always occur with cross-functional teams. These questions can be effectively answered and potential problem avoided through careful upfront discussion and planning.
 
 ## Build vs Buy
 
@@ -115,16 +131,45 @@ In constrast to most new technologies, everyone can use AI without needing advan
 
 ## Embedded AI partners
 
-The workforce development team will equip all faculty \& staff with enough basic AI knowledge to solve low-hanging problems and make meaningful improvements to their own workflow. The "AI Solutions" team will create advanced AI tools to solve complex problems.
+The Workforce Development team will equip all faculty \& staff with enough basic AI knowledge to pick their own low-hanging fruit and make meaningful improvements to their own workflow. The AI Solutions team will create advanced AI tools to solve complex problems.
 
-Open question: Should there be something in-between?
+Question: Should there be something in-between?
 
-Initial idea: Offer additional AI training beyond the baseline campus-wide training to self-selected "AI partners" embedded in functional areas. They would serve as local AI faciliators for their unit to
+Idea: Offer additional AI training beyond the baseline campus-wide training to self-selected "AI partners" embedded in functional areas to serve as local AI faciliators for their unit to
 1. Encourage AI adoption \& self-service
 2. Create intermediate-level AI solutions tailored to their unit which require AI knowledge beyond baseline and are not appropriate tasks for the main AI Solutions teams (eg: too narrow, competing priorities, etc)
 
-The AI partner program could fall either under workforce development or AI solutions teams. My instinct leans toward AI solutions as that could drive a secondary benefit of creating direct relationships between AI partners and engineers with advanced AI skills.
+The AI partner program could fall either under workforce development or AI solutions teams. My instinct leans toward AI solutions as that could bring a secondary benefit of creating direct relationships between AI partners and engineers with advanced AI skills.
 
+
+## Gap Analysis
+Below is a partial list of additional AI-related gaps I've heard which are not covered above
+1. User-support for AI Builder, Copilot, and other enterprise-wide AI platforms
+1. Technical Users Group where AI power users can share lessons learned and seek advice
+1. Stable platform (AI Builder has usuage limits and teething-problems, Copilot has additional cost (for pro) and many folks like ChatGPT/Gemini/Claude more, ChatGPT/Gemini/Claude are not secure/private)
+
+## Infrastructure
+
+Current and planned AI infrastructure available to the University.
+### University-wide
+
+| Platform | Cost | Availability | Notes |
+|----------|------|--------------|-------|
+| AI Builder | Free | Now | $10/day cap |
+| Copilot Chat | Free | Now | |
+| Copilot Pro | $18/month | Now | |
+| TAICCI | TBD | >1 year out | Texas AI Compute Cooperative Initiative |
+| VISION Superpod | TBD | Now | High technical barrier to entry |
+| Secure ChatGPT/Gemini/Claude | TBD | Early proposal | Pursuing quotes from OpenAI, Google, Anthropic |
+
+### Limited-access
+
+| Platform | Cost | Availability | Notes |
+|----------|------|--------------|-------|
+| TAI01 research server | — | Now | Donated by Troy Thorne |
+| NVIDIA DGX Spark | — | Now | |
+
+-------- Everything below is AI-created boilerplate to be completed or removed later --------
 
 ---
 
