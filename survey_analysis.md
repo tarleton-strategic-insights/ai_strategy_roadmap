@@ -1,8 +1,9 @@
 # Follow-Up Survey Analysis
 
-Analysis of `survey_results.csv` — 26 responses to the ranking survey sent via
-[pac_followup_message.md](pac_followup_message.md) following the PAC AI strategy retreat.
-Source data is raw survey export; not hand-edited.
+Analysis of [survey_results.csv](prioritization/survey_results.csv) — 26 responses to
+the ranking survey sent via
+[survey_message.md](prioritization/survey_message.md) following the PAC AI strategy
+retreat. Source data is raw survey export; not hand-edited.
 
 ---
 
@@ -71,7 +72,7 @@ If the question had instead been "Which road-trip enabler needs the most immedia
 ## AI ambition spectrum placement
 
 Where respondents think Tarleton should aim (per the slide-3 spectrum referenced in
-`pac_followup_message.md`; "AI-intergrated" in the source data is a typo for
+`prioritization/survey_message.md`; "AI-intergrated" in the source data is a typo for
 "AI-integrated," normalized here):
 
 | Position | Votes |

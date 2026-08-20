@@ -1,9 +1,6 @@
 ## Introduction
 
-TODO: frame this doc as the sequel to [pac_report.md](pac_report.md) — moving from "what was
-surfaced at the retreat" to "how we act on it."
-
-This draft Ai strategy \& roadmaps document builds upon [pac_report.md](pac_report.md) — moving from "what was surfaced in the retreat and followup survey" to "how we act on it."
+This working draft of AI strategy \& roadmap for Tarleton State builds upon [pac_report.md](pac_report.md) and [survey_analysis.md](survey_analysis.md) — moving from "what we learned in the retreat and followup survey" to "how we act on it."
 
 ## Synthesized vision statement 
 from [pac_report.md](pac_report.md)
@@ -23,7 +20,6 @@ In [pac_report.md](pac_report.md), all 51 use cases suggested in the PAC retreat
 - Equip our faculty and staff to use AI effectively and responsibly
 - Provide guidance and guardrails to keep our data and systems safe
 - AI Solutions Delivery
-
 
 We now add details such as key roles and responsibilities. This is work in-progress. It is incomplete and intended as a starting point for future discussions.
 
@@ -79,7 +75,7 @@ AI Council has provided some degree of oversight, but it does not have a clear m
 This carries at least 2 responsibilities - creating guidance AND communicating/implementing/enforcing it. AI Council can create all necessary the rules and proceedures, but it must have broad leadership support to disseminate and enforce them.
 
 #### AI Solutions Delivery
-Many of the high-impact applications for AI (dropout early-warning, course planning & advising, interdepartmental coordination, etc) are technically complex to create and maintain. Like most IHE AI strategies we reviewed, we propose creating a team with advanced AI skills to tackle these challenging tasks.
+Many of the high-priority applications of AI (dropout early-warning, course planning & advising, streamline business processes, etc) are technically complex to create and maintain. Like most IHE AI strategies reviewed, we propose creating a team with advanced AI skills to tackle these challenging tasks.
 
 - Create, deploy, and support complex AI tools & solutions
 - Leaders
@@ -104,15 +100,6 @@ Many of the high-impact applications for AI (dropout early-warning, course plann
 
 There are already several pockets of such activity to build upon.
 
-
-
-## Strategic Priorities
-
-TODO: the prioritized (not just enumerated) set of outcomes/use-cases — which come first and why.
-
-
-
-
 ## Organizational Structure
 
 While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, the other resource categories span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. As discussed above, "Workforce development" does not have a natural home and therefore might only span multiple divisions.
@@ -125,7 +112,7 @@ These raise questions about coordination, oversight, and evaluation that always 
 
 In constrast to most new technologies, everyone can use AI without needing advanced technical skills. AI empowers "build-your-own" approaches to problems that previously required specialized skills and materials. However, some problems remain too complex, specialized, or costly for DIY and should be outsourced or purchased.
 
-"AI Solutions Delivery" could contain separate "build" and "buy" teams. While the build team creates and maintains in-house AI solutions, the buy team evaluates 3rd party tools and provides training and support on them to faculty \& staff.
+"AI Solutions Delivery" could contain dedicated "build" and "buy" teams. While the build team creates and maintains in-house AI solutions, the buy team evaluates 3rd party tools and provides training and support for them to faculty \& staff.
 
 ## Embedded AI partners
 

@@ -31,7 +31,7 @@ Best,
 
 - Where should Tarleton be on the AI ambition spectrum
 
-![AI ambition spectrum: Not AI-enabled, AI-assisted, AI-augmented, AI-integrated, AI-centric, AI-native](pac_retreat/sources/event_artifacts/images/ai_ambition_spectrum.png)
+![AI ambition spectrum: Not AI-enabled, AI-assisted, AI-augmented, AI-integrated, AI-centric, AI-native](../pac_retreat/sources/event_artifacts/images/ai_ambition_spectrum.png)
 
 - Rank these AI-focused initiatives from highest to lowest priority
     - Accelerate Student Retention and Success
