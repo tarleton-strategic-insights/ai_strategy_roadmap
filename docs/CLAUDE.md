@@ -28,7 +28,10 @@ move the roadmap forward iteration by iteration.
   prioritization, org structure, staffing (including the Champions/Leaders/Doers
   role detail per resource category — no longer generated, lives here natively),
   milestones, budget, governance. Not generated; edit directly, never regenerate.
-- `followup_message.md` (repo top level) — PAC-facing follow-up survey draft.
+- `pac_followup_message.md` (repo top level) — PAC-facing follow-up survey draft.
+- `survey_results.csv` / `survey_analysis.md` (repo top level) — raw export and
+  analysis of the follow-up survey responses. `survey_analysis.md` is hand-authored,
+  not generated; edit directly if the underlying CSV changes.
 - `pac_retreat/sources/` — raw retreat materials (flip-chart photos, slides, pre-event
   case-study research). Read-only reference; never edited.
 - `pac_retreat/analysis/` — structured source of truth and its generated/hand-authored
@@ -62,7 +65,7 @@ move the roadmap forward iteration by iteration.
       strategic objective each unique_items entry serves. Independent axis from
       resource — the two don't have to agree and aren't derived from each other.
       Every unique_items entry belongs to exactly one outcome. Set mirrors
-      `followup_message.md`'s three PAC-facing priorities plus a Foundations
+      `pac_followup_message.md`'s three PAC-facing priorities plus a Foundations
       catch-all.
   - `strategic_insights/cook/vision_synthesis.yaml` — sole authoritative source for
     the official vision statement (adjudicated 2026-08-12, ADR-11) quoted in
@@ -112,7 +115,7 @@ to agree with each other and neither is derived from the other:
   Leaders, Doers) staff each category is hand-authored in `AI_strategy_and_roadmap.md`,
   not part of this YAML.
 - **Outcome** (`outcomes.yaml`) — which strategic objective the work serves. Mirrors the
-  PAC-facing priorities in `followup_message.md`.
+  PAC-facing priorities in `pac_followup_message.md`.
 
 Both axes apply at the **unique_items** (deduplicated) level, not the raw-item level —
 every unique_items entry belongs to exactly one group on each axis. Where an entry's
@@ -155,7 +158,7 @@ bucket numbers, and two contested item placements).
 
 ### Outcome
 
-Four groups (added 2026-08-12), three mirroring `followup_message.md`'s PAC-facing
+Four groups (added 2026-08-12), three mirroring `pac_followup_message.md`'s PAC-facing
 priorities plus a catch-all for entries none of the three cover:
 
 1. Accelerate Student Retention and Success

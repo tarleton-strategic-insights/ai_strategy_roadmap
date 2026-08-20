@@ -231,6 +231,11 @@ Categorize items based on the resources it requires - highlights *HOW* we do it 
 - Literacy & training (5 raw items)
 - Operational efficiency (6 raw items)
 
+#### Provide guidance and guardrails to keep our data and systems safe
+
+- Governance / security / ethics (8 raw items)
+- External advisory board(s) (1 raw item)
+
 #### AI Solutions Delivery
 
 - Student success / retention (4 raw items)
@@ -247,9 +252,4 @@ Categorize items based on the resources it requires - highlights *HOW* we do it 
 - Scheduling rooms — recoding rooms for use, clean data input before scheduling (currently doesn't predict), watch clicks on registration (1 raw item)
 - Hiring/onboarding & benefits — goal: retention, transition, advanced degree (1 raw item)
 - Degree development repository — proforma-identified faculty, hiring process (1 raw item)
-
-#### Provide guidance and guardrails to keep our data and systems safe
-
-- Governance / security / ethics (8 raw items)
-- External advisory board(s) (1 raw item)
 

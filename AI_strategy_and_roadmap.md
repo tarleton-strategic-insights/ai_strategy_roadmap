@@ -21,8 +21,9 @@ In [pac_report.md](pac_report.md), all 51 use cases suggested in the PAC retreat
 ### By Resource
 - Ensure AI Literacy for All Tarleton Graduates
 - Equip our faculty and staff to use AI effectively and responsibly
-- AI Solutions Delivery
 - Provide guidance and guardrails to keep our data and systems safe
+- AI Solutions Delivery
+
 
 We now add details such as key roles and responsibilities. This is work in-progress. It is incomplete and intended as a starting point for future discussions.
 
@@ -31,9 +32,6 @@ Since technical AI expertise is a limited and expensive resource, we estimate th
 #### Ensure AI Literacy for All Tarleton Graduates
 
 - Curriculum integration and microcredential programs
-- Champions
-    - Barry Lambert
-    - Denise Martinez
 - Leaders
     - Provost, deans, department heads
         - Establish academic structure and process (ex: stand-alone AI courses vs. embed AI in all courses vs. embed into capstones)
@@ -48,8 +46,6 @@ This objective naturally lives within Academic Affairs which has already begun t
 #### Equip our faculty and staff to use AI effectively and responsibly
 
 - Workforce development
-- Champions
-    - TBD
 - Leaders
     - Coordinator
         - Organize & support training for all staff AND faculty (and possibly alumni, community partners, etc)
@@ -70,16 +66,26 @@ This incomplete list already highlights the 1st big issue - workforce developmen
 
 Thus, figuring out where this fits must be one of our top priorities.
 
+#### Provide guidance and guardrails to keep our data and systems safe
+
+- Oversee AI governance, ethics, security, etc
+- Leaders
+    - TBD
+- Doers
+    - TBD
+
+AI Council has provided some degree of oversight, but it does not have a clear mandate or sufficient resourcing to do it properly. We could choose to beef-up and refocus AI Council for this job or find/create another group.
+
+This carries at least 2 responsibilities - creating guidance AND communicating/implementing/enforcing it. AI Council can create all necessary the rules and proceedures, but it must have broad leadership support to disseminate and enforce them.
+
 #### AI Solutions Delivery
+Many of the high-impact applications for AI (dropout early-warning, course planning & advising, interdepartmental coordination, etc) are technically complex to create and maintain. Like most IHE AI strategies we reviewed, we propose creating a team with advanced AI skills to tackle these challenging tasks.
 
 - Create, deploy, and support complex AI tools & solutions
-- Champions
-    - Scott Cook
-    - Zach Gorman
 - Leaders
     - Chief engineer
         - Develop, architect, and guide multiple complex AI projects
-        - Evaluate & manage 3rd-party AI products
+        - Evaluate & support 3rd-party AI products
         - AI expertise: high
     - Project manager
         - Intake, prioritize, coordinate, and monitor all projects
@@ -98,15 +104,7 @@ Thus, figuring out where this fits must be one of our top priorities.
 
 There are already several pockets of such activity to build upon.
 
-#### Provide guidance and guardrails to keep our data and systems safe
 
-- Oversee AI governance, ethics, security, etc
-- Leaders
-    - TBD
-- Doers
-    - TBD
-
-AI Council has provided some degree of oversight, but it does not have a clear mandate or sufficient resourcing to do it properly. We could choose to beef-up and refocus AI Council for this job or find/create another group.
 
 ## Strategic Priorities
 
@@ -146,7 +144,10 @@ The AI partner program could fall either under workforce development or AI solut
 Below is a partial list of additional AI-related gaps I've heard which are not covered above
 1. User-support for AI Builder, Copilot, and other enterprise-wide AI platforms
 1. Technical Users Group where AI power users can share lessons learned and seek advice
-1. Stable platform (AI Builder has usuage limits and teething-problems, Copilot has additional cost (for pro) and many folks like ChatGPT/Gemini/Claude more, ChatGPT/Gemini/Claude are not secure/private)
+1. Stable platform
+    - AI Builder has usuage limits and teething-problems
+    - Copilot has added cost (for pro) and many folks like ChatGPT/Gemini/Claude more
+    - ChatGPT/Gemini/Claude are not secure/private
 
 ## Infrastructure
 
@@ -159,8 +160,8 @@ Current and planned AI infrastructure available to the University.
 | Copilot Chat | Free | Now | |
 | Copilot Pro | $18/month | Now | |
 | TAICCI | TBD | >1 year out | Texas AI Compute Cooperative Initiative |
-| VISION Superpod | TBD | Now | High technical barrier to entry |
-| Secure ChatGPT/Gemini/Claude | TBD | Early proposal | Pursuing quotes from OpenAI, Google, Anthropic |
+| VISION Superpod | Free | Now | High technical barrier to entry |
+| Secure ChatGPT/Gemini/Claude | TBD | Early proposal | Getting quotes from OpenAI, Google, Anthropic |
 
 ### Limited-access
 

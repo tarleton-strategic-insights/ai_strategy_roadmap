@@ -18,7 +18,10 @@ python build/generate.py --pdf     # also render PDFs (not committed; repo is pu
   `pac_report.md`: prioritization, org structure, staffing (including the
   Champions/Leaders/Doers role detail, no longer generated), milestones, budget,
   governance. Not generated; edit directly.
-- `followup_message.md` (repo top level) — PAC-facing follow-up survey draft.
+- `pac_followup_message.md` (repo top level) — PAC-facing follow-up survey draft.
+- `survey_results.csv` / `survey_analysis.md` (repo top level) — raw export and
+  analysis of the follow-up survey responses. `survey_analysis.md` is hand-authored,
+  not generated.
 - `pac_retreat/sources/` — raw retreat materials (photos, slides, case studies).
   Read-only.
 - `pac_retreat/analysis/` — `use_cases_analysis.md` (build output — do not
