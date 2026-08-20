@@ -1,30 +1,34 @@
 # Message
-We’d like to thank you for the time and energy you brought to PAC’s AI strategy retreat. Your insights are shaping a clear AI roadmap for Tarleton State.
+Happy Purple Thursday, PAC members!
 
-Three clear priorities emerged from our time together:
+We’d like to thank you for the time and energy you brought to the July 27th Summer AI Strategy Retreat. Your insights and contributions are shaping a clear AI roadmap for Tarleton State.
 
-- Accelerate Student Retention and Success Through AI
-- Integrate AI Across the Curriculum and Create AI Certificates
-- Enhance Service and Operations Through AI
+Three clear priorities have emerged from the day for us to focus on for the next year:
+
+    Ensure AI Literacy for All Tarleton Graduates
+    Accelerate Student Retention and Success Through AI
+    Enhance Service and Operations Through AI
 
 The foundational enablers of these three priorities will be to:
 
-- Equip our faculty and staff to use AI effectively and responsibly, 
-- Resource AI initiatives/projects adequately
-- Provide guidance and guardrails to keep our data and systems safe
+    Equip our faculty and staff to use AI effectively and responsibly, 
+    Resource AI initiatives/projects adequately
+    Provide guidance and guardrails to keep our data and systems safe
 
-To help us prioritize steps to move from strategy to action in the coming year, would you please complete [THIS] survey by [DEADLINE].
+Our next step is for you to complete a brief 2-3 minute survey to help us prioritize steps to move from strategy to action for the coming year. Please try to complete it by next Thursday, August 20th. 
+ 
 
-We’re excited for the journey ahead! Thank you again for your contributions.
-
-All PAC members received access to M365 CoPilot Pro for one month which will expire on 8/31. If you would like to continue your license at $18 per month, please contact ITS through [Laura Isbell](LISBELL@tarleton.edu) and provide an account number.
-[we can drop this if desired, but the information does need to go out to PAC so including it here at the end saves another email]
+We’re excited for the journey ahead! Thank you again for your contributions last week. 
 
 Best,
 
-~Credence 
+~Credence
 
 # Survey
+## [Final](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=OOZeLGOpwEmsJoKN2beNXgzM0cYG3dJKlkYKSmCNRphUNVVNNDZCQzhYT0Q1WFFGTURINE5NUjlVNS4u)
+
+## Draft
+
 - Where should Tarleton be on the AI ambition spectrum
 
 ![AI ambition spectrum: Not AI-enabled, AI-assisted, AI-augmented, AI-integrated, AI-centric, AI-native](pac_retreat/sources/event_artifacts/images/ai_ambition_spectrum.png)
