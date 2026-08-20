@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Regenerate use_cases_analysis.md from raw_items.yaml, unique_items.yaml, personnel.yaml,
+Regenerate use_cases_analysis.md from raw_items.yaml, unique_items.yaml, resources.yaml,
 and outcomes.yaml. Also regenerates pac_report.md (Introduction + Vision Statement +
-Use Cases, the latter re-deriving the outcome/personnel breakdown from those same
+Use Cases, the latter re-deriving the outcome/resource breakdown from those same
 files) plus vision_synthesis.yaml.
 
 PDFs are off by default — this repo is pushed to GitHub, which renders markdown
@@ -38,10 +38,10 @@ SUBTITLE = ("Source: `pac_retreat/sources/event_artifacts/images/use_cases/` "
 
 def load():
     items = yaml.safe_load((DATA / "raw_items.yaml").read_text())["items"]
-    personnel = yaml.safe_load((DATA / "personnel.yaml").read_text())
+    resources = yaml.safe_load((DATA / "resources.yaml").read_text())["resources"]
     outcomes = yaml.safe_load((DATA / "outcomes.yaml").read_text())["outcomes"]
     uniques = yaml.safe_load((DATA / "unique_items.yaml").read_text())["unique_items"]
-    return items, personnel, outcomes, uniques
+    return items, resources, outcomes, uniques
 
 def by_group(items):
     groups = {}
@@ -91,53 +91,17 @@ def emit_part3a_outcomes(uniques, outcomes):
         out.append("")
     return "\n".join(out)
 
-def emit_roles(role_list):
-    out = []
-    for role in role_list:
-        out.append(f"    - {role['title']}")
-        for desc in role.get("descriptions", []):
-            out.append(f"        - {desc}")
-        if "ai_expertise" in role:
-            out.append(f"        - AI expertise: {role['ai_expertise']}")
-    return out
-
-def emit_personnel_category(label, cat_def, uniques):
-    out = [f"#### {label}", ""]
-    if "champions" in cat_def:
-        out.append("- Champions")
-        for name in cat_def["champions"]:
-            out.append(f"    - {name}")
-    out.append("- Leaders")
-    out.extend(emit_roles(cat_def["leaders"]))
-    out.append("- Doers")
-    out.extend(emit_roles(cat_def["doers"]))
-    out.append("- Items")
-    for uid in cat_def["items"]:
-        u = uniques[uid]
-        n = len(u["items"])
-        out.append(f"    - {u['label']} ({n} raw item{'s' if n != 1 else ''})")
-    return out
-
-def emit_part3b_personnel(personnel, uniques):
+def emit_part3b_resources(resources, uniques):
     out = ["### By Resources\n",
            "Categorize items based on the resources it requires - highlights *HOW* we "
-           "do it and informs resource allocation and planning decisions.\n",
-           "This is work in-progress. It is incomplete and intended as a starting "
-           "point for future planning conversations.\n",
-           "Since technical AI expertise is a limited and expensive resource, we "
-           "estimate the level necessary for each role.\n"]
-    types = personnel["kinds"]["use_cases"]["types"]
-    ordered = sorted(types.items(), key=lambda kv: kv[1]["ordinal"])
-
-    for tname, t in ordered:
-        out.extend(emit_personnel_category(t["label"], t, uniques))
+           "do it and informs resource allocation and planning decisions.\n"]
+    for rname, rdef in resources.items():
+        out.append(f"#### {rdef['label']}\n")
+        out.extend(emit_uniques_list(rdef["items"], uniques))
         out.append("")
-
-    foundation = personnel["kinds"]["capabilities_foundation"]
-    out.extend(emit_personnel_category(foundation["label"], foundation, uniques))
     return "\n".join(out)
 
-def emit_part3(items, personnel, outcomes, uniques):
+def emit_part3(items, resources, outcomes, uniques):
     out = ["## Part 3 - Categorize\n"
            "We now categorize unique use cases from PAC retreat in two distinct ways "
            "that reveal "
@@ -145,18 +109,18 @@ def emit_part3(items, personnel, outcomes, uniques):
            "Defined in "
            "[outcomes.yaml](strategic_insights/cook/use_cases/outcomes.yaml) "
            "and "
-           "[personnel.yaml](strategic_insights/cook/use_cases/personnel.yaml) "
+           "[resources.yaml](strategic_insights/cook/use_cases/resources.yaml) "
            "using deduplicated (unique) items.\n",
            emit_part3a_outcomes(uniques, outcomes),
            "",
-           emit_part3b_personnel(personnel, uniques)]
+           emit_part3b_resources(resources, uniques)]
     return "\n".join(out)
 
-def build_md(items, personnel, outcomes, uniques):
+def build_md(items, resources, outcomes, uniques):
     parts = [f"# {TITLE}", SUBTITLE, "", "---", "",
              emit_part1(items), "---", "",
              emit_part2(items, uniques), "---", "",
-             emit_part3(items, personnel, outcomes, uniques)]
+             emit_part3(items, resources, outcomes, uniques)]
     return "\n".join(parts) + "\n"
 
 VISION_STATEMENT_COUNT = 7  # distinct statements documented in vision_statements_analysis.md
@@ -166,7 +130,7 @@ def emit_report_intro():
             "This report synthesizes the outcomes of Tarleton State's PAC AI strategy "
             "retreat (2026-07-27) into a single reference: our working vision for AI "
             "at the university, and the concrete use cases surfaced at the retreat, "
-            "organized by the strategic outcome each serves and the personnel needed "
+            "organized by the strategic outcome each serves and the resources needed "
             "to deliver it.\n\n"
             "This report was created by a human+AI team.\n")
 
@@ -176,7 +140,7 @@ def emit_report_vision():
             "See "
             "[vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md) for details.\n")
 
-def emit_report_use_cases(items, personnel, outcomes, uniques):
+def emit_report_use_cases(items, resources, outcomes, uniques):
     out = ["## Use Cases\n",
            "We analyze all use cases suggested during the PAC retreat by combining "
            "duplicate items then categorizing them in two distinct ways that "
@@ -189,13 +153,13 @@ def emit_report_use_cases(items, personnel, outcomes, uniques):
            "[use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md) for details.\n",
            emit_part3a_outcomes(uniques, outcomes),
            "",
-           emit_part3b_personnel(personnel, uniques)]
+           emit_part3b_resources(resources, uniques)]
     return "\n".join(out)
 
-def build_report_md(items, personnel, outcomes, uniques):
+def build_report_md(items, resources, outcomes, uniques):
     parts = [emit_report_intro(), "---", "",
              emit_report_vision(), "---", "",
-             emit_report_use_cases(items, personnel, outcomes, uniques)]
+             emit_report_use_cases(items, resources, outcomes, uniques)]
     return "\n".join(parts) + "\n"
 
 STYLED_CSS = """
@@ -233,13 +197,13 @@ def to_pdf(md_path, pdf_path, css=STYLED_CSS):
 
 def main():
     ANALYSIS.mkdir(parents=True, exist_ok=True)
-    items, personnel, outcomes, uniques = load()
-    md = build_md(items, personnel, outcomes, uniques)
+    items, resources, outcomes, uniques = load()
+    md = build_md(items, resources, outcomes, uniques)
     md_path = ANALYSIS / "use_cases_analysis.md"
     md_path.write_text(md)
     print(f"wrote {md_path.relative_to(ROOT)}  ({len(items)} items)")
 
-    report_md = build_report_md(items, personnel, outcomes, uniques)
+    report_md = build_report_md(items, resources, outcomes, uniques)
     report_path = OUT / "pac_report.md"
     report_path.write_text(report_md)
     print(f"wrote {report_path.relative_to(ROOT)}")

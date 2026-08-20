@@ -102,7 +102,7 @@ technically complex work, and an embedded-partner tier fills the middle ground �
 distributing skilled capacity into functional areas without losing central
 coordination entirely.
 **Open question surfaced:** How the AI partner tier would actually be staffed/trained,
-and how it interacts with the roles in `use_cases/personnel.yaml`'s "Solutions
+and how it interacts with the roles in AI_strategy_and_roadmap.md's "AI Solutions
 Delivery" category — see OD-11 and OD-14 in `open_decisions.md`.
 
 ### ADR-11 — Official vision statement (2026-08-12)

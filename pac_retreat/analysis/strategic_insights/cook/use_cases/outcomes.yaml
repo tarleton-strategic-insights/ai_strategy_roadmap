@@ -1,8 +1,8 @@
 # Outcome framework: categorizes each unique_items entry by the strategic objective it
 # serves. Sole authoritative definition of outcomes AND membership. This is one of two
-# independent categorization axes — see personnel.yaml for the other (which roles/
-# personnel the work needs). An entry gets exactly one outcome and exactly one
-# personnel category; the two axes don't have to agree and aren't derived from each other.
+# independent categorization axes — see resources.yaml for the other (which resource
+# category the work needs). An entry gets exactly one outcome and exactly one
+# resource category; the two axes don't have to agree and aren't derived from each other.
 # Membership is defined at the unique_items (unique_items.yaml) level, not the raw-item
 # level: every unique_items entry (X1, X2, ...) belongs to exactly one outcome.
 #

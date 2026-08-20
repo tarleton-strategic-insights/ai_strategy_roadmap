@@ -14,6 +14,10 @@ python build/generate.py --pdf     # also render PDFs (not committed; repo is pu
 ## Where things live
 - `pac_report.md` (repo top level) — build output (Introduction, Vision Statement,
   Use Cases). Do not hand-edit.
+- `AI_strategy_and_roadmap.md` (repo top level) — hand-authored sequel to
+  `pac_report.md`: prioritization, org structure, staffing (including the
+  Champions/Leaders/Doers role detail, no longer generated), milestones, budget,
+  governance. Not generated; edit directly.
 - `followup_message.md` (repo top level) — PAC-facing follow-up survey draft.
 - `pac_retreat/sources/` — raw retreat materials (photos, slides, case studies).
   Read-only.
@@ -21,7 +25,7 @@ python build/generate.py --pdf     # also render PDFs (not committed; repo is pu
   hand-edit) and `vision_statements_analysis.md` (vision-statement transcriptions +
   synopsis).
   - `strategic_insights/cook/use_cases/` — structured source of truth
-    (`raw_items.yaml`, `unique_items.yaml`, `personnel.yaml`, `outcomes.yaml`).
+    (`raw_items.yaml`, `unique_items.yaml`, `resources.yaml`, `outcomes.yaml`).
     Edit these; the generated docs live one level up, not here.
   - `strategic_insights/cook/vision_synthesis.yaml` — source of truth for the
     official vision statement quoted in `pac_report.md`.

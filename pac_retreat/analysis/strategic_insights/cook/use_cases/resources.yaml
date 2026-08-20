@@ -1,0 +1,27 @@
+# Resource framework: categorizes each unique_items entry by the resource
+# category it requires. Sole authoritative definition of resource categories AND
+# membership. This is one of two independent categorization axes — see outcomes.yaml
+# for the other (which strategic objective the work serves). An entry gets exactly one
+# resource category and exactly one outcome; the two axes don't have to agree and
+# aren't derived from each other.
+# Membership is defined at the unique_items (unique_items.yaml) level, not the raw-item
+# level: every unique_items entry (X1, X2, ...) belongs to exactly one resource category.
+#
+# Simplified 2026-08-20 (replaces personnel.yaml): dropped the Champions/Leaders/Doers
+# role breakdown — that detail now lives as hand-authored prose in
+# AI_strategy_and_roadmap.md, not generated from YAML. This file is now a plain mirror
+# of outcomes.yaml's shape: label + items per category.
+
+resources:
+  curriculum_integration:
+    label: "Ensure AI Literacy for All Tarleton Graduates"
+    items: [X1, X9]
+  workforce_development:
+    label: "Equip our faculty and staff to use AI effectively and responsibly"
+    items: [X7, X6]
+  ai_solution_delivery:
+    label: "AI Solutions Delivery"
+    items: [X3, X4, X5, X8, X10, X11, X12, X13, X14, X15, X16, X18, X19, X20]
+  capabilities_foundation:
+    label: "Provide guidance and guardrails to keep our data and systems safe"
+    items: [X2, X17]

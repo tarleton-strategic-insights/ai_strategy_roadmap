@@ -9,7 +9,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "pac_retreat/analysis/strategic_insights/cook/use_cases"
-VALID_PERSONNEL_CATEGORIES = {"workforce_development", "curriculum_integration", "ai_solution_delivery",
+VALID_RESOURCE_CATEGORIES = {"workforce_development", "curriculum_integration", "ai_solution_delivery",
                               "capabilities_foundation"}
 ID_RE = re.compile(r"^[A-I]\d+$")
 
@@ -31,7 +31,7 @@ def check_axis(axis_name, axis_defs, uniques, errors):
 def main():
     items = yaml.safe_load((DATA / "raw_items.yaml").read_text())["items"]
     uniques = yaml.safe_load((DATA / "unique_items.yaml").read_text())["unique_items"]
-    personnel = yaml.safe_load((DATA / "personnel.yaml").read_text())
+    resources = yaml.safe_load((DATA / "resources.yaml").read_text())["resources"]
     outcomes = yaml.safe_load((DATA / "outcomes.yaml").read_text())["outcomes"]
     errors, warnings = [], []
 
@@ -61,17 +61,15 @@ def main():
         if iid not in dedup_seen:
             errors.append(f"{iid}: not listed in any unique_items entry")
 
-    # 3. personnel.yaml is well-formed and every unique_items entry belongs to
-    #    exactly one personnel category (nothing dropped, nothing double-assigned).
-    #    personnel.yaml is authoritative; raw_items.yaml carries no personnel field.
-    pers_defs = dict(personnel["kinds"]["use_cases"]["types"])
-    pers_defs["capabilities_foundation"] = personnel["kinds"]["capabilities_foundation"]
-    if set(pers_defs) != VALID_PERSONNEL_CATEGORIES:
-        errors.append(f"personnel.yaml kinds {set(pers_defs)} != VALID_PERSONNEL_CATEGORIES {VALID_PERSONNEL_CATEGORIES}")
-    check_axis("personnel", pers_defs, uniques, errors)
+    # 3. resources.yaml is well-formed and every unique_items entry belongs to
+    #    exactly one resource category (nothing dropped, nothing double-assigned).
+    #    resources.yaml is authoritative; raw_items.yaml carries no resource field.
+    if set(resources) != VALID_RESOURCE_CATEGORIES:
+        errors.append(f"resources.yaml kinds {set(resources)} != VALID_RESOURCE_CATEGORIES {VALID_RESOURCE_CATEGORIES}")
+    check_axis("resource", resources, uniques, errors)
 
     # 4. outcomes.yaml is well-formed and every unique_items entry belongs to exactly
-    #    one outcome (independent axis from personnel — see outcomes.yaml header).
+    #    one outcome (independent axis from resource — see outcomes.yaml header).
     check_axis("outcome", outcomes, uniques, errors)
 
     # 5. surface OPEN placement questions as warnings
