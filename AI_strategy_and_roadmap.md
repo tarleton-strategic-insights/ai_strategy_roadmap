@@ -132,15 +132,16 @@ The AI partner program could work either as advanced extension of workforce deve
 
 ## Gap Analysis
 Below is a partial list of additional AI-related gaps I've heard which are not covered above
+1. Solution support - ongoing monitoring and maintenance of previously created solutions
+1. Technical staff augmentation - short-term consultant support for specialities we lack in-house or when tasks outstrip internal capacity
+1. Intake & client coordination - structured process to receive, prioritize, and track project and communicate progress back to requestor
 1. User-support for AI Builder, Copilot, and other enterprise-wide AI platforms
 1. Technical Users Group where AI power users can share lessons learned and seek advice
 1. Stable platform
     - AI Builder has usuage limits and teething-problems
     - Copilot has added cost (for pro) and many folks like ChatGPT/Gemini/Claude more
     - ChatGPT/Gemini/Claude are not secure/private
-1. Technical staff augmentation - short-term consultant support for specialities we lack in-house or when tasks outstrip internal capacity
-1. Intake & client coordination - structured process to receive, prioritize, and track project and communicate progress back to requestor
-1. Solution support - ongoing monitoring and maintenance of previously created solutions
+
 
 
 ## Open Questions
