@@ -192,4 +192,4 @@ Current and planned AI infrastructure available to the University.
 |----------|------|--------------|-------|
 | TAI01 research server | — | Now | Donated by Troy Thorne |
 | NVIDIA DGX Spark | — | Now | |
-| Individual "edge devices"
+| Individual "edge devices" | variable | ongoing | |
