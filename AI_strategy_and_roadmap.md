@@ -3,9 +3,9 @@
 This working draft of AI strategy \& roadmap for Tarleton State builds upon [pac_report.md](pac_report.md) and [survey_analysis.md](survey_analysis.md) — moving from "what we learned in the retreat and followup survey" to "how we act on it."
 
 **Status: working draft**, not a final proposal. Sections vary in maturity — some (Use
-Cases, Gap Analysis, Infrastructure) are fleshed out; others (Milestones, Resourcing
-and Budget) are still placeholders awaiting input from other stakeholders. Intended to
-guide further conversation, not to be read as a complete package.
+Cases, Gap Analysis, Infrastructure) are fleshed out; others are still open. See "Open
+Questions" at the end for the specific decision points this draft still needs resolved.
+Intended to guide further conversation, not to be read as a complete package.
 
 ## Synthesized vision statement 
 from [pac_report.md](pac_report.md) and [vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md)
@@ -164,37 +164,6 @@ Current and planned AI infrastructure available to the University.
 |----------|------|--------------|-------|
 | TAI01 research server | — | Now | Donated by Troy Thorne |
 | NVIDIA DGX Spark | — | Now | |
-
--------- Everything below is AI-created boilerplate to be completed or removed later --------
-
----
-
-## Roles and Staffing
-
-TODO: how the Champions/Leaders/Doers roles in pac_report.md's "By Resources" section get
-filled — hiring, reassignment, training.
-
----
-
-## Milestones and Timeline
-
-TODO: phased plan. See "Summary: Emerging Roadmap Milestones" in
-[post_retreat_discussion.md](roadmap/resources/post_retreat_discussion.md) as a starting point.
-
----
-
-## Resourcing and Budget
-
-TODO: funding model. See OD-13 and
-[infrastructure.md](roadmap/resources/infrastructure.md).
-
----
-
-## Governance and Guardrails
-
-TODO: policy, security, ethics oversight for the "Provide guidance and guardrails" category.
-
----
 
 ## Open Questions
 

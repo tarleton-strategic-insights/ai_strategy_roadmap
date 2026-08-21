@@ -15,9 +15,9 @@ python build/generate.py --pdf     # also render PDFs (not committed; repo is pu
 - `pac_report.md` (repo top level) — build output (Introduction, Vision Statement,
   Use Cases). Do not hand-edit.
 - `AI_strategy_and_roadmap.md` (repo top level) — hand-authored sequel to
-  `pac_report.md`: prioritization, org structure, staffing (including the
-  Champions/Leaders/Doers role detail, no longer generated), milestones, budget,
-  governance. Not generated; edit directly.
+  `pac_report.md`: org structure, staffing (including the Champions/Leaders/Doers
+  role detail, no longer generated), gap analysis, infrastructure, and an "Open
+  Questions" section. Working draft; not generated; edit directly.
 - `survey_analysis.md` (repo top level) — hand-authored analysis of the follow-up
   survey responses, not generated.
 - `prioritization/` — `survey_message.md` (PAC-facing follow-up survey draft) and

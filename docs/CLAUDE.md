@@ -24,10 +24,12 @@ move the roadmap forward iteration by iteration.
   `use_cases/*.yaml`). Never hand-edit; regenerate. Lives at top level (not under
   `pac_retreat/`) because it's the primary PAC-facing deliverable.
 - `AI_strategy_and_roadmap.md` (repo top level) — hand-authored sequel to
-  `pac_report.md`, moving from "what was surfaced" to "how we act on it":
-  prioritization, org structure, staffing (including the Champions/Leaders/Doers
-  role detail per resource category — no longer generated, lives here natively),
-  milestones, budget, governance. Not generated; edit directly, never regenerate.
+  `pac_report.md`, moving from "what was surfaced" to "how we act on it": org
+  structure, staffing (including the Champions/Leaders/Doers role detail per
+  resource category — no longer generated, lives here natively), gap analysis,
+  infrastructure, and an "Open Questions" section collecting the draft's unresolved
+  decision points. Working draft; sections vary in maturity. Not generated; edit
+  directly, never regenerate.
 - `survey_analysis.md` (repo top level) — hand-authored analysis of the follow-up
   survey responses. Not generated; edit directly if the underlying CSV changes.
 - `prioritization/` — `survey_message.md` (PAC-facing follow-up survey draft) and
@@ -139,7 +141,8 @@ Unique items partition into two top-level kinds:
 Simplified 2026-08-20: `resources.yaml` (replaces `personnel.yaml`) dropped the
 Champions/Leaders/Doers role breakdown (title, description(s), `ai_expertise` rating)
 that used to live in the YAML — that detail is now hand-authored prose in
-`AI_strategy_and_roadmap.md`'s Roles and Staffing section instead of generated, since it
+`AI_strategy_and_roadmap.md`'s Use Cases section (Leaders/Doers under each resource
+category) instead of generated, since it
 no longer needs to round-trip through `pac_report.md`. `resources.yaml` itself is now a
 plain label+items mirror of `outcomes.yaml`.
 
