@@ -142,26 +142,6 @@ Below is a partial list of additional AI-related gaps I've heard which are not c
 1. Intake & client coordination - structured process to receive, prioritize, and track project and communicate progress back to requestor
 1. Solution support - ongoing monitoring and maintenance of previously created solutions
 
-## Infrastructure
-
-Current and planned AI infrastructure available to the University.
-### University-wide
-
-| Platform | Cost | Availability | Notes |
-|----------|------|--------------|-------|
-| AI Builder | Free | Now | $10/day cap |
-| Copilot Chat | Free | Now | |
-| Copilot Pro | $18/month | Now | |
-| TAICCI | TBD | >1 year out | Texas AI Compute Cooperative Initiative |
-| VISION Superpod | Free | Now | High technical barrier to entry |
-| Secure ChatGPT/Gemini/Claude | TBD | Early proposal | Getting quotes from OpenAI, Google, Anthropic |
-
-### Limited-access
-
-| Platform | Cost | Availability | Notes |
-|----------|------|--------------|-------|
-| TAI01 research server | — | Now | Donated by Troy Thorne |
-| NVIDIA DGX Spark | — | Now | |
 
 ## Open Questions
 
@@ -186,3 +166,30 @@ independently of this roadmap.
 4. **Budget and resourcing model** — not addressed anywhere in this draft yet. This
    document distills what PAC said it wants and needs; the funding conversation is
    a distinct next step for other stakeholders to own.
+
+
+## Footnotes
+Information that connects to the AI roadmap but is not core to the narrative
+
+### Infrastructure
+
+Current and planned AI infrastructure available to the University.
+#### University-wide
+
+| Platform | Cost | Availability | Notes |
+|----------|------|--------------|-------|
+| AI Builder | Free | Now | $10/day cap |
+| Copilot Chat | Free | Now | |
+| Copilot Pro | $18/month | Now | |
+| TAICCI | TBD | >1 year out | Texas AI Compute Cooperative Initiative |
+| VISION Superpod | Free | Now | High technical barrier to entry |
+| Secure ChatGPT/Gemini/Claude | TBD | Early proposal | Getting quotes from OpenAI, Google, Anthropic |
+| Microsoft Azure | TBD | Now | pay-as-you-go |
+
+#### Limited-access
+
+| Platform | Cost | Availability | Notes |
+|----------|------|--------------|-------|
+| TAI01 research server | — | Now | Donated by Troy Thorne |
+| NVIDIA DGX Spark | — | Now | |
+| Individual "edge devices"
