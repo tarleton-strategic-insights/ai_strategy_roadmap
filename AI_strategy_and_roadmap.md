@@ -61,16 +61,7 @@ This objective naturally lives within Academic Affairs which has already begun t
     - ITS
 
 
-This is a big job that needs a leader with a clear vision and strong organizational skills to make it consistent and effective. Unlike the other pieces, this does not have an obvious home nor align naturally with existing jobs.
-
-It presents organizational challenges because it spans both faculty and staff. Here are a few examples (over-simplified for brevity)
-- Uses: faculty need AI for teaching/learning and research; staff need AI for business functions
-- Trainers: CEE, HR, & ITS each handle different types of training
-- Incentives: faculty are incentivized by tenure/promotion; staff are incentivized by performance evaluations
-
-This incomplete list already highlights the 1st big issue - workforce development does not fit naturally into our organizational structure.
-
-Thus, figuring out where this fits must be one of our top priorities.
+This is a big job that needs a leader with a clear vision and strong organizational skills to make it consistent and effective. Unlike the other pieces, this does not have an obvious home nor align naturally with existing jobs. Thus, figuring out where this fits must be one of our top priorities.
 
 #### Provide guidance and guardrails to keep our data and systems safe
 
