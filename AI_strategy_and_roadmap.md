@@ -108,15 +108,13 @@ There are already several pockets of such activity to build upon.
 
 ## Organizational Structure
 
-While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, the other resource categories span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. As discussed above, "Workforce development" does not have a natural home and therefore might also span multiple divisions.
+While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, other items span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. "Workforce development" does not have a natural home and therefore may also span multiple divisions. Many roles are not full time jobs and may be incorporated into existing positions.
 
-Many of the roles above are not full time jobs. It is likely that they will be incorporated into existing positions across different departments/divisions.
-
-These raise questions about coordination, oversight, and evaluation that commonly occur with cross-functional teams. These questions can be effectively answered and potential problem avoided through careful upfront discussion and planning.
+These raise questions about coordination, oversight, and evaluation that commonly occur with cross-functional teams. We should plan carefully to minimize these impacts.
 
 ## Build vs Buy
 
-In constrast to most new technologies, everyone can use AI without needing advanced technical skills. AI empowers "build-your-own" approaches to problems that previously required specialized skills and materials. However, some problems remain too complex, specialized, or costly for DIY and should be outsourced or purchased.
+Everyone can use AI without advanced technical skills. AI empowers "build-your-own" approaches to problems that previously required specialized skills and materials. However, some problems remain too complex, specialized, or costly for DIY. Maintenance and support of DIY solutions becomes even more critical and time-consuming. Deciding when to "build" vs "buy" is pivotal.
 
 "AI Solutions Delivery" could contain dedicated "build" and "buy" teams. While the build team creates and maintains in-house AI solutions, the buy team evaluates 3rd party tools and provides training and support for them to faculty \& staff.
 
