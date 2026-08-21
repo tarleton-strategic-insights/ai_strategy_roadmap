@@ -135,6 +135,9 @@ Below is a partial list of additional AI-related gaps I've heard which are not c
     - AI Builder has usuage limits and teething-problems
     - Copilot has added cost (for pro) and many folks like ChatGPT/Gemini/Claude more
     - ChatGPT/Gemini/Claude are not secure/private
+1. Technical staff augmentation - short-term consultant support for specialities we lack in-house or when tasks outstrip internal capacity
+1. Intake & client coordination - structured process to receive, prioritize, and track project and communicate progress back to requestor
+1. Solution support - ongoing monitoring and maintenance of previously created solutions
 
 ## Infrastructure
 
