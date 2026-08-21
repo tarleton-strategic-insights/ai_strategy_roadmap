@@ -11,6 +11,34 @@ python build/generate.py --pdf     # also render PDFs (not committed; repo is pu
                                     # GitHub, which renders markdown natively)
 ```
 
+## Document lineage
+
+Every document in this repo traces back to raw retreat/survey material through a chain
+of synthesis. Starting from the culminating document and working backward:
+
+1. **[`AI_strategy_and_roadmap.md`](../AI_strategy_and_roadmap.md)** — the culminating
+   document. Hand-authored strategy and roadmap: org structure, staffing, gap
+   analysis, infrastructure, open questions. Builds on both documents below.
+2. **[`pac_report.md`](../pac_report.md)** and **[`survey_analysis.md`](../survey_analysis.md)**
+   — the immediately preceding documents.
+   - `pac_report.md` synthesizes `use_cases_analysis.md` and
+     `vision_statements_analysis.md` (below) into a single PAC-facing reference.
+   - `survey_analysis.md` analyzes `prioritization/survey_results.csv`, the raw
+     responses to the follow-up survey drafted in `prioritization/survey_message.md`.
+3. **`pac_retreat/analysis/use_cases_analysis.md`** and
+   **`pac_retreat/analysis/vision_statements_analysis.md`** — generated/hand-maintained
+   analysis one level further back.
+   - `use_cases_analysis.md` is generated from the YAML source of truth in
+     `strategic_insights/cook/use_cases/`: `raw_items.yaml` (every retreat idea) →
+     `unique_items.yaml` (deduplicated) → `resources.yaml` / `outcomes.yaml` (the two
+     categorization axes).
+   - `vision_statements_analysis.md` transcribes the vision-statement photos and
+     records the adjudicated synthesis, sourced from
+     `strategic_insights/cook/vision_synthesis.yaml`.
+4. **`pac_retreat/sources/`** — the raw retreat materials this whole chain ultimately
+   derives from: flip-chart photos, workshop slides, and pre-event case-study
+   research. Read-only; never edited.
+
 ## Where things live
 - `pac_report.md` (repo top level) — build output (Introduction, Vision Statement,
   Use Cases). Do not hand-edit.
