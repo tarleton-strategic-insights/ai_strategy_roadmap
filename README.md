@@ -1,4 +1,4 @@
-# AI Roadmap — Command Center
+# AI Strategy Command Center
 
 Working repository for Tarleton's AI strategy & roadmap.
 
