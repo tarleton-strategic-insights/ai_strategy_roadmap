@@ -118,3 +118,23 @@ carried since the retreat. Sole source of truth for the wording is
 (repo top level) Vision Statement section is generated from it directly, and
 `vision_statements_analysis.md`'s "Synthesized Vision Statement" section is kept in
 sync by hand.
+**Update:** Superseded by ADR-12 below (2026-08-20).
+
+### ADR-12 — Official vision statement, revised (2026-08-20)
+**Decision:** Adopt a more ambitious rewrite as the official vision statement
+(supersedes ADR-11): "Tarleton State University will responsibly harness AI to
+amplify student success, workforce readiness, and institutional impact — empowering
+our students, faculty, staff, and community to lead with integrity, privacy, and
+trust in an AI-enabled world."
+**Rationale:** ADR-11's synthesis, while accurate, read more like a compliance policy
+than something that rallies people — feedback surfaced when `AI_strategy_and_roadmap.md`
+was reviewed from the perspective of a retreat participant seeing it for the first
+time. Several of the original 7 candidate statements (see
+`vision_statements_analysis.md`) carried more ambition (VS-3's "amplify human
+potential," VS-7's "transformational impact... beyond!"); this revision borrows that
+energy ("harness," "amplify," "lead") while preserving every commitment from ADR-11's
+wording (student success, workforce readiness, institutional impact, integrity/
+privacy/trust, all four stakeholder groups). Sole source of truth for the wording
+remains `pac_retreat/analysis/strategic_insights/cook/vision_synthesis.yaml`;
+`pac_report.md` and `vision_statements_analysis.md` are kept in sync as described
+under ADR-11.

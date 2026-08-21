@@ -1,11 +1,13 @@
 # Sole authoritative source for the official vision statement text (adjudicated
-# 2026-08-12, see ADR-11 in roadmap/decisions/resolved_decisions.md) — read by build/generate.py
-# to build pac_report.md's (repo top level) Vision Statement section and (by hand)
-# quoted in pac_retreat/analysis/vision_statements_analysis.md's "Synthesized Vision
-# Statement" section. If you edit the wording, update it here first, then sync
+# 2026-08-12, revised 2026-08-20 — see ADR-11 and ADR-12 in
+# roadmap/decisions/resolved_decisions.md) — read by build/generate.py to build
+# pac_report.md's (repo top level) Vision Statement section and (by hand) quoted in
+# pac_retreat/analysis/vision_statements_analysis.md's "Synthesized Vision Statement"
+# section. If you edit the wording, update it here first, then sync
 # vision_statements_analysis.md to match and regenerate pac_report.md.
 
 working_synthesis: >-
-  Tarleton State University will responsibly use AI to improve student success,
-  workforce readiness, and institutional operations, while protecting the
-  integrity, privacy, and trust of our students, faculty, staff, and community.
+  Tarleton State University will responsibly harness AI to amplify student success,
+  workforce readiness, and institutional impact — empowering our students, faculty,
+  staff, and community to lead with integrity, privacy, and trust in an AI-enabled
+  world.

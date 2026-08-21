@@ -3,7 +3,8 @@
 Transcribed verbatim from flip-chart photos taken at the PAC retreat, 2026-07-28.
 Source: `pac_retreat/sources/event_artifacts/images/vision_statements/` (5 photos,
 7 distinct statements). Adjudicated into a single official vision (the Synthesized
-Vision Statement below) — see ADR-11 in `../../roadmap/decisions/resolved_decisions.md`.
+Vision Statement below) — see ADR-11 and ADR-12 in
+`../../roadmap/decisions/resolved_decisions.md`.
 
 ---
 
@@ -128,4 +129,4 @@ Source: `IMG_20260728_093023 (4).jpg` (bottom poster)
 
 ## Synthesized Vision Statement
 
-> Tarleton State University will responsibly use AI to improve student success, workforce readiness, and institutional operations, while protecting the integrity, privacy, and trust of our students, faculty, staff, and community.
+> Tarleton State University will responsibly harness AI to amplify student success, workforce readiness, and institutional impact — empowering our students, faculty, staff, and community to lead with integrity, privacy, and trust in an AI-enabled world.

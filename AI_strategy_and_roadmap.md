@@ -2,13 +2,18 @@
 
 This working draft of AI strategy \& roadmap for Tarleton State builds upon [pac_report.md](pac_report.md) and [survey_analysis.md](survey_analysis.md) — moving from "what we learned in the retreat and followup survey" to "how we act on it."
 
-## Synthesized vision statement 
-from [pac_report.md](pac_report.md)
+**Status: working draft**, not a final proposal. Sections vary in maturity — some (Use
+Cases, Gap Analysis, Infrastructure) are fleshed out; others (Milestones, Resourcing
+and Budget) are still placeholders awaiting input from other stakeholders. Intended to
+guide further conversation, not to be read as a complete package.
 
-> Tarleton State University will responsibly use AI to improve student success, workforce readiness, and institutional operations, while protecting the integrity, privacy, and trust of our students, faculty, staff, and community.
+## Synthesized vision statement 
+from [pac_report.md](pac_report.md) and [vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md)
+
+> Tarleton State University will responsibly harness AI to amplify student success, workforce readiness, and institutional impact — empowering our students, faculty, staff, and community to lead with integrity, privacy, and trust in an AI-enabled world.
 
 ## Use Cases
-In [pac_report.md](pac_report.md), all 51 use cases suggested in the PAC retreat were analyzed to create two types of categorization: by outcome and by resource. 
+In [pac_report.md](pac_report.md) and [use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md), all 51 use cases suggested in the PAC retreat were analyzed to create two types of categorization: by outcome and by resource. 
 
 ### By Outcome
 - Ensure AI Literacy for All Tarleton Graduates
@@ -193,5 +198,24 @@ TODO: policy, security, ethics oversight for the "Provide guidance and guardrail
 
 ## Open Questions
 
-TODO: anything blocking this roadmap specifically that isn't already tracked in
-[open_decisions.md](roadmap/decisions/open_decisions.md).
+Decision points raised in this document, collected here so the next meeting can work
+through them directly rather than finding them scattered across sections. See also
+[open_decisions.md](roadmap/decisions/open_decisions.md) for decisions tracked
+independently of this roadmap.
+
+1. **Where does Workforce Development live?** Flagged above as not fitting naturally
+   into the existing organizational structure, spanning both faculty (CEE, tenure
+   incentives) and staff (HR, performance-eval incentives) — this is one of the
+   biggest structural risks in the whole roadmap and still has no proposed home.
+2. **Who owns AI governance?** AI Council currently lacks a clear mandate and
+   sufficient resourcing. Do we expand and refocus AI Council, or stand up a
+   different group? This underpins the Build vs Buy split and the AI partners
+   program below it, so resolving it unblocks both.
+3. **AI partners: workforce extension or Solutions Delivery on-ramp?** Two different
+   framings are floating in "Embedded AI partners" — an advanced extension of
+   Workforce Development, or an introductory tier feeding into AI Solutions
+   Delivery. Current lean is the latter, but neither framing is fully fleshed out;
+   this may need its own dedicated discussion before it can be scoped.
+4. **Budget and resourcing model** — not addressed anywhere in this draft yet. This
+   document distills what PAC said it wants and needs; the funding conversation is
+   a distinct next step for other stakeholders to own.

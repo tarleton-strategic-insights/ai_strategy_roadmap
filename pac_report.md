@@ -8,7 +8,7 @@ This report was created by a human+AI team.
 
 ## Vision Statement
 
-> Tarleton State University will responsibly use AI to improve student success, workforce readiness, and institutional operations, while protecting the integrity, privacy, and trust of our students, faculty, staff, and community.
+> Tarleton State University will responsibly harness AI to amplify student success, workforce readiness, and institutional impact — empowering our students, faculty, staff, and community to lead with integrity, privacy, and trust in an AI-enabled world.
 
 See [vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md) for details.
 
