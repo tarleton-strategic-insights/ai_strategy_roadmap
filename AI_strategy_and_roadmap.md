@@ -32,7 +32,9 @@ Since technical AI expertise is a limited and expensive resource, we estimate th
 
 #### Ensure AI Literacy for All Tarleton Graduates
 
-- Curriculum integration and microcredential programs
+- Outcome:
+    - Curriculum integration
+    - Microcredential programs
 - Leaders
     - Provost, deans, department heads
         - Establish academic structure and process (ex: stand-alone AI courses vs. embed AI in all courses vs. embed into capstones)
@@ -46,7 +48,8 @@ This objective naturally lives within Academic Affairs which has already begun t
 
 #### Equip our faculty and staff to use AI effectively and responsibly
 
-- Workforce development
+- Outcome:
+    - Workforce development
 - Leaders
     - Coordinator
         - Organize & support training for all staff AND faculty (and possibly alumni, community partners, etc)
@@ -69,7 +72,8 @@ Thus, figuring out where this fits must be one of our top priorities.
 
 #### Provide guidance and guardrails to keep our data and systems safe
 
-- Oversee AI governance, ethics, security, etc
+- Outcome:
+    - Oversee AI governance, ethics, security, etc
 - Leaders
     - TBD
 - Doers
@@ -82,7 +86,8 @@ This carries at least 2 responsibilities - creating guidance AND communicating/i
 #### AI Solutions Delivery
 Many of the high-priority applications of AI (dropout early-warning, course planning & advising, streamline business processes, etc) are technically complex to create and maintain. Like most IHE AI strategies reviewed, we propose creating a team with advanced AI skills to tackle these challenging tasks.
 
-- Create, deploy, and support complex AI tools & solutions
+- Outcome:
+    - Create, deploy, and support complex AI tools & solutions
 - Leaders
     - Chief engineer
         - Develop, architect, and guide multiple complex AI projects
