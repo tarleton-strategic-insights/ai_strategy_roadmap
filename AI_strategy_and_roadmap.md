@@ -8,12 +8,12 @@ Questions" at the end for the specific decision points this draft still needs re
 Intended to guide further conversation, not to be read as a complete package.
 
 ## Synthesized vision statement 
-from [pac_report.md](pac_report.md) and [vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md)
+from [pac_report.md](pac_report.md) and [vision_statements_analysis.md](supporting_materials/pac_retreat/analysis/vision_statements_analysis.md)
 
 > Tarleton State University will responsibly harness AI to amplify student success, workforce readiness, and institutional impact — empowering our students, faculty, staff, and community to lead with integrity, privacy, and trust in an AI-enabled world.
 
 ## Use Cases
-In [pac_report.md](pac_report.md) and [use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md), all 51 use cases suggested in the PAC retreat were analyzed to create two types of categorization: by outcome and by resource. 
+In [pac_report.md](pac_report.md) and [use_cases_analysis.md](supporting_materials/pac_retreat/analysis/use_cases_analysis.md), all 51 use cases suggested in the PAC retreat were analyzed to create two types of categorization: by outcome and by resource. 
 
 ### By Outcome
 - Ensure AI Literacy for All Tarleton Graduates
@@ -148,7 +148,7 @@ Below is a partial list of additional AI-related gaps I've heard which are not c
 
 Decision points raised in this document, collected here so the next meeting can work
 through them directly rather than finding them scattered across sections. See also
-[open_decisions.md](roadmap/decisions/open_decisions.md) for decisions tracked
+[open_decisions.md](supporting_materials/other/decisions/open_decisions.md) for decisions tracked
 independently of this roadmap.
 
 1. **Where does Workforce Development live?** Flagged above as not fitting naturally

@@ -10,7 +10,7 @@ This report was created by a human+AI team.
 
 > Tarleton State University will responsibly harness AI to amplify student success, workforce readiness, and institutional impact — empowering our students, faculty, staff, and community to lead with integrity, privacy, and trust in an AI-enabled world.
 
-See [vision_statements_analysis.md](pac_retreat/analysis/vision_statements_analysis.md) for details.
+See [vision_statements_analysis.md](supporting_materials/pac_retreat/analysis/vision_statements_analysis.md) for details.
 
 ---
 
@@ -20,7 +20,7 @@ We analyze all use cases suggested during the PAC retreat by combining duplicate
 
 Note - this section does NOT judge the value/priority of use cases NOR add missing items ... that will happen later. This section analyzes only suggestions made during the PAC retreat giving them all equal weight.
 
-See [use_cases_analysis.md](pac_retreat/analysis/use_cases_analysis.md) for details.
+See [use_cases_analysis.md](supporting_materials/pac_retreat/analysis/use_cases_analysis.md) for details.
 
 ### By Outcomes
 
