@@ -58,8 +58,7 @@ This objective naturally lives within Academic Affairs which has already begun t
         - AI expertise: medium
     - ITS
 
-
-This is a big job that needs a leader with a clear vision and strong organizational skills to make it consistent and effective. Unlike the other pieces, this does not have an obvious home nor align naturally with existing jobs. Thus, figuring out where this fits must be one of our top priorities.
+This is a big job that needs a leader with a clear vision and strong organizational skills to make it consistent and effective. Unlike the other pieces, this does not have an obvious home nor align naturally with existing units. Therefore, figuring out where this fits must be one of our top priorities.
 
 #### Provide guidance and guardrails to keep our data and systems safe
 
@@ -79,7 +78,7 @@ This carries at least 2 responsibilities
 We can create guidance, but there must be broad leadership support and clear communication channels to disseminate and enforce them.
 
 #### AI Solutions Delivery
-Many of the high-priority applications of AI (dropout early-warning, course planning & advising, streamline business processes, etc) are technically complex to create and maintain. Like most IHE AI strategies reviewed, we propose creating a team with advanced AI skills to tackle these challenging tasks.
+Many of the AI applications prioritized highly in the survey (dropout early-warning, course planning & advising, streamline business processes, etc) are technically complex to create and maintain. Like many IHE AI strategies, we propose creating a team with advanced AI skills to tackle these challenging tasks.
 
 - Outcome:
     - Create, deploy, and support complex AI tools & solutions
