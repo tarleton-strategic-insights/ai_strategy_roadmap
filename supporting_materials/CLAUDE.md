@@ -96,7 +96,7 @@ move the roadmap forward iteration by iteration.
 ## Core conventions
 
 1. **Data drives docs.** The categorization lives in the `use_cases/*.yaml` files under
-   `pac_retreat/analysis/.../cook/use_cases/`. Generated documents are built from it.
+   `supporting_materials/pac_retreat/analysis/.../cook/use_cases/`. Generated documents are built from it.
    If a resource category or outcome changes, change the YAML and rebuild — never patch
    a generated file by hand. (Exception: `AI_strategy_and_roadmap.md` is hand-authored,
    not generated — see Layout above.)
@@ -143,38 +143,35 @@ Unique items partition into two top-level kinds:
   systems safe"; cross-cutting preconditions (governance, security, advisory board); not
   sorted by resource.
 
-Simplified 2026-08-20: `resources.yaml` (replaces `personnel.yaml`) dropped the
-Champions/Leaders/Doers role breakdown (title, description(s), `ai_expertise` rating)
-that used to live in the YAML — that detail is now hand-authored prose in
-`AI_strategy_and_roadmap.md`'s Use Cases section (Leaders/Doers under each resource
-category) instead of generated, since it
-no longer needs to round-trip through `pac_report.md`. `resources.yaml` itself is now a
-plain label+items mirror of `outcomes.yaml`.
+Display order in the generated docs' "By Resources" section is Curriculum → Workforce
+→ Capabilities/Foundation → AI solution delivery (`resources.yaml`'s dict order,
+no explicit ordinal field — reordered to put "Provide guidance and guardrails" ahead
+of "AI Solutions Delivery," aligning with `survey_analysis.md`'s foundational-enabler
+results).
 
-(Restructured 2026-08-12, since superseded: an earlier version replaced a
-structure/content/technical facet profile with the Leaders/Doers breakdown described
-above. A former third top-level kind, **Framings** — strategic lenses/models that
-consumed no resources — was removed 2026-08-11: once this axis moved to the
-unique_items level, every framings-flavored raw item turned out to be the minority
-member of a duplicate group whose majority belonged elsewhere, leaving the category
-permanently empty.)
+`resources.yaml` carries only label + `items:` per category — no per-role detail. The
+Champions/Leaders/Doers breakdown (title, description(s), `ai_expertise` rating) for
+each category is hand-authored prose in `AI_strategy_and_roadmap.md`'s Use Cases
+section instead, not generated.
 
-See `use_cases/resources.yaml` for the authoritative category/item definition,
-`AI_strategy_and_roadmap.md` for role detail, and `supporting_materials/other/decisions/open_decisions.md`
-for unresolved framework questions (notably a lingering ordering divergence vs. PAC
-bucket numbers, and two contested item placements).
+See `supporting_materials/pac_retreat/analysis/strategic_insights/cook/use_cases/resources.yaml`
+for the authoritative category/item definition, `AI_strategy_and_roadmap.md` for role
+detail, and `supporting_materials/other/decisions/open_decisions.md` for unresolved
+framework questions (notably a lingering ordering divergence vs. PAC bucket numbers,
+and two contested item placements).
 
 ### Outcome
 
-Four groups (added 2026-08-12), three mirroring `supporting_materials/prioritization/survey_message.md`'s PAC-facing
-priorities plus a catch-all for entries none of the three cover:
+Four groups, three mirroring `supporting_materials/prioritization/survey_message.md`'s
+PAC-facing priorities plus a catch-all for entries none of the three cover:
 
-1. Accelerate Student Retention and Success
-2. Integrate AI Across the Curriculum and Create AI Certificates
+1. Ensure AI Literacy for All Tarleton Graduates
+2. Accelerate Student Retention and Success
 3. Enhance Service and Operations Through AI
 4. Foundations (catch-all — e.g. governance, research capacity)
 
-See `use_cases/outcomes.yaml` for the authoritative definition.
+See `supporting_materials/pac_retreat/analysis/strategic_insights/cook/use_cases/outcomes.yaml`
+for the authoritative definition.
 
 ## Relationship to the PAC three-bucket framework
 
@@ -185,13 +182,14 @@ See `use_cases/outcomes.yaml` for the authoritative definition.
 | AI solution delivery | Bucket 2: High-Technical Projects | **SI owns** |
 | Foundations | Cross-Cutting Foundations | rides along all buckets |
 
-**Ordering vs. PAC buckets:** this repo currently orders use-cases Curriculum/Workforce/
-AI-solution (1/2/3); PAC buckets order Workforce/AI-solution/Curriculum (1/2/3) — every
-slot differs. This is adjudicated, not an oversight (OD-1, resolved): the repo
-deliberately keeps its own internal ordering rather than matching PAC's, and that
-internal ordering has itself been revised twice (ADR-1, then ADR-9 in
-`supporting_materials/other/decisions/resolved_decisions.md`) for internal-readability and ownership-signaling reasons
-unrelated to PAC alignment. See `supporting_materials/other/decisions/resolved_decisions.md` for the full history.
+**Ordering vs. PAC buckets:** this repo's internal category ordering (currently
+Curriculum → Workforce → Capabilities/Foundation → AI solution delivery, per
+`resources.yaml`'s dict order) does not match PAC's bucket numbering, and that's
+adjudicated, not an oversight (OD-1, resolved) — the repo deliberately keeps its own
+internal ordering for readability/ownership-signaling reasons unrelated to PAC
+alignment. See `supporting_materials/other/decisions/resolved_decisions.md` (ADR-1,
+ADR-9) for the ordering history up through when it used an explicit `ordinal` field
+(since replaced by plain dict order — see "Resource" above).
 
 ## Build
 

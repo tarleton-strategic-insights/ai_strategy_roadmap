@@ -26,9 +26,7 @@ In [pac_report.md](pac_report.md) and [use_cases_analysis.md](supporting_materia
 - Provide guidance and guardrails to keep our data and systems safe
 - AI Solutions Delivery
 
-We now add details such as key roles and responsibilities. This is work in-progress. It is incomplete and intended as a starting point for future discussions.
-
-Since technical AI expertise is a limited and expensive resource, we estimate the level necessary for each role.
+We begin filling in details such as key roles and responsibilities below. This is work in-progress, intended as a jumping-off point for future discussions.
 
 #### Ensure AI Literacy for All Tarleton Graduates
 
@@ -72,9 +70,13 @@ This is a big job that needs a leader with a clear vision and strong organizatio
 - Doers
     - TBD
 
-AI Council has provided some degree of oversight, but it does not have a clear mandate or sufficient resourcing to do it properly. We could choose to beef-up and refocus AI Council for this job or find/create another group.
+AI Council has provided some degree of oversight, but it does not have a clear mandate or sufficient resourcing to do it properly. We could choose to beef-up AI Council for this job or find/create another group.
 
-This carries at least 2 responsibilities - creating guidance AND communicating/implementing/enforcing it. AI Council can create all necessary the rules and proceedures, but it must have broad leadership support to disseminate and enforce them.
+This carries at least 2 responsibilities
+- creating guidance AND
+- communicating, implementing, and enforcing it
+
+We can create guidance, but there must be broad leadership support and clear communication channels to disseminate and enforce them.
 
 #### AI Solutions Delivery
 Many of the high-priority applications of AI (dropout early-warning, course planning & advising, streamline business processes, etc) are technically complex to create and maintain. Like most IHE AI strategies reviewed, we propose creating a team with advanced AI skills to tackle these challenging tasks.
