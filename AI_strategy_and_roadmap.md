@@ -106,11 +106,11 @@ There are already several pockets of such activity to build upon.
 
 ## Organizational Structure
 
-While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, the other resource categories span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. As discussed above, "Workforce development" does not have a natural home and therefore might only span multiple divisions.
+While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, the other resource categories span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. As discussed above, "Workforce development" does not have a natural home and therefore might also span multiple divisions.
 
-Furthermore, many of the listed roles are not full time jobs. It is likely that they will be incorporated into existing positions across different departments/divisions.
+Many of the roles above are not full time jobs. It is likely that they will be incorporated into existing positions across different departments/divisions.
 
-These raise questions about coordination, oversight, and evaluation that always occur with cross-functional teams. These questions can be effectively answered and potential problem avoided through careful upfront discussion and planning.
+These raise questions about coordination, oversight, and evaluation that commonly occur with cross-functional teams. These questions can be effectively answered and potential problem avoided through careful upfront discussion and planning.
 
 ## Build vs Buy
 
@@ -120,30 +120,26 @@ In constrast to most new technologies, everyone can use AI without needing advan
 
 ## Embedded AI partners
 
-The Workforce Development team will equip all faculty \& staff with enough basic AI knowledge to pick their own low-hanging fruit and make meaningful improvements to their own workflow. The AI Solutions team will create advanced AI tools to solve complex problems.
+University-wide AI training will equip everyone with enough basic AI knowledge to make meaningful low-complexity improvements to their own workflow while the AI Solutions team will create high-complexity AI tools to solve high-impact problems.
 
 Question: Should there be something in-between?
 
-Idea: Offer additional AI training beyond the baseline campus-wide training to self-selected "AI partners" embedded in functional areas to serve as local AI faciliators for their unit to
+Idea: Offer additional AI training to self-selected "AI partners" embedded in functional areas who will serve as local AI faciliators to
 1. Encourage AI adoption \& self-service
-2. Create intermediate-level AI solutions tailored to their unit which require AI knowledge beyond baseline and are not appropriate tasks for the main AI Solutions teams (eg: too narrow, competing priorities, etc)
-
-The AI partner program could work either as advanced extension of workforce development or entry-point under the AI solutions team. My instinct leans toward AI solutions as that could bring a secondary benefit of creating direct relationships between AI partners and engineers with advanced AI skills.
-
+2. Create medium-complexity AI solutions tailored to their unit which require more AI knowledge but are not well-suited for the main AI Solutions teams
 
 ## Gap Analysis
-Below is a partial list of additional AI-related gaps I've heard which are not covered above
-1. Solution support - ongoing monitoring and maintenance of previously created solutions
-1. Technical staff augmentation - short-term consultant support for specialities we lack in-house or when tasks outstrip internal capacity
-1. Intake & client coordination - structured process to receive, prioritize, and track project and communicate progress back to requestor
+Below is a partial list of known AI-related gaps not covered above
+1. Solution support - ongoing monitoring and maintenance of previously created AI solutions
+1. Technical staff augmentation - short-term consultant support for specialities we lack in-house or demand beyond internal capacity
+1. Intake & client coordination - structured process to receive, prioritize & track projects and communicate progress back to requestor
 1. User-support for AI Builder, Copilot, and other enterprise-wide AI platforms
-1. Technical Users Group where AI power users can share lessons learned and seek advice
+1. Technical User Community of Practice - AI power users share lessons learned and seek advice
 1. Stable platform
     - AI Builder has usuage limits and teething-problems
     - Copilot has added cost (for pro) and many folks like ChatGPT/Gemini/Claude more
     - ChatGPT/Gemini/Claude are not secure/private
-
-
+    - The AI landscape changes rapidly, creating new demand and undermining established solutions. While we can not control it, we must (to the best of our ability) plan how to mitigate disruptive effects.
 
 ## Open Questions
 
