@@ -129,7 +129,7 @@ Idea: Offer additional AI training beyond the baseline campus-wide training to s
 1. Encourage AI adoption \& self-service
 2. Create intermediate-level AI solutions tailored to their unit which require AI knowledge beyond baseline and are not appropriate tasks for the main AI Solutions teams (eg: too narrow, competing priorities, etc)
 
-The AI partner program could fall either under workforce development or AI solutions teams. My instinct leans toward AI solutions as that could bring a secondary benefit of creating direct relationships between AI partners and engineers with advanced AI skills.
+The AI partner program could work either as advanced extension of workforce development or entry-point under the AI solutions team. My instinct leans toward AI solutions as that could bring a secondary benefit of creating direct relationships between AI partners and engineers with advanced AI skills.
 
 
 ## Gap Analysis
