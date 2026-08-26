@@ -47,7 +47,7 @@ This objective naturally lives within Academic Affairs which has already begun t
 #### Equip our faculty and staff to use AI effectively and responsibly
 
 - Outcome:
-    - Workforce development
+    - Professional development
 - Leaders
     - Coordinator
         - Organize & support training for all staff AND faculty (and possibly alumni, community partners, etc)
@@ -56,7 +56,7 @@ This objective naturally lives within Academic Affairs which has already begun t
     - Trainers
         - Teach AI to a broad range of people
         - AI expertise: medium
-    - ITS
+    - ITS, CEE, HR, et al
 
 This is a big job that needs a leader with a clear vision and strong organizational skills to make it consistent and effective. Unlike the other pieces, this does not have an obvious home nor align naturally with existing units. Therefore, figuring out where this fits must be one of our top priorities.
 
@@ -108,7 +108,7 @@ There are already several pockets of such activity to build upon.
 
 ## Organizational Structure
 
-While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, other items span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. "Workforce development" does not have a natural home and therefore may also span multiple divisions. Many roles are not full time jobs and may be incorporated into existing positions.
+While "Ensure AI Literacy for All Tarleton Graduates" lives wholly within Academic Affairs, other items span multiple divisions wrt function and personnel. For example, "AI Solutions Delivery" will serve the entire university and likely involve personnel from Business \& Finance, University Strategy, Academic Affairs, and potentially other divisions. "Professional development" does not have a natural home and therefore may also span multiple divisions. Many roles are not full time jobs and may be incorporated into existing positions.
 
 These raise questions about coordination, oversight, and evaluation that commonly occur with cross-functional teams. We should plan carefully to minimize these impacts.
 
@@ -142,7 +142,7 @@ Idea: Offer additional AI training to self-selected "AI partners" embedded in fu
 1. Create medium-complexity AI solutions tailored to their unit which require more AI knowledge but are not well-suited for the main AI Solutions teams
 
 ## Open Questions
-1. **Where does Workforce Development live?**
+1. **Where does Professional Development live?**
 1. **Who owns AI governance & how do they communicate/implement/enforce it?**
 1. **Budget and resourcing models**
 1. **Internally developed AI solutions require dedicated support and maintanence**

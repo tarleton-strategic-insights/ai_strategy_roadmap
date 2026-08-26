@@ -34,8 +34,8 @@ ADR and update the relevant `use_cases/*.yaml`.
 ## Resolved (ADR)
 
 ### ADR-1 — Use-case ordering (2026-08-10, revised)
-**Decision:** Reorder to: AI-solution-delivery(1) / Curriculum(2) / Workforce(3).
-**Rationale:** Places owned use-cases first; un-owned Workforce last highlights the ownership gap.
+**Decision:** Reorder to: AI-solution-delivery(1) / Curriculum(2) / Professional(3).
+**Rationale:** Places owned use-cases first; un-owned Professional last highlights the ownership gap.
 
 ### ADR-2 — Terminology (2026-08-10)
 **Decision:** Keep repo terminology ("use-case," "AI solution delivery").
@@ -49,21 +49,21 @@ ADR and update the relevant `use_cases/*.yaml`.
 **Decision:** Add ownership to use-case taxonomy.
 - AI solution delivery → **Strategic Insights**
 - Curriculum integration → **Academic Affairs**
-- Workforce development → **TBD** *(key decision needed)*
+- Professional development → **TBD** *(key decision needed)*
 
-**Rationale:** Clarifies accountability; surfaces Workforce ownership gap as an open item.
+**Rationale:** Clarifies accountability; surfaces Professional development ownership gap as an open item.
 
 ### ADR-5 — F1 Security gap analysis placement (2026-08-10)
 **Decision:** Keep in Foundation (not Bucket 2).
 **Rationale:** PAC prose describes it as cross-cutting; Appendix A placement was inconsistent.
 
 ### ADR-6 — F3 "Teach me ___" placement (2026-08-10)
-**Decision:** Keep in Workforce development.
+**Decision:** Keep in Professional development.
 **Rationale:** It's a training/learning tool, not a solution to build.
 
 ### ADR-7 — B5 Centralized AI support placement (2026-08-10)
 **Decision:** Move to AI solution delivery.
-**Rationale:** This is about building/delivering AI solutions, not workforce training.
+**Rationale:** This is about building/delivering AI solutions, not professional development training.
 **Open question surfaced:** Central vs. distributed build teams—key strategic decision TBD.
 **Update:** Resolved by ADR-10 below (2026-08-11).
 
@@ -79,15 +79,15 @@ category left Framings with zero members. An empty category serves no purpose, s
 dropped rather than kept as a placeholder.
 
 ### ADR-9 — Use-case ordering, second revision (2026-08-11)
-**Decision:** Reorder to: Curriculum(1) / Workforce(2) / AI-solution-delivery(3)
-(supersedes ADR-1's AI-solution-delivery(1) / Curriculum(2) / Workforce(3)).
+**Decision:** Reorder to: Curriculum(1) / Professional(2) / AI-solution-delivery(3)
+(supersedes ADR-1's AI-solution-delivery(1) / Curriculum(2) / Professional(3)).
 **Rationale:** Balances two goals that ADR-1's ordering no longer served once
 categorization moved to the unique_items level: (1) readability — AI solution delivery
 became the longest item list in Part 3 of the generated doc, and having the longest list
 first pushed the shorter, easier-to-scan categories further down; (2) ADR-1's original
-ownership signal — keeping the still-unowned Workforce development (see OD-8 in
+ownership signal — keeping the still-unowned Professional development (see OD-8 in
 `open_decisions.md`) out of the first position — is preserved by this ordering too, since
-Workforce sits in the middle, not first.
+Professional sits in the middle, not first.
 
 ### ADR-10 — Central vs. distributed build teams (2026-08-11)
 **Decision: Both.** Stand up a central AI Solutions Delivery team to handle

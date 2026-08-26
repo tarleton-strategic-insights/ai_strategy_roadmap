@@ -23,7 +23,7 @@ resources:
   curriculum_integration:
     label: "Ensure AI Literacy for All Tarleton Graduates"
     items: [X1, X9]
-  workforce_development:
+  professional_development:
     label: "Equip our faculty and staff to use AI effectively and responsibly"
     items: [X7, X6]
   capabilities_foundation:

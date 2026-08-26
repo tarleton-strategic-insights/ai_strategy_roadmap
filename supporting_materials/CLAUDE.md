@@ -89,7 +89,7 @@ move the roadmap forward iteration by iteration.
   `decisions/resolved_decisions.md` (adjudicated decisions, ADR-style);
   `infrastructure.md` (AI platform catalog), `support_organizations.md` (support
   roles/org units), and `post_retreat_discussion.md`. Job roles (Curriculum
-  Integration Lead, Workforce Development Lead, AI Solution Delivery Lead, etc.) are
+  Integration Lead, Professional Development Lead, AI Solution Delivery Lead, etc.) are
   no longer tracked separately here — see `AI_strategy_and_roadmap.md` for current
   role definitions.
 
@@ -117,7 +117,7 @@ Every unique_items entry is categorized along **two independent axes** — they 
 to agree with each other and neither is derived from the other:
 
 - **Resource** (`resources.yaml`) — what the work needs (four categories: Curriculum
-  integration, Workforce development, AI solution delivery, Capabilities/Foundation).
+  integration, Professional development, AI solution delivery, Capabilities/Foundation).
   Drives hiring/promoting/organizing decisions. Which specific roles (Champions,
   Leaders, Doers) staff each category is hand-authored in `AI_strategy_and_roadmap.md`,
   not part of this YAML.
@@ -127,7 +127,7 @@ to agree with each other and neither is derived from the other:
 Both axes apply at the **unique_items** (deduplicated) level, not the raw-item level —
 every unique_items entry belongs to exactly one group on each axis. Where an entry's
 member raw items previously disagreed on resource category (e.g. a duplicate group
-mixing a curriculum item with a workforce item), a single category was chosen by
+mixing a curriculum item with a professional-development item), a single category was chosen by
 explicit adjudication rather than split across categories; same rule applies to outcome.
 
 ### Resource
@@ -136,14 +136,14 @@ Unique items partition into two top-level kinds:
 
 - **Use-cases** — resourceable work, split by the scarce *key resource* each depends on:
   1. Curriculum integration — "Ensure AI Literacy for All Tarleton Graduates."
-  2. Workforce development — "Equip our faculty and staff to use AI effectively and
+  2. Professional development — "Equip our faculty and staff to use AI effectively and
      responsibly."
   3. AI solution delivery — "AI Solutions Delivery."
 - **Capabilities / Foundation** — "Provide guidance and guardrails to keep our data and
   systems safe"; cross-cutting preconditions (governance, security, advisory board); not
   sorted by resource.
 
-Display order in the generated docs' "By Resources" section is Curriculum → Workforce
+Display order in the generated docs' "By Resources" section is Curriculum → Professional
 → Capabilities/Foundation → AI solution delivery (`resources.yaml`'s dict order,
 no explicit ordinal field — reordered to put "Provide guidance and guardrails" ahead
 of "AI Solutions Delivery," aligning with `survey_analysis.md`'s foundational-enabler
@@ -178,12 +178,12 @@ for the authoritative definition.
 | This repo (use-case) | PAC document (bucket) | Owner |
 |---|---|---|
 | Curriculum integration | Bucket 3: Curriculum Integration | Academic Affairs (TBD); SI advises |
-| Workforce development | Bucket 1: Workforce Upskilling | Org lead (TBD); SI advises |
+| Professional development | Bucket 1: Workforce Upskilling | Org lead (TBD); SI advises |
 | AI solution delivery | Bucket 2: High-Technical Projects | **SI owns** |
 | Foundations | Cross-Cutting Foundations | rides along all buckets |
 
 **Ordering vs. PAC buckets:** this repo's internal category ordering (currently
-Curriculum → Workforce → Capabilities/Foundation → AI solution delivery, per
+Curriculum → Professional → Capabilities/Foundation → AI solution delivery, per
 `resources.yaml`'s dict order) does not match PAC's bucket numbering, and that's
 adjudicated, not an oversight (OD-1, resolved) — the repo deliberately keeps its own
 internal ordering for readability/ownership-signaling reasons unrelated to PAC

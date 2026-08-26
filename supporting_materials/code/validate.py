@@ -9,7 +9,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "pac_retreat/analysis/strategic_insights/cook/use_cases"
-VALID_RESOURCE_CATEGORIES = {"workforce_development", "curriculum_integration", "ai_solution_delivery",
+VALID_RESOURCE_CATEGORIES = {"professional_development", "curriculum_integration", "ai_solution_delivery",
                               "capabilities_foundation"}
 ID_RE = re.compile(r"^[A-I]\d+$")
 

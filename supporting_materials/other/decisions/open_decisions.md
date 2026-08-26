@@ -6,9 +6,9 @@ as a dated ADR entry and update the relevant `use_cases/*.yaml`.
 
 ## Framework-level
 
-### OD-8 — Workforce development ownership
-No owner currently assigned for the Workforce development use-case. Strategic Insights owns AI solution delivery; Academic Affairs owns Curriculum integration.
-**Decision needed:** Who owns Workforce development?
+### OD-8 — Professional development ownership
+No owner currently assigned for the Professional development use-case. Strategic Insights owns AI solution delivery; Academic Affairs owns Curriculum integration.
+**Decision needed:** Who owns Professional development?
 **Status: OPEN.**
 
 ### OD-10 — Name for the central AI solutions team
@@ -26,7 +26,7 @@ stays as-is (see ADR-2 in `resolved_decisions.md`).
 **Status: OPEN.**
 
 ### OD-11 — Single organization over all three use-cases + Capabilities/Foundation?
-Should Curriculum integration, Workforce development, AI solution delivery, and
+Should Curriculum integration, Professional development, AI solution delivery, and
 Capabilities/Foundation all live under one umbrella organization (e.g. an "AI Council"),
 rather than being owned/coordinated separately as today (see OD-8, ADR-4 in
 `resolved_decisions.md` on the current per-category ownership split)? Distinct from
