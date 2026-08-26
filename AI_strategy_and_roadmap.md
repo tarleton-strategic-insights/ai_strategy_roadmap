@@ -80,7 +80,7 @@ We can create guidance, but there must be broad leadership support and clear com
 #### AI Solutions Delivery
 Many of the AI applications prioritized highly in the survey (dropout early-warning, course planning & advising, streamline business processes, etc) are technically complex to create and maintain. Like many IHE AI strategies, we propose creating a team with advanced AI skills to tackle these challenging tasks.
 
-[This piece is more fleshed-out because it's in my wheelhouse AND probably requires the most new investment. This does NOT reflect perceived importance.]
+[This piece is more fleshed-out because it's in my wheelhouse AND likely requires more new investment, but this does NOT suggest it is more important than other pieces.]
 
 - Outcome:
     - Create, deploy, and support complex AI tools & solutions
